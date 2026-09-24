@@ -1,0 +1,25 @@
+{
+  "status": "passed-part",
+  "part": "scaling-chain-distinct",
+  "worker_count": 1,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "tests/scaling.py",
+        "--shape",
+        "chain-distinct"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 14.062935165999988,
+      "whole_child_cpu_seconds": 19.279357,
+      "cumulative_peak_child_rss_kib": 168672,
+      "stdout": "{\"shape\": \"chain-distinct\", \"runs\": 12, \"whole_child_cpu_seconds\": 18.23242, \"max_body_wall_seconds\": 1.400031791999936, \"max_rss_kib\": 168672}\n",
+      "stderr": ""
+    }
+  ],
+  "wall_seconds": 14.063685225999961,
+  "whole_child_cpu_seconds": 19.279357,
+  "coordinator_peak_rss_kib": 93360,
+  "peak_child_rss_kib": 168672
+}

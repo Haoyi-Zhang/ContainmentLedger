@@ -1,0 +1,52 @@
+{
+  "contract": "containment-ledger/local-freshness/hmac-sha256/v1",
+  "authenticated_state_reopened": true,
+  "strict_replay_rejected_after_process_restart": true,
+  "same_epoch_advance_persisted": true,
+  "explicit_epoch_rotation_accepted": true,
+  "old_epoch_downgrade_rejected": true,
+  "retired_or_missing_epoch_key_rejected": true,
+  "tamper_or_context_cases_rejected": 7,
+  "tamper_cases": [
+    "persistent-replay",
+    "state-content-mutation",
+    "wrong-state-key",
+    "state-symlink",
+    "unapproved-epoch-transition",
+    "epoch-downgrade",
+    "missing-rotated-key"
+  ],
+  "race_processes": 8,
+  "race_successful_acceptors": 1,
+  "race_stale_rejections": 7,
+  "process_death_checkpoints": [
+    {
+      "checkpoint": "temp-created",
+      "accepted_sequence_after_restart": 7,
+      "temporary_files": 1
+    },
+    {
+      "checkpoint": "file-synced",
+      "accepted_sequence_after_restart": 7,
+      "temporary_files": 1
+    },
+    {
+      "checkpoint": "replaced",
+      "accepted_sequence_after_restart": 8,
+      "temporary_files": 0
+    },
+    {
+      "checkpoint": "directory-synced",
+      "accepted_sequence_after_restart": 8,
+      "temporary_files": 0
+    }
+  ],
+  "pre_replace_death_retained_prior_complete_state": true,
+  "post_replace_death_exposed_new_complete_state": true,
+  "whole_state_file_rollback_detected": false,
+  "distributed_consensus_or_transparency_provided": false,
+  "power_loss_or_network_filesystem_durability_tested": false,
+  "cpu_seconds": 0.019018694999999974,
+  "wall_seconds": 3.5191289999997935,
+  "peak_rss_kib": 94892
+}

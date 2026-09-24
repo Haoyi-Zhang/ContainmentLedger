@@ -1,0 +1,221 @@
+{
+  "graphs": 15625,
+  "cut_certificates": 11456,
+  "infeasible_certificates": 4169,
+  "mutations_rejected": 2059,
+  "greedy_gaps": 52,
+  "batches": [
+    {
+      "through_encoding": 624,
+      "valid_cuts": 500,
+      "infeasible": 125,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 80
+    },
+    {
+      "through_encoding": 1249,
+      "valid_cuts": 900,
+      "infeasible": 350,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 152
+    },
+    {
+      "through_encoding": 1874,
+      "valid_cuts": 1400,
+      "infeasible": 475,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 240
+    },
+    {
+      "through_encoding": 2499,
+      "valid_cuts": 1900,
+      "infeasible": 600,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 328
+    },
+    {
+      "through_encoding": 3124,
+      "valid_cuts": 2400,
+      "infeasible": 725,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 418
+    },
+    {
+      "through_encoding": 3749,
+      "valid_cuts": 2784,
+      "infeasible": 966,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 490
+    },
+    {
+      "through_encoding": 4374,
+      "valid_cuts": 3104,
+      "infeasible": 1271,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 549
+    },
+    {
+      "through_encoding": 4999,
+      "valid_cuts": 3488,
+      "infeasible": 1512,
+      "greedy_larger_than_minimum": 0,
+      "rejected_mutations": 618
+    },
+    {
+      "through_encoding": 5624,
+      "valid_cuts": 3872,
+      "infeasible": 1753,
+      "greedy_larger_than_minimum": 1,
+      "rejected_mutations": 686
+    },
+    {
+      "through_encoding": 6249,
+      "valid_cuts": 4256,
+      "infeasible": 1994,
+      "greedy_larger_than_minimum": 2,
+      "rejected_mutations": 756
+    },
+    {
+      "through_encoding": 6874,
+      "valid_cuts": 4756,
+      "infeasible": 2119,
+      "greedy_larger_than_minimum": 12,
+      "rejected_mutations": 845
+    },
+    {
+      "through_encoding": 7499,
+      "valid_cuts": 5156,
+      "infeasible": 2344,
+      "greedy_larger_than_minimum": 12,
+      "rejected_mutations": 916
+    },
+    {
+      "through_encoding": 8124,
+      "valid_cuts": 5656,
+      "infeasible": 2469,
+      "greedy_larger_than_minimum": 22,
+      "rejected_mutations": 1008
+    },
+    {
+      "through_encoding": 8749,
+      "valid_cuts": 6156,
+      "infeasible": 2594,
+      "greedy_larger_than_minimum": 27,
+      "rejected_mutations": 1098
+    },
+    {
+      "through_encoding": 9374,
+      "valid_cuts": 6656,
+      "infeasible": 2719,
+      "greedy_larger_than_minimum": 32,
+      "rejected_mutations": 1187
+    },
+    {
+      "through_encoding": 9999,
+      "valid_cuts": 7156,
+      "infeasible": 2844,
+      "greedy_larger_than_minimum": 32,
+      "rejected_mutations": 1279
+    },
+    {
+      "through_encoding": 10624,
+      "valid_cuts": 7556,
+      "infeasible": 3069,
+      "greedy_larger_than_minimum": 32,
+      "rejected_mutations": 1353
+    },
+    {
+      "through_encoding": 11249,
+      "valid_cuts": 8056,
+      "infeasible": 3194,
+      "greedy_larger_than_minimum": 34,
+      "rejected_mutations": 1444
+    },
+    {
+      "through_encoding": 11874,
+      "valid_cuts": 8556,
+      "infeasible": 3319,
+      "greedy_larger_than_minimum": 34,
+      "rejected_mutations": 1535
+    },
+    {
+      "through_encoding": 12499,
+      "valid_cuts": 9056,
+      "infeasible": 3444,
+      "greedy_larger_than_minimum": 42,
+      "rejected_mutations": 1625
+    },
+    {
+      "through_encoding": 13124,
+      "valid_cuts": 9556,
+      "infeasible": 3569,
+      "greedy_larger_than_minimum": 42,
+      "rejected_mutations": 1715
+    },
+    {
+      "through_encoding": 13749,
+      "valid_cuts": 9956,
+      "infeasible": 3794,
+      "greedy_larger_than_minimum": 42,
+      "rejected_mutations": 1786
+    },
+    {
+      "through_encoding": 14374,
+      "valid_cuts": 10456,
+      "infeasible": 3919,
+      "greedy_larger_than_minimum": 44,
+      "rejected_mutations": 1877
+    },
+    {
+      "through_encoding": 14999,
+      "valid_cuts": 10956,
+      "infeasible": 4044,
+      "greedy_larger_than_minimum": 52,
+      "rejected_mutations": 1969
+    },
+    {
+      "through_encoding": 15624,
+      "valid_cuts": 11456,
+      "infeasible": 4169,
+      "greedy_larger_than_minimum": 52,
+      "rejected_mutations": 2059
+    }
+  ],
+  "gap_family": [
+    {
+      "paths": 1,
+      "greedy_size": 1,
+      "minimum_size": 1
+    },
+    {
+      "paths": 2,
+      "greedy_size": 2,
+      "minimum_size": 1
+    },
+    {
+      "paths": 3,
+      "greedy_size": 3,
+      "minimum_size": 1
+    },
+    {
+      "paths": 4,
+      "greedy_size": 4,
+      "minimum_size": 1
+    },
+    {
+      "paths": 8,
+      "greedy_size": 8,
+      "minimum_size": 1
+    },
+    {
+      "paths": 16,
+      "greedy_size": 16,
+      "minimum_size": 1
+    }
+  ],
+  "zero_length_infeasibility_checked": true,
+  "encoding": "All 5^6 four-node DAGs: each edge absent, uncuttable, or group a/b/c. All action subsets enumerated by a separate Boolean oracle.",
+  "cpu_seconds": 0.535756651,
+  "wall_seconds": 0.5348074120001911,
+  "peak_rss_kib": 94376
+}

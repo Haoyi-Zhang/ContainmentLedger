@@ -1,0 +1,291 @@
+{
+  "status": "passed",
+  "parts": [
+    {
+      "status": "passed-part",
+      "part": "checks",
+      "worker_count": 1,
+      "commands": [
+        {
+          "command": [
+            "python",
+            "tests/pilot.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.6215789159996348,
+          "whole_child_cpu_seconds": 0.9837309999999999,
+          "cumulative_peak_child_rss_kib": 94512,
+          "stdout": "{\n  \"stage\": \"pre-lock-pilot\",\n  \"workers\": 1,\n  \"records\": [\n    {\n      \"file\": \"abc.py\",\n      \"scenario\": \"C07\",\n      \"expected_blocked\": true,\n      \"blocked\": 1\n    },\n    {\n      \"file\": \"abc.py\",\n      \"scenario\": \"C08\",\n      \"expected_blocked\": false,\n      \"blocked\": 0\n    },\n    {\n      \"file\": \"abc.py\",\n      \"scenario\": \"C09\",\n      \"expected_blocked\": false,\n      \"blocked\": 0\n    },\n    {\n      \"file\": \"abc.py\",\n      \"scenario\": \"C15\",\n      \"expected_blocked\": true,\n      \"blocked\": 1\n    },\n    {\n      \"file\": \"bisect.py\",\n      \"scenario\": \"C07\",\n      \"expected_blocked\": true,\n      \"blocked\": 1\n    },\n    {\n      \"file\": \"bisect.py\",\n      \"scenario\": \"C08\",\n      \"expected_blocked\": false,\n      \"blocked\": 0\n    },\n    {\n      \"file\": \"bisect.py\",\n      \"scenario\": \"C09\",\n      \"expected_blocked\": false,\n      \"blocked\": 0\n    },\n    {\n      \"file\": \"bisect.py\",\n      \"scenario\": \"C15\",\n      \"expected_blocked\": true,\n      \"blocked\": 1\n    }\n  ],\n  \"unauthorized_repair_rejected_by_both\": true,\n  \"greedy_size\": 3,\n  \"exact_minimum_size\": 1,\n  \"cpu_seconds\": 0.004010073000000003,\n  \"wall_seconds\": 0.002957467999749497,\n  \"peak_rss_kib\": 94384,\n  \"interpretation\": \"Finite checks only. No corpus code executed; no model, poisoning attack, or production workload.\"\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/campaign.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 1.7315331449999576,
+          "whole_child_cpu_seconds": 2.119697,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"source_projects\": 6,\n  \"files_per_project\": {\n    \"cpython\": 4,\n    \"go\": 4,\n    \"npm\": 4,\n    \"perl\": 4,\n    \"pip\": 4,\n    \"ruby\": 4\n  },\n  \"source_files\": 24,\n  \"source_bytes\": 268614,\n  \"source_lines\": 8215,\n  \"families\": 20,\n  \"valid_cases\": 480,\n  \"positive_cases\": 336,\n  \"negative_cases\": 144,\n  \"structural_mutations\": 288,\n  \"composition_contexts\": 2457,\n  \"heterogeneous_composition_contexts\": 51,\n  \"contexts_invalidating_a_local_clean_decision\": 793,\n  \"newly_blocked_output_decisions\": 846,\n  \"confusion\": {\n    \"path-only\": {\n      \"tp\": 24,\n      \"tn\": 144,\n      \"fp\": 0,\n      \"fn\": 312\n    },\n    \"final-marker\": {\n      \"tp\": 0,\n      \"tn\": 144,\n      \"fp\": 0,\n      \"fn\": 336\n    },\n    \"canonical-content\": {\n      \"tp\": 120,\n      \"tn\": 144,\n      \"fp\": 0,\n      \"fn\": 216\n    },\n    \"declared-lineage\": {\n      \"tp\": 192,\n      \"tn\": 144,\n      \"fp\": 0,\n      \"fn\": 144\n    },\n    \"all-label-alias\": {\n      \"tp\": 336,\n      \"tn\": 72,\n      \"fp\": 72,\n      \"fn\": 0\n    },\n    \"no-authorized-repair\": {\n      \"tp\": 336,\n      \"tn\": 120,\n      \"fp\": 24,\n      \"fn\": 0\n    },\n    \"lineage-plus-final-alias\": {\n      \"tp\": 288,\n      \"tn\": 144,\n      \"fp\": 0,\n      \"fn\": 48\n    },\n    \"same-information-fixed-point\": {\n      \"tp\": 336,\n      \"tn\": 144,\n      \"fp\": 0,\n      \"fn\": 0\n    },\n    \"scoped-replay\": {\n      \"tp\": 336,\n      \"tn\": 144,\n      \"fp\": 0,\n      \"fn\": 0\n    }\n  },\n  \"composition_baselines\": {\n    \"cached-local-decisions\": {\n      \"outputs\": 4962,\n      \"exact_outputs\": 3060,\n      \"false_clean_outputs\": 846,\n      \"false_block_outputs\": 0,\n      \"missed_scope_bits\": 1962,\n      \"extra_scope_bits\": 0,\n      \"contexts\": 2457,\n      \"exact_contexts\": 1100,\n      \"exact_output_rate\": 0.6166868198307134,\n      \"exact_context_rate\": 0.4477004477004477\n    },\n    \"seed-to-output-equality\": {\n      \"outputs\": 4962,\n      \"exact_outputs\": 3132,\n      \"false_clean_outputs\": 1626,\n      \"false_block_outputs\": 0,\n      \"missed_scope_bits\": 2058,\n      \"extra_scope_bits\": 0,\n      \"contexts\": 2457,\n      \"exact_contexts\": 1041,\n      \"exact_output_rate\": 0.6311970979443773,\n      \"exact_context_rate\": 0.4236874236874237\n    },\n    \"output-endpoint-alias\": {\n      \"outputs\": 4962,\n      \"exact_outputs\": 3810,\n      \"false_clean_outputs\": 492,\n      \"false_block_outputs\": 0,\n      \"missed_scope_bits\": 1152,\n      \"extra_scope_bits\": 0,\n      \"contexts\": 2457,\n      \"exact_contexts\": 1538,\n      \"exact_output_rate\": 0.7678355501813785,\n      \"exact_context_rate\": 0.625966625966626\n    },\n    \"context-complete-summary\": {\n      \"outputs\": 4962,\n      \"exact_outputs\": 4962,\n      \"false_clean_outputs\": 0,\n      \"false_block_outputs\": 0,\n      \"missed_scope_bits\": 0,\n      \"extra_scope_bits\": 0,\n      \"contexts\": 2457,\n      \"exact_contexts\": 2457,\n      \"exact_output_rate\": 1.0,\n      \"exact_context_rate\": 1.0\n    }\n  },\n  \"cpu_seconds\": 1.1059232470000002,\n  \"wall_seconds\": 1.1043438480000987,\n  \"peak_rss_kib\": 99372\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/finite.py",
+            "closure"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 4.0246338460001425,
+          "whole_child_cpu_seconds": 4.435827,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"cases\": 327680,\n  \"disagreements\": 0,\n  \"encoding\": \"3-node forward DAG: 3 edges x masks 0..7 and 3 seeds x labels 0..7. 4-node directed no-self-edge graphs: 12 Boolean B edges and 4 Boolean B seeds. No claim of exhaustive larger or all mixed-label cyclic graphs.\",\n  \"cpu_seconds\": 3.415681245,\n  \"wall_seconds\": 3.418008256000121,\n  \"peak_rss_kib\": 94372\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/finite.py",
+            "cuts"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 1.1184692329998143,
+          "whole_child_cpu_seconds": 1.5267219999999984,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"graphs\": 15625,\n  \"cut_certificates\": 11456,\n  \"infeasible_certificates\": 4169,\n  \"mutations_rejected\": 2059,\n  \"greedy_gaps\": 52,\n  \"gap_family\": [\n    {\n      \"paths\": 1,\n      \"greedy_size\": 1,\n      \"minimum_size\": 1\n    },\n    {\n      \"paths\": 2,\n      \"greedy_size\": 2,\n      \"minimum_size\": 1\n    },\n    {\n      \"paths\": 3,\n      \"greedy_size\": 3,\n      \"minimum_size\": 1\n    },\n    {\n      \"paths\": 4,\n      \"greedy_size\": 4,\n      \"minimum_size\": 1\n    },\n    {\n      \"paths\": 8,\n      \"greedy_size\": 8,\n      \"minimum_size\": 1\n    },\n    {\n      \"paths\": 16,\n      \"greedy_size\": 16,\n      \"minimum_size\": 1\n    }\n  ],\n  \"zero_length_infeasibility_checked\": true,\n  \"encoding\": \"All 5^6 four-node DAGs: each edge absent, uncuttable, or group a/b/c. All action subsets enumerated by a separate Boolean oracle.\",\n  \"cpu_seconds\": 0.535756651,\n  \"wall_seconds\": 0.5348074120001911,\n  \"peak_rss_kib\": 94376\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/context.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.8554764509999586,
+          "whole_child_cpu_seconds": 1.196604,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"keys\": 3,\n  \"local_graph_seed_worlds\": 512,\n  \"merged_graph_seed_contexts\": 262144,\n  \"distinct_context_signatures\": 45,\n  \"single_probes_distinguish_every_signature\": true,\n  \"two_by_two_bipartite_relations_distinguished\": 16,\n  \"actual_rewrite_pipeline_probe_contexts\": 64,\n  \"disagreements\": 0,\n  \"cpu_seconds\": 0.23197688299999997,\n  \"wall_seconds\": 0.22974062899993442,\n  \"peak_rss_kib\": 94764\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/natural.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 2.7923287759999766,
+          "whole_child_cpu_seconds": 3.2010920000000005,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"source_files\": 24,\n  \"minimum_canonical_line_length\": 8,\n  \"duplicate_line_classes\": 127,\n  \"cross_project_duplicate_classes\": 6,\n  \"pair_contexts\": 216,\n  \"cross_project_pair_contexts\": 13,\n  \"complete_summary_equal_to_joined_replay\": 216,\n  \"authenticated_capsule_compositions_equal_to_joined_replay\": 216,\n  \"endpoint_only_false_clean_outputs\": 216,\n  \"capsules_issued_and_verified\": 432,\n  \"capsule_canonical_bytes_min\": 3941,\n  \"capsule_canonical_bytes_max\": 75289,\n  \"capsule_canonical_bytes_mean\": 40916.710648148146,\n  \"capsule_wrapper_bytes_min\": 560,\n  \"capsule_wrapper_bytes_max\": 565,\n  \"capsule_wrapper_bytes_mean\": 563.7361111111111,\n  \"duplicate_threshold_sensitivity\": {\n    \"8\": {\n      \"classes\": 127,\n      \"file_pair_contexts\": 216,\n      \"cross_project_classes\": 6\n    },\n    \"12\": {\n      \"classes\": 110,\n      \"file_pair_contexts\": 173,\n      \"cross_project_classes\": 1\n    },\n    \"20\": {\n      \"classes\": 74,\n      \"file_pair_contexts\": 99,\n      \"cross_project_classes\": 0\n    },\n    \"40\": {\n      \"classes\": 51,\n      \"file_pair_contexts\": 65,\n      \"cross_project_classes\": 0\n    }\n  },\n  \"largest_duplicate_class_files\": 4,\n  \"examples\": [\n    {\n      \"canonical_line\": \"\\t\\t\\t    All rights reserved.\",\n      \"left\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 406\n      },\n      \"right\": {\n        \"file\": \"perl/AutoSplit.pm\",\n        \"line\": 154\n      },\n      \"cross_project\": false\n    },\n    {\n      \"canonical_line\": \"\\t    else {\",\n      \"left\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 123\n      },\n      \"right\": {\n        \"file\": \"perl/Benchmark.pm\",\n        \"line\": 1071\n      },\n      \"cross_project\": false\n    },\n    {\n      \"canonical_line\": \"\\t    } else {\",\n      \"left\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 87\n      },\n      \"right\": {\n        \"file\": \"perl/AutoSplit.pm\",\n        \"line\": 414\n      },\n      \"cross_project\": false\n    },\n    {\n      \"canonical_line\": \"\\tSoftware Foundation; either version 1, or (at your option) any\",\n      \"left\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 412\n      },\n      \"right\": {\n        \"file\": \"perl/AutoSplit.pm\",\n        \"line\": 160\n      },\n      \"cross_project\": false\n    },\n    {\n      \"canonical_line\": \"\\ta) the GNU General Public License as published by the Free\",\n      \"left\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 411\n      },\n      \"right\": {\n        \"file\": \"perl/AutoSplit.pm\",\n        \"line\": 159\n      },\n      \"cross_project\": false\n    },\n    {\n      \"canonical_line\": \"\\tb) the \\\"Artistic License\\\" which comes with this Kit.\",\n      \"left\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 415\n      },\n      \"right\": {\n        \"file\": \"perl/AutoSplit.pm\",\n        \"line\": 163\n      },\n      \"cross_project\": false\n    },\n    {\n      \"canonical_line\": \"\\tlater version, or\",\n      \"left\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 413\n      },\n      \"right\": {\n        \"file\": \"perl/AutoSplit.pm\",\n        \"line\": 161\n      },\n      \"cross_project\": false\n    },\n    {\n      \"canonical_line\": \"\\t} else {\",\n      \"left\": {\n        \"file\": \"go/csv-reader.go\",\n        \"line\": 201\n      },\n      \"right\": {\n        \"file\": \"perl/AutoLoader.pm\",\n        \"line\": 173\n      },\n      \"cross_project\": true\n    }\n  ],\n  \"labels_are_generated_fixture_facts\": true,\n  \"source_text_was_not_executed\": true,\n  \"cpu_seconds\": 2.18792243,\n  \"wall_seconds\": 2.1891706760002307,\n  \"peak_rss_kib\": 98728\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/builder_bridge.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.6478795200000604,
+          "whole_child_cpu_seconds": 1.0543329999999993,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"profile\": \"bigcode-exact-substring-bridge/v1\",\n  \"upstream_repository\": \"bigcode-project/bigcode-dataset\",\n  \"upstream_commit\": \"bebec929edd826f19b5fa3538f22d18d5b50da4b\",\n  \"upstream_source_path\": \"decontamination/find_substrings.py\",\n  \"upstream_source_blob\": \"446313901df4de049a3cfc473152f438b542c799\",\n  \"upstream_function_invoked\": \"find_substrings\",\n  \"public_humaneval_commit\": \"6d43fb980f9fee3c892a914eda09951f772ad10d\",\n  \"public_humaneval_source_blob\": \"06236282a45e10e92233e2b8f84cea10ae25be46\",\n  \"source_projects\": 6,\n  \"retained_source_files\": 24,\n  \"natural_line_root_matches\": 24,\n  \"public_benchmark_shaped_root_matches\": 1,\n  \"matched_roots_total\": 25,\n  \"rewritten_endpoints_passing_same_upstream_scanner\": 25,\n  \"rewritten_endpoints_blocked_by_lineage\": 25,\n  \"final_state_false_clean_if_used_alone\": 25,\n  \"clean_controls\": 24,\n  \"clean_controls_accepted_by_scanner_and_ledger\": 24,\n  \"independent_upstream_oracle_cases\": 4,\n  \"independent_upstream_oracle_disagreements\": 0,\n  \"records\": [\n    {\n      \"file\": \"cpython/abc.py\",\n      \"probe_line_length\": 82,\n      \"root_filter_reason\": \"retained_natural_line_cpython_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"cpython/bisect.py\",\n      \"probe_line_length\": 80,\n      \"root_filter_reason\": \"retained_natural_line_cpython_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"cpython/colorsys.py\",\n      \"probe_line_length\": 76,\n      \"root_filter_reason\": \"retained_natural_line_cpython_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"cpython/keyword.py\",\n      \"probe_line_length\": 64,\n      \"root_filter_reason\": \"retained_natural_line_cpython_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"go/csv-reader.go\",\n      \"probe_line_length\": 118,\n      \"root_filter_reason\": \"retained_natural_line_go_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"go/path.go\",\n      \"probe_line_length\": 83,\n      \"root_filter_reason\": \"retained_natural_line_go_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"go/sort.go\",\n      \"probe_line_length\": 97,\n      \"root_filter_reason\": \"retained_natural_line_go_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"go/tar-format.go\",\n      \"probe_line_length\": 94,\n      \"root_filter_reason\": \"retained_natural_line_go_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"npm/cli-entry.js\",\n      \"probe_line_length\": 277,\n      \"root_filter_reason\": \"retained_natural_line_npm_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"npm/dedupe.js\",\n      \"probe_line_length\": 77,\n      \"root_filter_reason\": \"retained_natural_line_npm_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"npm/pack.js\",\n      \"probe_line_length\": 78,\n      \"root_filter_reason\": \"retained_natural_line_npm_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"npm/reify-finish.js\",\n      \"probe_line_length\": 65,\n      \"root_filter_reason\": \"retained_natural_line_npm_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"perl/AutoLoader.pm\",\n      \"probe_line_length\": 86,\n      \"root_filter_reason\": \"retained_natural_line_perl_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"perl/AutoSplit.pm\",\n      \"probe_line_length\": 79,\n      \"root_filter_reason\": \"retained_natural_line_perl_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"perl/Benchmark.pm\",\n      \"probe_line_length\": 97,\n      \"root_filter_reason\": \"retained_natural_line_perl_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"perl/English.pm\",\n      \"probe_line_length\": 73,\n      \"root_filter_reason\": \"retained_natural_line_perl_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"pip/cache.py\",\n      \"probe_line_length\": 88,\n      \"root_filter_reason\": \"retained_natural_line_pip_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"pip/direct-url.py\",\n      \"probe_line_length\": 86,\n      \"root_filter_reason\": \"retained_natural_line_pip_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"pip/prepare.py\",\n      \"probe_line_length\": 88,\n      \"root_filter_reason\": \"retained_natural_line_pip_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"pip/req-install.py\",\n      \"probe_line_length\": 88,\n      \"root_filter_reason\": \"retained_natural_line_pip_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"ruby/abbrev.rb\",\n      \"probe_line_length\": 82,\n      \"root_filter_reason\": \"retained_natural_line_ruby_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"ruby/base64.rb\",\n      \"probe_line_length\": 96,\n      \"root_filter_reason\": \"retained_natural_line_ruby_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"ruby/benchmark.rb\",\n      \"probe_line_length\": 106,\n      \"root_filter_reason\": \"retained_natural_line_ruby_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    },\n    {\n      \"file\": \"ruby/tsort.rb\",\n      \"probe_line_length\": 105,\n      \"root_filter_reason\": \"retained_natural_line_ruby_match\",\n      \"endpoint_scanner_decision\": \"include\",\n      \"ledger_decision\": \"block\"\n    }\n  ],\n  \"human_eval_example\": {\n    \"task_id\": \"test/0\",\n    \"root_filter_reason\": \"human_eval_public_example_match\",\n    \"endpoint_scanner_decision\": \"include\",\n    \"ledger_decision\": \"block\"\n  },\n  \"labels_for_natural_lines_are_generated_fixture_facts\": true,\n  \"full_bigcode_pipeline_reproduced\": false,\n  \"corpus_or_benchmark_code_executed\": false,\n  \"cpu_seconds\": 0.0560036530000001,\n  \"wall_seconds\": 0.05695331599963538,\n  \"peak_rss_kib\": 94636\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/deployment.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 5.2213881789998595,
+          "whole_child_cpu_seconds": 13.024176999999998,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"capsule_contract\": \"containment-ledger/equality-only/hmac-sha256\",\n  \"valid_capsule_bound_and_verified\": true,\n  \"tamper_or_context_cases_rejected\": 23,\n  \"tamper_cases\": [\n    \"policy_digest-mutation\",\n    \"ledger_digest-mutation\",\n    \"summary_digest-mutation\",\n    \"policy_tag-mutation\",\n    \"checker_tag-mutation\",\n    \"summary-content-mutation\",\n    \"output-name-mutation\",\n    \"contract-mutation\",\n    \"sequence-type-confusion\",\n    \"wrong-authority-key\",\n    \"wrong-checker-key\",\n    \"stale-epoch\",\n    \"stale-sequence\",\n    \"wrong-shard\",\n    \"per-shard-stale-sequence\",\n    \"duplicate-capsule-identity\",\n    \"duplicate-shard-revision\",\n    \"bound-policy-substitution\",\n    \"bound-ledger-substitution\",\n    \"authenticated-emission-tamper\",\n    \"destination-symlink\",\n    \"preexisting-destination\",\n    \"symlink-parent\"\n  ],\n  \"race_processes\": 8,\n  \"race_successful_publishers\": 1,\n  \"race_result_complete\": true,\n  \"race_temporary_files_remaining\": 0,\n  \"preexisting_destination_preserved\": true,\n  \"destination_symlink_preserved_and_target_unchanged\": true,\n  \"symlink_parent_refused\": true,\n  \"process_death_checkpoints\": [\n    {\n      \"checkpoint\": \"temp-created\",\n      \"destination_exists\": false,\n      \"expected_committed\": false,\n      \"temporary_files\": 1\n    },\n    {\n      \"checkpoint\": \"zip-closed\",\n      \"destination_exists\": false,\n      \"expected_committed\": false,\n      \"temporary_files\": 1\n    },\n    {\n      \"checkpoint\": \"file-synced\",\n      \"destination_exists\": false,\n      \"expected_committed\": false,\n      \"temporary_files\": 1\n    },\n    {\n      \"checkpoint\": \"linked\",\n      \"destination_exists\": true,\n      \"expected_committed\": true,\n      \"temporary_files\": 1\n    },\n    {\n      \"checkpoint\": \"directory-synced\",\n      \"destination_exists\": true,\n      \"expected_committed\": true,\n      \"temporary_files\": 1\n    },\n    {\n      \"checkpoint\": \"temporary-removed\",\n      \"destination_exists\": true,\n      \"expected_committed\": true,\n      \"temporary_files\": 0\n    }\n  ],\n  \"precommit_deaths_created_no_destination\": true,\n  \"postlink_deaths_left_complete_destination\": true,\n  \"power_loss_or_arbitrary_filesystem_durability_tested\": false,\n  \"public_signature_or_nonrepudiation_claimed\": false,\n  \"cpu_seconds\": 0.018903954,\n  \"wall_seconds\": 4.629231606000303,\n  \"peak_rss_kib\": 94892\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/freshness.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 4.169816201999765,
+          "whole_child_cpu_seconds": 10.936091000000001,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"contract\": \"containment-ledger/local-freshness/hmac-sha256/v1\",\n  \"authenticated_state_reopened\": true,\n  \"strict_replay_rejected_after_process_restart\": true,\n  \"same_epoch_advance_persisted\": true,\n  \"explicit_epoch_rotation_accepted\": true,\n  \"old_epoch_downgrade_rejected\": true,\n  \"retired_or_missing_epoch_key_rejected\": true,\n  \"tamper_or_context_cases_rejected\": 7,\n  \"tamper_cases\": [\n    \"persistent-replay\",\n    \"state-content-mutation\",\n    \"wrong-state-key\",\n    \"state-symlink\",\n    \"unapproved-epoch-transition\",\n    \"epoch-downgrade\",\n    \"missing-rotated-key\"\n  ],\n  \"race_processes\": 8,\n  \"race_successful_acceptors\": 1,\n  \"race_stale_rejections\": 7,\n  \"process_death_checkpoints\": [\n    {\n      \"checkpoint\": \"temp-created\",\n      \"accepted_sequence_after_restart\": 7,\n      \"temporary_files\": 1\n    },\n    {\n      \"checkpoint\": \"file-synced\",\n      \"accepted_sequence_after_restart\": 7,\n      \"temporary_files\": 1\n    },\n    {\n      \"checkpoint\": \"replaced\",\n      \"accepted_sequence_after_restart\": 8,\n      \"temporary_files\": 0\n    },\n    {\n      \"checkpoint\": \"directory-synced\",\n      \"accepted_sequence_after_restart\": 8,\n      \"temporary_files\": 0\n    }\n  ],\n  \"pre_replace_death_retained_prior_complete_state\": true,\n  \"post_replace_death_exposed_new_complete_state\": true,\n  \"whole_state_file_rollback_detected\": false,\n  \"distributed_consensus_or_transparency_provided\": false,\n  \"power_loss_or_network_filesystem_durability_tested\": false,\n  \"cpu_seconds\": 0.019018694999999974,\n  \"wall_seconds\": 3.5191289999997935,\n  \"peak_rss_kib\": 94892\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/boundaries.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 1.0865669609997894,
+          "whole_child_cpu_seconds": 1.4688089999999994,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"clean_archives_emitted_and_read_back\": 144,\n  \"blocked_archives_not_created\": 336,\n  \"inclusion_minimal_diagnoses\": 288,\n  \"uncuttable_diagnoses\": 192,\n  \"boundary_checks\": [\n    \"malformed JSON rejected\",\n    \"malformed JSON rejected\",\n    \"malformed JSON rejected\",\n    \"malformed JSON rejected\",\n    \"malformed JSON rejected\",\n    \"malformed JSON rejected\",\n    \"malformed JSON rejected\",\n    \"malformed JSON rejected\",\n    \"member Unicode scalar checked\",\n    \"member Unicode scalar checked\",\n    \"empty ledger\",\n    \"normalizer boundary\",\n    \"normalizer boundary\",\n    \"normalizer boundary\",\n    \"normalizer boundary\",\n    \"Boolean index rejected\",\n    \"Boolean index rejected\",\n    \"copy replay\",\n    \"expanded export budget enforced\",\n    \"expanded export budget enforced\"\n  ],\n  \"false_clean_claims_rejected_and_diagnosable\": 336,\n  \"observable_history_boundary_demonstrated\": true,\n  \"cpu_seconds\": 0.4173583110000001,\n  \"wall_seconds\": 0.41527884499964784,\n  \"peak_rss_kib\": 94892\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "tests/package_audit.py"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.6857876720000604,
+          "whole_child_cpu_seconds": 1.0939480000000072,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\n  \"cpu_seconds\": 0.06399361399999992,\n  \"emitter_publication\": {\n    \"atomic_hard_link_commits\": 1,\n    \"destination_unlink_calls\": 0,\n    \"exclusive_and_no_follow_flags_present\": true,\n    \"fsync_calls\": 3,\n    \"overwrite_capable_publication_calls\": 0,\n    \"proof_implementation_boundary_aligned\": true\n  },\n  \"evidence_tables\": {\n    \"all_resource_locators_https\": true,\n    \"claim_evidence_rows\": 30,\n    \"external_internals_modified\": 0,\n    \"external_resource_rows\": 118,\n    \"scholarly_or_standard_resource_rows\": 85\n  },\n  \"package_shape\": {\n    \"forbidden_workflow_or_private_names\": 0,\n    \"nested_archives\": 0,\n    \"python_cache_artifacts\": 0,\n    \"symlinks\": 0,\n    \"top_level_entries\": [\n      \"LICENSE\",\n      \"README.md\",\n      \"claim_evidence_ledger.csv\",\n      \"data\",\n      \"external_resources.csv\",\n      \"licenses\",\n      \"proofs\",\n      \"reproduce.py\",\n      \"results\",\n      \"src\",\n      \"tests\",\n      \"upstream\"\n    ]\n  },\n  \"peak_rss_kib\": 96296,\n  \"public_inputs\": {\n    \"all_selected_files_have_retained_license\": true,\n    \"all_selected_files_utf8\": true,\n    \"files_per_project\": {\n      \"CPython\": 4,\n      \"Go\": 4,\n      \"Perl\": 4,\n      \"Ruby\": 4,\n      \"npm CLI\": 4,\n      \"pip\": 4\n    },\n    \"selection_bytes\": 268614,\n    \"selection_files\": 24,\n    \"selection_logical_lines\": 8215,\n    \"selection_projects\": 6\n  },\n  \"retained_upstream\": {\n    \"bigcode_commit_and_blob_identifiers_present\": true,\n    \"humaneval_commit_and_blob_identifiers_present\": true,\n    \"humaneval_example_exact_record_matched\": true,\n    \"retained_bigcode_functions_ast_matched\": 2,\n    \"upstream_license_files_present\": 2\n  },\n  \"scope\": \"Offline package-shape, retained-byte accounting, AST-level source-safety, publication-source invariants, upstream-excerpt identity, and evidence-table integrity checks. These checks do not prove semantic correctness, arbitrary-file-system durability, or remote source availability.\",\n  \"source_safety\": {\n    \"cut_generator_verifier_cross_imports\": 0,\n    \"dynamic_import_sites\": [\n      [\n        \"src/builder_adapter.py\",\n        32,\n        \"importlib.util.spec_from_file_location\"\n      ],\n      [\n        \"src/builder_adapter.py\",\n        36,\n        \"spec.loader.exec_module\"\n      ]\n    ],\n    \"forbidden_dynamic_execution_calls\": 0,\n    \"forbidden_network_imports\": 0,\n    \"producer_checker_cross_imports\": 0,\n    \"python_files_ast_parsed\": 26,\n    \"shell_true_subprocess_calls\": 0\n  },\n  \"status\": \"passed\",\n  \"wall_seconds\": 0.06747846700000082\n}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "src/ledger.py",
+            "data/example-policy.json",
+            "data/example-ledger.json"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.6595815149998998,
+          "whole_child_cpu_seconds": 1.0598039999999962,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\"blocked\": 0, \"edges\": 8, \"labels\": {\"initial\": 4, \"repaired\": 0}, \"nodes\": 3, \"retained\": 1, \"status\": \"valid\"}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "src/checker.py",
+            "data/example-policy.json",
+            "data/example-ledger.json"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.6386448919997747,
+          "whole_child_cpu_seconds": 1.0217620000000012,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\"blocked\": 0, \"edges\": 8, \"labels\": {\"initial\": 4, \"repaired\": 0}, \"nodes\": 3, \"retained\": 1, \"status\": \"valid\"}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "python",
+            "src/emitter.py",
+            "data/example-policy.json",
+            "data/example-ledger.json",
+            "<temporary-output>/checked.zip"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 0.61441428299986,
+          "whole_child_cpu_seconds": 1.0261790000000017,
+          "cumulative_peak_child_rss_kib": 99500,
+          "stdout": "{\"bytes\": 901, \"members\": 2, \"units\": 1}\n",
+          "stderr": ""
+        }
+      ],
+      "wall_seconds": 24.871643437999865,
+      "whole_child_cpu_seconds": 44.148776000000005,
+      "coordinator_peak_rss_kib": 93484,
+      "peak_child_rss_kib": 99500
+    },
+    {
+      "status": "passed-part",
+      "part": "scaling-chain-distinct",
+      "worker_count": 1,
+      "commands": [
+        {
+          "command": [
+            "python",
+            "tests/scaling.py",
+            "--shape",
+            "chain-distinct"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 14.062935165999988,
+          "whole_child_cpu_seconds": 19.279357,
+          "cumulative_peak_child_rss_kib": 168672,
+          "stdout": "{\"shape\": \"chain-distinct\", \"runs\": 12, \"whole_child_cpu_seconds\": 18.23242, \"max_body_wall_seconds\": 1.400031791999936, \"max_rss_kib\": 168672}\n",
+          "stderr": ""
+        }
+      ],
+      "wall_seconds": 14.063685225999961,
+      "whole_child_cpu_seconds": 19.279357,
+      "coordinator_peak_rss_kib": 93360,
+      "peak_child_rss_kib": 168672
+    },
+    {
+      "status": "passed-part",
+      "part": "scaling-alias-copy",
+      "worker_count": 1,
+      "commands": [
+        {
+          "command": [
+            "python",
+            "tests/scaling.py",
+            "--shape",
+            "alias-copy"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 15.55288657500023,
+          "whole_child_cpu_seconds": 20.673744,
+          "cumulative_peak_child_rss_kib": 179604,
+          "stdout": "{\"shape\": \"alias-copy\", \"runs\": 12, \"whole_child_cpu_seconds\": 19.638640000000002, \"max_body_wall_seconds\": 1.5982881979998638, \"max_rss_kib\": 179604}\n",
+          "stderr": ""
+        }
+      ],
+      "wall_seconds": 15.553436589000285,
+      "whole_child_cpu_seconds": 20.673744,
+      "coordinator_peak_rss_kib": 93228,
+      "peak_child_rss_kib": 179604
+    },
+    {
+      "status": "passed-part",
+      "part": "scaling-many-roots",
+      "worker_count": 1,
+      "commands": [
+        {
+          "command": [
+            "python",
+            "tests/scaling.py",
+            "--shape",
+            "many-roots"
+          ],
+          "exit_code": 0,
+          "wall_seconds": 14.024592710999968,
+          "whole_child_cpu_seconds": 19.129379999999998,
+          "cumulative_peak_child_rss_kib": 148980,
+          "stdout": "{\"shape\": \"many-roots\", \"runs\": 12, \"whole_child_cpu_seconds\": 18.117746999999998, \"max_body_wall_seconds\": 1.2843910910000886, \"max_rss_kib\": 148980}\n",
+          "stderr": ""
+        }
+      ],
+      "wall_seconds": 14.025115344000369,
+      "whole_child_cpu_seconds": 19.129379999999998,
+      "coordinator_peak_rss_kib": 93360,
+      "peak_child_rss_kib": 148980
+    }
+  ],
+  "checks": {
+    "context_checks": "passed",
+    "generated_result_files": [
+      "campaign.json",
+      "composition-baselines.json",
+      "finite-closure.json",
+      "finite-cuts.json",
+      "context.json",
+      "natural-duplicates.json",
+      "builder-bridge.json",
+      "deployment.json",
+      "freshness.json",
+      "boundaries.json",
+      "package-audit.json"
+    ],
+    "scaling_included": true
+  },
+  "worker_count": 1,
+  "whole_child_cpu_seconds": 103.231257,
+  "sum_part_wall_seconds": 68.51388059700048,
+  "peak_child_rss_kib": 179604,
+  "accounting_scope": "Four saved sequential parts and waited descendants; not earlier exploration.",
+  "verification_scope": "Checks saved part reports and current scientific invariants; does not rerun tests."
+}

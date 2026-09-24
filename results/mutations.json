@@ -1,0 +1,1730 @@
+[
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/abc.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/bisect.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/colorsys.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "cpython",
+    "shard": "cpython/keyword.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/csv-reader.go",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/path.go",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/sort.go",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "go",
+    "shard": "go/tar-format.go",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/cli-entry.js",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/dedupe.js",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/pack.js",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "npm",
+    "shard": "npm/reify-finish.js",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoLoader.pm",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/AutoSplit.pm",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/Benchmark.pm",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "perl",
+    "shard": "perl/English.pm",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/cache.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/direct-url.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/prepare.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "pip",
+    "shard": "pip/req-install.py",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/abbrev.rb",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/base64.rb",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/benchmark.rb",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "unregistered-source",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "nonpreceding-parent",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "unknown-authority",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "authority-input-binding",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "counterfeit-unit-bytes",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "counterfeit-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "missing-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "extra-export",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "duplicate-unit",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "extra-record-field",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "false-label",
+    "both_reject": true
+  },
+  {
+    "project": "ruby",
+    "shard": "ruby/tsort.rb",
+    "mutation": "unsafe-member",
+    "both_reject": true
+  }
+]

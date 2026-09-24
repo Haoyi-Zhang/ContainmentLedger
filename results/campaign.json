@@ -1,0 +1,132 @@
+{
+  "source_projects": 6,
+  "files_per_project": {
+    "cpython": 4,
+    "go": 4,
+    "npm": 4,
+    "perl": 4,
+    "pip": 4,
+    "ruby": 4
+  },
+  "source_files": 24,
+  "source_bytes": 268614,
+  "source_lines": 8215,
+  "families": 20,
+  "valid_cases": 480,
+  "positive_cases": 336,
+  "negative_cases": 144,
+  "structural_mutations": 288,
+  "composition_contexts": 2457,
+  "heterogeneous_composition_contexts": 51,
+  "contexts_invalidating_a_local_clean_decision": 793,
+  "newly_blocked_output_decisions": 846,
+  "confusion": {
+    "path-only": {
+      "tp": 24,
+      "tn": 144,
+      "fp": 0,
+      "fn": 312
+    },
+    "final-marker": {
+      "tp": 0,
+      "tn": 144,
+      "fp": 0,
+      "fn": 336
+    },
+    "canonical-content": {
+      "tp": 120,
+      "tn": 144,
+      "fp": 0,
+      "fn": 216
+    },
+    "declared-lineage": {
+      "tp": 192,
+      "tn": 144,
+      "fp": 0,
+      "fn": 144
+    },
+    "all-label-alias": {
+      "tp": 336,
+      "tn": 72,
+      "fp": 72,
+      "fn": 0
+    },
+    "no-authorized-repair": {
+      "tp": 336,
+      "tn": 120,
+      "fp": 24,
+      "fn": 0
+    },
+    "lineage-plus-final-alias": {
+      "tp": 288,
+      "tn": 144,
+      "fp": 0,
+      "fn": 48
+    },
+    "same-information-fixed-point": {
+      "tp": 336,
+      "tn": 144,
+      "fp": 0,
+      "fn": 0
+    },
+    "scoped-replay": {
+      "tp": 336,
+      "tn": 144,
+      "fp": 0,
+      "fn": 0
+    }
+  },
+  "composition_baselines": {
+    "cached-local-decisions": {
+      "outputs": 4962,
+      "exact_outputs": 3060,
+      "false_clean_outputs": 846,
+      "false_block_outputs": 0,
+      "missed_scope_bits": 1962,
+      "extra_scope_bits": 0,
+      "contexts": 2457,
+      "exact_contexts": 1100,
+      "exact_output_rate": 0.6166868198307134,
+      "exact_context_rate": 0.4477004477004477
+    },
+    "seed-to-output-equality": {
+      "outputs": 4962,
+      "exact_outputs": 3132,
+      "false_clean_outputs": 1626,
+      "false_block_outputs": 0,
+      "missed_scope_bits": 2058,
+      "extra_scope_bits": 0,
+      "contexts": 2457,
+      "exact_contexts": 1041,
+      "exact_output_rate": 0.6311970979443773,
+      "exact_context_rate": 0.4236874236874237
+    },
+    "output-endpoint-alias": {
+      "outputs": 4962,
+      "exact_outputs": 3810,
+      "false_clean_outputs": 492,
+      "false_block_outputs": 0,
+      "missed_scope_bits": 1152,
+      "extra_scope_bits": 0,
+      "contexts": 2457,
+      "exact_contexts": 1538,
+      "exact_output_rate": 0.7678355501813785,
+      "exact_context_rate": 0.625966625966626
+    },
+    "context-complete-summary": {
+      "outputs": 4962,
+      "exact_outputs": 4962,
+      "false_clean_outputs": 0,
+      "false_block_outputs": 0,
+      "missed_scope_bits": 0,
+      "extra_scope_bits": 0,
+      "contexts": 2457,
+      "exact_contexts": 2457,
+      "exact_output_rate": 1.0,
+      "exact_context_rate": 1.0
+    }
+  },
+  "cpu_seconds": 1.1059232470000002,
+  "wall_seconds": 1.1043438480000987,
+  "peak_rss_kib": 99372
+}

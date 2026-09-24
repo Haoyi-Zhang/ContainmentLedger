@@ -1,0 +1,9 @@
+claim_id,claim,evidence,scope_limit
+RH-01,Iterative closure and quotient reachability agree on the enumerated domain,results/reviewer-hardening.json#small_model,Four-node DAGs all partitions and nonempty root sets only
+RH-02,The finite suite distinguishes every documented semantic mutant,results/reviewer-hardening.json#mutation_campaign,Relative to the listed fault model only
+RH-03,Five textual rewrite families evade the upstream endpoint predicate while declared lineage remains blocked,results/reviewer-hardening.json#transform_bridge,Function-level static-text bridge not the full distributed builder
+RH-04,Scaling statistics retain raw repetitions and dispersion,results/reviewer-hardening.json#scaling,Host-specific deterministic microbenchmark not production performance
+RH-05,General proof obligations and finite evidence are explicitly separated,proofs/reviewer-hardening.md,Not proof-assistant mechanization
+RH-06,Likely reviewer objections map to evidence or a disclosed residual boundary,REVIEWER-AUDIT.md,Internal audit not external peer review
+RH-07,The public checks regenerate the reviewer-hardening result,reproduce.py and tests/reviewer_hardening.py,Requires the documented POSIX-like CPython environment
+RH-08,At least 55 bibliography records have persistent metadata validation,paper/reference-online-validation.json when present,Resolution does not establish relevance or correctness of scientific claims

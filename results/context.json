@@ -1,0 +1,13 @@
+{
+  "keys": 3,
+  "local_graph_seed_worlds": 512,
+  "merged_graph_seed_contexts": 262144,
+  "distinct_context_signatures": 45,
+  "single_probes_distinguish_every_signature": true,
+  "two_by_two_bipartite_relations_distinguished": 16,
+  "actual_rewrite_pipeline_probe_contexts": 64,
+  "disagreements": 0,
+  "cpu_seconds": 0.23197688299999997,
+  "wall_seconds": 0.22974062899993442,
+  "peak_rss_kib": 94764
+}

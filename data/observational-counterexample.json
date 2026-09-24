@@ -1,0 +1,57 @@
+{
+  "trusted_policy": {
+    "roots": [
+      {
+        "id": "marked",
+        "code": "alpha",
+        "intent": "",
+        "labels": 1
+      },
+      {
+        "id": "clear",
+        "code": "beta",
+        "intent": "",
+        "labels": 0
+      }
+    ],
+    "repairs": []
+  },
+  "reported_ledger": {
+    "units": [
+      {
+        "id": "u",
+        "op": "import",
+        "source": "clear",
+        "code": "beta",
+        "intent": ""
+      }
+    ],
+    "bundles": [
+      {
+        "id": "f",
+        "op": "collect",
+        "items": [
+          {
+            "name": "unit.txt",
+            "unit": "u"
+          }
+        ]
+      }
+    ],
+    "final": "f",
+    "outputs": [
+      {
+        "name": "unit.txt",
+        "unit": "u",
+        "code": "beta",
+        "intent": ""
+      }
+    ],
+    "claims": {
+      "u": 0
+    }
+  },
+  "declared_reconstruction": "Import clear (beta).",
+  "unobserved_history_alternative": "Replace alpha by beta before reporting the same clear import.",
+  "verifier_decision": "Accepts the declared clean reconstruction, not the unobserved history."
+}

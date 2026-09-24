@@ -1,0 +1,204 @@
+{
+  "profile": "bigcode-exact-substring-bridge/v1",
+  "upstream_repository": "bigcode-project/bigcode-dataset",
+  "upstream_commit": "bebec929edd826f19b5fa3538f22d18d5b50da4b",
+  "upstream_source_path": "decontamination/find_substrings.py",
+  "upstream_source_blob": "446313901df4de049a3cfc473152f438b542c799",
+  "upstream_function_invoked": "find_substrings",
+  "public_humaneval_commit": "6d43fb980f9fee3c892a914eda09951f772ad10d",
+  "public_humaneval_source_blob": "06236282a45e10e92233e2b8f84cea10ae25be46",
+  "source_projects": 6,
+  "retained_source_files": 24,
+  "natural_line_root_matches": 24,
+  "public_benchmark_shaped_root_matches": 1,
+  "matched_roots_total": 25,
+  "rewritten_endpoints_passing_same_upstream_scanner": 25,
+  "rewritten_endpoints_blocked_by_lineage": 25,
+  "final_state_false_clean_if_used_alone": 25,
+  "clean_controls": 24,
+  "clean_controls_accepted_by_scanner_and_ledger": 24,
+  "independent_upstream_oracle_cases": 4,
+  "independent_upstream_oracle_disagreements": 0,
+  "records": [
+    {
+      "file": "cpython/abc.py",
+      "probe_line_length": 82,
+      "root_filter_reason": "retained_natural_line_cpython_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "cpython/bisect.py",
+      "probe_line_length": 80,
+      "root_filter_reason": "retained_natural_line_cpython_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "cpython/colorsys.py",
+      "probe_line_length": 76,
+      "root_filter_reason": "retained_natural_line_cpython_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "cpython/keyword.py",
+      "probe_line_length": 64,
+      "root_filter_reason": "retained_natural_line_cpython_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "go/csv-reader.go",
+      "probe_line_length": 118,
+      "root_filter_reason": "retained_natural_line_go_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "go/path.go",
+      "probe_line_length": 83,
+      "root_filter_reason": "retained_natural_line_go_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "go/sort.go",
+      "probe_line_length": 97,
+      "root_filter_reason": "retained_natural_line_go_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "go/tar-format.go",
+      "probe_line_length": 94,
+      "root_filter_reason": "retained_natural_line_go_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "npm/cli-entry.js",
+      "probe_line_length": 277,
+      "root_filter_reason": "retained_natural_line_npm_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "npm/dedupe.js",
+      "probe_line_length": 77,
+      "root_filter_reason": "retained_natural_line_npm_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "npm/pack.js",
+      "probe_line_length": 78,
+      "root_filter_reason": "retained_natural_line_npm_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "npm/reify-finish.js",
+      "probe_line_length": 65,
+      "root_filter_reason": "retained_natural_line_npm_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "perl/AutoLoader.pm",
+      "probe_line_length": 86,
+      "root_filter_reason": "retained_natural_line_perl_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "perl/AutoSplit.pm",
+      "probe_line_length": 79,
+      "root_filter_reason": "retained_natural_line_perl_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "perl/Benchmark.pm",
+      "probe_line_length": 97,
+      "root_filter_reason": "retained_natural_line_perl_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "perl/English.pm",
+      "probe_line_length": 73,
+      "root_filter_reason": "retained_natural_line_perl_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "pip/cache.py",
+      "probe_line_length": 88,
+      "root_filter_reason": "retained_natural_line_pip_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "pip/direct-url.py",
+      "probe_line_length": 86,
+      "root_filter_reason": "retained_natural_line_pip_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "pip/prepare.py",
+      "probe_line_length": 88,
+      "root_filter_reason": "retained_natural_line_pip_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "pip/req-install.py",
+      "probe_line_length": 88,
+      "root_filter_reason": "retained_natural_line_pip_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "ruby/abbrev.rb",
+      "probe_line_length": 82,
+      "root_filter_reason": "retained_natural_line_ruby_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "ruby/base64.rb",
+      "probe_line_length": 96,
+      "root_filter_reason": "retained_natural_line_ruby_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "ruby/benchmark.rb",
+      "probe_line_length": 106,
+      "root_filter_reason": "retained_natural_line_ruby_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    },
+    {
+      "file": "ruby/tsort.rb",
+      "probe_line_length": 105,
+      "root_filter_reason": "retained_natural_line_ruby_match",
+      "endpoint_scanner_decision": "include",
+      "ledger_decision": "block"
+    }
+  ],
+  "human_eval_example": {
+    "task_id": "test/0",
+    "root_filter_reason": "human_eval_public_example_match",
+    "endpoint_scanner_decision": "include",
+    "ledger_decision": "block"
+  },
+  "labels_for_natural_lines_are_generated_fixture_facts": true,
+  "full_bigcode_pipeline_reproduced": false,
+  "corpus_or_benchmark_code_executed": false,
+  "cpu_seconds": 0.0560036530000001,
+  "wall_seconds": 0.05695331599963538,
+  "peak_rss_kib": 94636
+}

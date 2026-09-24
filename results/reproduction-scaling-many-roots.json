@@ -1,0 +1,25 @@
+{
+  "status": "passed-part",
+  "part": "scaling-many-roots",
+  "worker_count": 1,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "tests/scaling.py",
+        "--shape",
+        "many-roots"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 14.024592710999968,
+      "whole_child_cpu_seconds": 19.129379999999998,
+      "cumulative_peak_child_rss_kib": 148980,
+      "stdout": "{\"shape\": \"many-roots\", \"runs\": 12, \"whole_child_cpu_seconds\": 18.117746999999998, \"max_body_wall_seconds\": 1.2843910910000886, \"max_rss_kib\": 148980}\n",
+      "stderr": ""
+    }
+  ],
+  "wall_seconds": 14.025115344000369,
+  "whole_child_cpu_seconds": 19.129379999999998,
+  "coordinator_peak_rss_kib": 93360,
+  "peak_child_rss_kib": 148980
+}

@@ -1,0 +1,50 @@
+{
+  "cached-local-decisions": {
+    "outputs": 4962,
+    "exact_outputs": 3060,
+    "false_clean_outputs": 846,
+    "false_block_outputs": 0,
+    "missed_scope_bits": 1962,
+    "extra_scope_bits": 0,
+    "contexts": 2457,
+    "exact_contexts": 1100,
+    "exact_output_rate": 0.6166868198307134,
+    "exact_context_rate": 0.4477004477004477
+  },
+  "seed-to-output-equality": {
+    "outputs": 4962,
+    "exact_outputs": 3132,
+    "false_clean_outputs": 1626,
+    "false_block_outputs": 0,
+    "missed_scope_bits": 2058,
+    "extra_scope_bits": 0,
+    "contexts": 2457,
+    "exact_contexts": 1041,
+    "exact_output_rate": 0.6311970979443773,
+    "exact_context_rate": 0.4236874236874237
+  },
+  "output-endpoint-alias": {
+    "outputs": 4962,
+    "exact_outputs": 3810,
+    "false_clean_outputs": 492,
+    "false_block_outputs": 0,
+    "missed_scope_bits": 1152,
+    "extra_scope_bits": 0,
+    "contexts": 2457,
+    "exact_contexts": 1538,
+    "exact_output_rate": 0.7678355501813785,
+    "exact_context_rate": 0.625966625966626
+  },
+  "context-complete-summary": {
+    "outputs": 4962,
+    "exact_outputs": 4962,
+    "false_clean_outputs": 0,
+    "false_block_outputs": 0,
+    "missed_scope_bits": 0,
+    "extra_scope_bits": 0,
+    "contexts": 2457,
+    "exact_contexts": 2457,
+    "exact_output_rate": 1.0,
+    "exact_context_rate": 1.0
+  }
+}

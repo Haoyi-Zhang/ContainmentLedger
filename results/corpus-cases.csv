@@ -1,0 +1,481 @@
+project,shard,case,description,expected_blocked,nodes,edges,outputs,path-only,final-marker,canonical-content,declared-lineage,all-label-alias,no-authorized-repair,lineage-plus-final-alias,same-information-fixed-point,scoped-replay
+cpython,cpython/abc.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+cpython,cpython/abc.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/abc.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/abc.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/abc.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/abc.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/abc.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/abc.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/abc.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+cpython,cpython/abc.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/abc.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+cpython,cpython/abc.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/abc.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/abc.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/abc.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+cpython,cpython/abc.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/abc.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/abc.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/abc.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/abc.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+cpython,cpython/bisect.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+cpython,cpython/bisect.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/bisect.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/bisect.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/bisect.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/bisect.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/bisect.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/bisect.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/bisect.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+cpython,cpython/bisect.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/bisect.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+cpython,cpython/bisect.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/bisect.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/bisect.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/bisect.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+cpython,cpython/bisect.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/bisect.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/bisect.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/bisect.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/bisect.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+cpython,cpython/colorsys.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/colorsys.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/colorsys.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/colorsys.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+cpython,cpython/colorsys.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+cpython,cpython/colorsys.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/colorsys.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/colorsys.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+cpython,cpython/colorsys.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/colorsys.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/colorsys.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/colorsys.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/colorsys.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+cpython,cpython/keyword.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+cpython,cpython/keyword.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/keyword.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+cpython,cpython/keyword.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/keyword.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/keyword.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/keyword.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/keyword.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/keyword.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+cpython,cpython/keyword.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/keyword.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+cpython,cpython/keyword.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+cpython,cpython/keyword.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+cpython,cpython/keyword.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/keyword.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+cpython,cpython/keyword.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/keyword.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+cpython,cpython/keyword.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+cpython,cpython/keyword.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+cpython,cpython/keyword.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/csv-reader.go,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+go,go/csv-reader.go,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+go,go/csv-reader.go,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+go,go/csv-reader.go,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/csv-reader.go,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/csv-reader.go,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+go,go/csv-reader.go,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+go,go/csv-reader.go,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+go,go/csv-reader.go,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+go,go/csv-reader.go,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+go,go/csv-reader.go,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/csv-reader.go,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+go,go/csv-reader.go,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+go,go/csv-reader.go,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/csv-reader.go,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+go,go/csv-reader.go,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+go,go/csv-reader.go,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+go,go/csv-reader.go,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+go,go/csv-reader.go,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/csv-reader.go,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/path.go,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+go,go/path.go,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+go,go/path.go,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+go,go/path.go,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/path.go,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/path.go,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+go,go/path.go,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+go,go/path.go,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+go,go/path.go,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+go,go/path.go,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+go,go/path.go,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/path.go,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+go,go/path.go,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+go,go/path.go,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/path.go,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+go,go/path.go,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+go,go/path.go,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+go,go/path.go,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+go,go/path.go,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/path.go,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/sort.go,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+go,go/sort.go,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+go,go/sort.go,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+go,go/sort.go,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/sort.go,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/sort.go,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+go,go/sort.go,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+go,go/sort.go,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+go,go/sort.go,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+go,go/sort.go,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+go,go/sort.go,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/sort.go,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+go,go/sort.go,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+go,go/sort.go,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/sort.go,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+go,go/sort.go,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+go,go/sort.go,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+go,go/sort.go,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+go,go/sort.go,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/sort.go,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/tar-format.go,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+go,go/tar-format.go,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+go,go/tar-format.go,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+go,go/tar-format.go,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/tar-format.go,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/tar-format.go,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+go,go/tar-format.go,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+go,go/tar-format.go,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+go,go/tar-format.go,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+go,go/tar-format.go,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+go,go/tar-format.go,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+go,go/tar-format.go,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+go,go/tar-format.go,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+go,go/tar-format.go,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/tar-format.go,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+go,go/tar-format.go,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+go,go/tar-format.go,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+go,go/tar-format.go,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+go,go/tar-format.go,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+go,go/tar-format.go,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/cli-entry.js,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+npm,npm/cli-entry.js,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+npm,npm/cli-entry.js,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+npm,npm/cli-entry.js,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/cli-entry.js,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/cli-entry.js,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+npm,npm/cli-entry.js,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+npm,npm/cli-entry.js,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+npm,npm/cli-entry.js,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+npm,npm/cli-entry.js,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+npm,npm/cli-entry.js,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/cli-entry.js,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+npm,npm/cli-entry.js,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+npm,npm/cli-entry.js,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/cli-entry.js,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+npm,npm/cli-entry.js,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+npm,npm/cli-entry.js,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+npm,npm/cli-entry.js,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+npm,npm/cli-entry.js,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/cli-entry.js,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/dedupe.js,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+npm,npm/dedupe.js,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+npm,npm/dedupe.js,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+npm,npm/dedupe.js,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/dedupe.js,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/dedupe.js,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+npm,npm/dedupe.js,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+npm,npm/dedupe.js,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+npm,npm/dedupe.js,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+npm,npm/dedupe.js,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+npm,npm/dedupe.js,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/dedupe.js,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+npm,npm/dedupe.js,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+npm,npm/dedupe.js,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/dedupe.js,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+npm,npm/dedupe.js,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+npm,npm/dedupe.js,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+npm,npm/dedupe.js,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+npm,npm/dedupe.js,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/dedupe.js,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/pack.js,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+npm,npm/pack.js,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+npm,npm/pack.js,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+npm,npm/pack.js,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/pack.js,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/pack.js,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+npm,npm/pack.js,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+npm,npm/pack.js,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+npm,npm/pack.js,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+npm,npm/pack.js,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+npm,npm/pack.js,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/pack.js,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+npm,npm/pack.js,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+npm,npm/pack.js,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/pack.js,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+npm,npm/pack.js,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+npm,npm/pack.js,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+npm,npm/pack.js,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+npm,npm/pack.js,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/pack.js,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/reify-finish.js,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+npm,npm/reify-finish.js,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+npm,npm/reify-finish.js,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+npm,npm/reify-finish.js,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/reify-finish.js,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/reify-finish.js,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+npm,npm/reify-finish.js,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+npm,npm/reify-finish.js,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+npm,npm/reify-finish.js,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+npm,npm/reify-finish.js,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+npm,npm/reify-finish.js,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+npm,npm/reify-finish.js,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+npm,npm/reify-finish.js,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+npm,npm/reify-finish.js,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/reify-finish.js,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+npm,npm/reify-finish.js,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+npm,npm/reify-finish.js,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+npm,npm/reify-finish.js,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+npm,npm/reify-finish.js,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+npm,npm/reify-finish.js,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/AutoLoader.pm,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+perl,perl/AutoLoader.pm,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+perl,perl/AutoLoader.pm,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+perl,perl/AutoLoader.pm,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+perl,perl/AutoLoader.pm,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/AutoLoader.pm,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+perl,perl/AutoLoader.pm,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+perl,perl/AutoLoader.pm,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+perl,perl/AutoLoader.pm,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+perl,perl/AutoLoader.pm,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+perl,perl/AutoLoader.pm,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+perl,perl/AutoLoader.pm,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoLoader.pm,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/AutoSplit.pm,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+perl,perl/AutoSplit.pm,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+perl,perl/AutoSplit.pm,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+perl,perl/AutoSplit.pm,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+perl,perl/AutoSplit.pm,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/AutoSplit.pm,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+perl,perl/AutoSplit.pm,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+perl,perl/AutoSplit.pm,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+perl,perl/AutoSplit.pm,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+perl,perl/AutoSplit.pm,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+perl,perl/AutoSplit.pm,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+perl,perl/AutoSplit.pm,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/AutoSplit.pm,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/Benchmark.pm,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+perl,perl/Benchmark.pm,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+perl,perl/Benchmark.pm,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+perl,perl/Benchmark.pm,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+perl,perl/Benchmark.pm,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/Benchmark.pm,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+perl,perl/Benchmark.pm,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+perl,perl/Benchmark.pm,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+perl,perl/Benchmark.pm,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+perl,perl/Benchmark.pm,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+perl,perl/Benchmark.pm,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+perl,perl/Benchmark.pm,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/Benchmark.pm,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/English.pm,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+perl,perl/English.pm,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+perl,perl/English.pm,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+perl,perl/English.pm,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/English.pm,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/English.pm,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+perl,perl/English.pm,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+perl,perl/English.pm,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+perl,perl/English.pm,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+perl,perl/English.pm,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+perl,perl/English.pm,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+perl,perl/English.pm,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+perl,perl/English.pm,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+perl,perl/English.pm,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/English.pm,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+perl,perl/English.pm,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+perl,perl/English.pm,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+perl,perl/English.pm,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+perl,perl/English.pm,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+perl,perl/English.pm,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/cache.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+pip,pip/cache.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+pip,pip/cache.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+pip,pip/cache.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/cache.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/cache.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+pip,pip/cache.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+pip,pip/cache.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+pip,pip/cache.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+pip,pip/cache.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+pip,pip/cache.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/cache.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+pip,pip/cache.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+pip,pip/cache.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/cache.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+pip,pip/cache.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+pip,pip/cache.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+pip,pip/cache.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+pip,pip/cache.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/cache.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/direct-url.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+pip,pip/direct-url.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+pip,pip/direct-url.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+pip,pip/direct-url.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/direct-url.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/direct-url.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+pip,pip/direct-url.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+pip,pip/direct-url.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+pip,pip/direct-url.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+pip,pip/direct-url.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+pip,pip/direct-url.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/direct-url.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+pip,pip/direct-url.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+pip,pip/direct-url.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/direct-url.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+pip,pip/direct-url.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+pip,pip/direct-url.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+pip,pip/direct-url.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+pip,pip/direct-url.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/direct-url.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/prepare.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+pip,pip/prepare.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+pip,pip/prepare.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+pip,pip/prepare.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/prepare.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/prepare.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+pip,pip/prepare.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+pip,pip/prepare.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+pip,pip/prepare.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+pip,pip/prepare.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+pip,pip/prepare.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/prepare.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+pip,pip/prepare.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+pip,pip/prepare.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/prepare.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+pip,pip/prepare.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+pip,pip/prepare.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+pip,pip/prepare.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+pip,pip/prepare.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/prepare.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/req-install.py,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+pip,pip/req-install.py,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+pip,pip/req-install.py,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+pip,pip/req-install.py,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/req-install.py,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/req-install.py,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+pip,pip/req-install.py,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+pip,pip/req-install.py,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+pip,pip/req-install.py,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+pip,pip/req-install.py,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+pip,pip/req-install.py,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+pip,pip/req-install.py,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+pip,pip/req-install.py,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+pip,pip/req-install.py,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/req-install.py,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+pip,pip/req-install.py,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+pip,pip/req-install.py,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+pip,pip/req-install.py,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+pip,pip/req-install.py,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+pip,pip/req-install.py,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/abbrev.rb,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/abbrev.rb,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/abbrev.rb,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/abbrev.rb,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+ruby,ruby/abbrev.rb,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/abbrev.rb,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/abbrev.rb,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/abbrev.rb,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+ruby,ruby/abbrev.rb,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/abbrev.rb,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/abbrev.rb,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/abbrev.rb,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/abbrev.rb,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/base64.rb,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+ruby,ruby/base64.rb,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/base64.rb,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/base64.rb,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/base64.rb,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/base64.rb,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/base64.rb,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/base64.rb,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/base64.rb,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+ruby,ruby/base64.rb,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/base64.rb,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/base64.rb,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/base64.rb,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/base64.rb,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/base64.rb,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+ruby,ruby/base64.rb,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/base64.rb,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/base64.rb,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/base64.rb,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/base64.rb,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/benchmark.rb,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/benchmark.rb,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/benchmark.rb,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/benchmark.rb,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+ruby,ruby/benchmark.rb,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/benchmark.rb,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/benchmark.rb,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/benchmark.rb,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+ruby,ruby/benchmark.rb,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/benchmark.rb,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/benchmark.rb,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/benchmark.rb,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/benchmark.rb,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/tsort.rb,C01,direct content label,1,2,5,1,1,0,1,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C02,member rename,1,2,5,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C03,normalization,1,3,10,1,0,0,1,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C04,literal rewrite,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C05,substring extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C06,unreported registered content alias,1,3,9,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/tsort.rb,C07,alias before rewrite,1,4,10,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/tsort.rb,C08,origin label on an alternative occurrence,0,3,9,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/tsort.rb,C09,authorized pair repair,0,3,8,1,0,0,0,0,1,1,0,0,0
+ruby,ruby/tsort.rb,C10,unrepaired pair obligation,1,2,5,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C11,clean transform control,0,3,6,1,0,0,0,0,0,0,0,0,0
+ruby,ruby/tsort.rb,C12,mix filter and deduplication,1,4,14,1,0,0,1,0,1,1,1,1,1
+ruby,ruby/tsort.rb,C15,label admitted at an intermediate value,1,5,9,1,0,0,0,0,1,1,0,1,1
+ruby,ruby/tsort.rb,C16,origin-scoped lineage,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C17,empty retained bundle,0,2,5,0,0,0,0,0,0,0,0,0,0
+ruby,ruby/tsort.rb,C18,pair label on an alternative occurrence,1,3,9,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/tsort.rb,C19,repair returns to a registered rejected pair,1,4,12,1,0,0,0,0,1,1,1,1,1
+ruby,ruby/tsort.rb,C20,different intent does not inherit pair label,0,3,7,1,0,0,0,0,1,0,0,0,0
+ruby,ruby/tsort.rb,C21,labelled common-header extraction,1,3,6,1,0,0,0,1,1,1,1,1,1
+ruby,ruby/tsort.rb,C22,clean common-header extraction,0,3,6,1,0,0,0,0,0,0,0,0,0

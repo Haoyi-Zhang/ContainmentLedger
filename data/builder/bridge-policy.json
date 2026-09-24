@@ -1,0 +1,9 @@
+{
+  "profile": "bigcode-exact-substring-bridge/v1",
+  "benchmarks": {
+    "human_eval_public_example": [
+      "def return1():\n"
+    ]
+  },
+  "notes": "The public HumanEval example is an exact retained input. Per-file natural-line probes are added deterministically at runtime and remain generated fixture facts, not allegations of contamination."
+}
