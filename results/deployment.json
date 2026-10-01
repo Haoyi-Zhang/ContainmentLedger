@@ -1,4 +1,15 @@
 {
+  "replay_call_boundaries": {
+    "local_checker_calls": {
+      "issue": 1,
+      "verify": 0,
+      "compose": 0,
+      "verify_bound": 1,
+      "accept_bound": 1
+    },
+    "accept_bound_persisted_freshness": true,
+    "trust": "Summary-only composition authenticates checker assertions and does not receive or replay original ledgers."
+  },
   "capsule_contract": "containment-ledger/equality-only/hmac-sha256",
   "valid_capsule_bound_and_verified": true,
   "tamper_or_context_cases_rejected": 23,
@@ -76,7 +87,7 @@
   "postlink_deaths_left_complete_destination": true,
   "power_loss_or_arbitrary_filesystem_durability_tested": false,
   "public_signature_or_nonrepudiation_claimed": false,
-  "cpu_seconds": 0.018903954,
-  "wall_seconds": 4.629231606000303,
-  "peak_rss_kib": 94892
+  "cpu_seconds": 0.020974079000000007,
+  "wall_seconds": 0.3900649870001871,
+  "peak_rss_kib": 16144
 }

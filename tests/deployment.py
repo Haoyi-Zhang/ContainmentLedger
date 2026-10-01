@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import capsule
 import checker
 import emitter
+import freshness
 
 AUTHORITY_KEY = bytes.fromhex("a1" * 32)
 CHECKER_KEY = bytes.fromhex("b2" * 32)
@@ -39,6 +40,43 @@ def valid_zip(path: Path, expected_members: int) -> bool:
 
 def mutate_hex(value):
     return ("0" if value[0] != "0" else "1") + value[1:]
+
+
+def replay_call_boundaries(policy, log):
+    """Count real local replay calls without changing their return values."""
+    original = checker.verify
+    count = 0
+    calls = {}
+    def observed(*args, **kwargs):
+        nonlocal count
+        count += 1
+        return original(*args, **kwargs)
+    checker.verify = observed
+    try:
+        def invoke(name, fn):
+            before = count
+            result = fn()
+            calls[name] = count - before
+            return result
+        value = invoke("issue", lambda: capsule.issue(policy, log, AUTHORITY_KEY, CHECKER_KEY,
+            shard="example", epoch="policyA", sequence=7))
+        invoke("verify", lambda: capsule.verify(value, AUTHORITY_KEY, CHECKER_KEY))
+        invoke("compose", lambda: capsule.compose([value], AUTHORITY_KEY, CHECKER_KEY))
+        invoke("verify_bound", lambda: capsule.verify_bound(policy, log, value, AUTHORITY_KEY, CHECKER_KEY))
+        with tempfile.TemporaryDirectory(prefix="capsule-role-boundary-") as directory:
+            path = Path(directory) / "state.json"
+            if path.exists():
+                raise RuntimeError("unexpected preexisting state")
+            invoke("accept_bound", lambda: freshness.accept_bound(path, WRONG_KEY, policy, log, value,
+                {"policyA": AUTHORITY_KEY}, {"policyA": CHECKER_KEY}))
+            persisted = freshness.read_state(path, WRONG_KEY)["accepted_sequences"] == {"example": 7}
+        expected = {"issue": 1, "verify": 0, "compose": 0, "verify_bound": 1, "accept_bound": 1}
+        if calls != expected or not persisted:
+            raise RuntimeError(f"capsule replay boundary changed: {calls}")
+        return {"local_checker_calls": calls, "accept_bound_persisted_freshness": persisted,
+                "trust": "Summary-only composition authenticates checker assertions and does not receive or replay original ledgers."}
+    finally:
+        checker.verify = original
 
 
 def main():
@@ -68,6 +106,7 @@ def main():
     )
     assert verified["output_names"] == [item["name"] for item in log["outputs"]]
 
+    call_boundaries = replay_call_boundaries(policy, log)
     tamper_cases = []
 
     def add(name, fn):
@@ -182,7 +221,7 @@ def main():
         # Concurrent create-if-absent publication: exactly one complete winner.
         race_path = temp / "race.zip"
         commands = [
-            [sys.executable, str(ROOT / "src" / "emitter.py"), str(policy_file), str(ledger_file), str(race_path)]
+            [sys.executable, '-S', str(ROOT / "src" / "emitter.py"), str(policy_file), str(ledger_file), str(race_path)]
             for _ in range(8)
         ]
         children = [
@@ -229,7 +268,7 @@ def main():
             directory.mkdir()
             output = directory / "output.zip"
             command = [
-                sys.executable,
+                sys.executable, "-S",
                 str(ROOT / "tests" / "emitter_worker.py"),
                 str(policy_file),
                 str(ledger_file),
@@ -256,6 +295,7 @@ def main():
             )
 
     result = {
+        "replay_call_boundaries": call_boundaries,
         "capsule_contract": capsule.CONTRACT,
         "valid_capsule_bound_and_verified": True,
         "tamper_or_context_cases_rejected": len(tamper_cases),

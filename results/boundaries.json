@@ -27,7 +27,7 @@
   ],
   "false_clean_claims_rejected_and_diagnosable": 336,
   "observable_history_boundary_demonstrated": true,
-  "cpu_seconds": 0.4173583110000001,
-  "wall_seconds": 0.41527884499964784,
-  "peak_rss_kib": 94892
+  "cpu_seconds": 0.5066210879999999,
+  "wall_seconds": 0.5032522369999697,
+  "peak_rss_kib": 15504
 }

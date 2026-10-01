@@ -198,7 +198,7 @@
   "labels_for_natural_lines_are_generated_fixture_facts": true,
   "full_bigcode_pipeline_reproduced": false,
   "corpus_or_benchmark_code_executed": false,
-  "cpu_seconds": 0.0560036530000001,
-  "wall_seconds": 0.05695331599963538,
-  "peak_rss_kib": 94636
+  "cpu_seconds": 0.075985091,
+  "wall_seconds": 0.07457835600007456,
+  "peak_rss_kib": 11440
 }

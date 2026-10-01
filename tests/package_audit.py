@@ -17,8 +17,9 @@ RESULT = ROOT / "results" / "package-audit.json"
 ALLOWED_TOP_LEVEL = {
     "LICENSE", "README.md", "claim_evidence_ledger.csv", "data",
     "external_resources.csv", "licenses", "proofs", "reproduce.py",
-    "results", "src", "tests", "upstream",
+    "results", "src", "tests", "upstream", "reviewer-evidence-ledger.csv",
 }
+EXPECTED_PYTHON_FILES = ['reproduce.py', 'src/builder_adapter.py', 'src/capsule.py', 'src/checker.py', 'src/corpus_adapter.py', 'src/cutcheck.py', 'src/cuts.py', 'src/diagnose.py', 'src/emitter.py', 'src/fixtures.py', 'src/freshness.py', 'src/ledger.py', 'src/merge.py', 'src/reviewer_hardening.py', 'tests/boundaries.py', 'tests/builder_bridge.py', 'tests/campaign.py', 'tests/context.py', 'tests/deployment.py', 'tests/emitter_worker.py', 'tests/finite.py', 'tests/freshness.py', 'tests/freshness_worker.py', 'tests/natural.py', 'tests/package_audit.py', 'tests/pilot.py', 'tests/reviewer_hardening.py', 'tests/runner_guards.py', 'tests/scaling.py']
 FORBIDDEN_NETWORK_ROOTS = {
     "aiohttp", "ftplib", "http", "httplib", "requests", "socket", "telnetlib",
     "urllib", "urllib3", "webbrowser",
@@ -101,17 +102,17 @@ def public_input_audit() -> dict:
             text = raw.decode("utf-8")
         except UnicodeError as exc:
             raise PackageAuditError(f"non-UTF-8 selected file {relative}") from exc
-        # The frozen campaign counts one logical line after each final newline.
-        logical_lines = text.count("\n") + 1
+        # Do not count the empty split segment after a terminal LF as a line.
+        physical_lines = raw.count(b"\n") + (1 if raw and not raw.endswith(b"\n") else 0)
         require(len(raw) == record.get("bytes"), f"byte count mismatch for {relative}")
-        require(logical_lines == record.get("lines"), f"line count mismatch for {relative}")
+        require(physical_lines == record.get("lines"), f"line count mismatch for {relative}")
         license_path = ROOT / record.get("retained_license", "")
         require(license_path.is_file() and license_path.stat().st_size > 0,
                 f"missing retained license for {relative}")
         require(type(record.get("source")) is str and record["source"].startswith("https://"),
                 f"missing source locator for {relative}")
         total_bytes += len(raw)
-        total_lines += logical_lines
+        total_lines += physical_lines
         per_project[record.get("project")] += 1
     actual_paths = {
         str(path.relative_to(ROOT / "data" / "public"))
@@ -126,12 +127,13 @@ def public_input_audit() -> dict:
         license_path = ROOT / project.get("license_file", "")
         require(license_path.is_file() and license_path.stat().st_size > 0,
                 f"project license missing for {project.get('display')}")
-    require((total_bytes, total_lines) == (268614, 8215), "frozen input totals changed")
+    require((total_bytes, total_lines) == (268614, 8191), "frozen input totals changed")
     return {
         "selection_projects": len(projects),
         "selection_files": len(files),
         "selection_bytes": total_bytes,
-        "selection_logical_lines": total_lines,
+        "selection_physical_lines": total_lines,
+        "all_selected_files_end_in_LF": all((ROOT / "data/public" / name).read_bytes().endswith(b"\n") for name in expected_paths),
         "files_per_project": dict(sorted(per_project.items())),
         "all_selected_files_utf8": True,
         "all_selected_files_have_retained_license": True,
@@ -144,6 +146,12 @@ def source_audit() -> dict:
         + list((ROOT / "src").glob("*.py"))
         + list((ROOT / "tests").glob("*.py"))
     )
+    require([str(path.relative_to(ROOT)) for path in python_files] == EXPECTED_PYTHON_FILES,
+            "maintained Python source inventory mismatch")
+    for directory in ("src", "tests"):
+        require({str(path.relative_to(ROOT)) for path in (ROOT / directory).iterdir() if path.is_file()}
+                == {name for name in EXPECTED_PYTHON_FILES if name.startswith(directory + "/")},
+                "unexpected source/test file")
     forbidden_imports = []
     forbidden_calls = []
     shell_calls = []
@@ -181,10 +189,13 @@ def source_audit() -> dict:
     require(not forbidden_imports, f"network-capable imports found: {forbidden_imports}")
     require(not forbidden_calls, f"dynamic execution calls found: {forbidden_calls}")
     require(not shell_calls, f"shell=True subprocess call found: {shell_calls}")
-    require(dynamic_import_sites == [
-        ["src/builder_adapter.py", 32, "importlib.util.spec_from_file_location"],
-        ["src/builder_adapter.py", 36, "spec.loader.exec_module"],
+    require([(site[0], site[2]) for site in dynamic_import_sites] == [
+        ("src/builder_adapter.py", "importlib.util.spec_from_file_location"),
+        ("src/builder_adapter.py", "spec.loader.exec_module"),
     ], f"unexpected dynamic import sites: {dynamic_import_sites}")
+    hardening_tree = ast.parse((ROOT / "src/reviewer_hardening.py").read_text())
+    require(any(isinstance(node, ast.Call) and call_name(node) == "builder_adapter.load_upstream"
+                for node in ast.walk(hardening_tree)), "hardening must reuse the complete fixed-path loader")
     require("ledger" not in import_graph["src/checker.py"], "checker imports producer ledger")
     require("checker" not in import_graph["src/ledger.py"], "producer imports checker")
     require("cuts" not in import_graph["src/cutcheck.py"], "cut verifier imports generator")
@@ -310,7 +321,14 @@ def evidence_table_audit() -> dict:
     require(len({row["claim_id"] for row in claims}) == len(claims), "duplicate claim identifier")
     for row in claims:
         require(all(value.strip() for value in row.values()), f"incomplete claim row {row.get('claim_id')}")
+    with (ROOT / "reviewer-evidence-ledger.csv").open(newline="", encoding="utf-8") as handle:
+        reviewer_rows = list(csv.DictReader(handle))
+    require(len(reviewer_rows) == 8, "additional-evidence ledger inventory")
+    require(all(row.get("status") and row.get("evidence") for row in reviewer_rows),
+            "additional-evidence status missing")
     return {
+        "additional_evidence_rows": len(reviewer_rows),
+        "unavailable_inherited_ancillary_records": sum(row["status"] == "unavailable-not-reconstructed" for row in reviewer_rows),
         "external_resource_rows": len(resources),
         "scholarly_or_standard_resource_rows": len(scholarly),
         "claim_evidence_rows": len(claims),

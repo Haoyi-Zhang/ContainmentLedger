@@ -62,12 +62,84 @@ def write_initial(path, policy, ledger, sequence=7):
     )
 
 
+def json_boundaries():
+    """Controlled parser cases with a valid fixture-key authenticated state.
+
+    Duplicate/hidden-constant inputs keep the original canonical body and tag.
+    They test syntax rejection, not MAC forgery or whole-state rollback.
+    """
+    body = {"contract": freshness.CONTRACT, "epoch": "policyA", "generation": 0,
+            "accepted_sequences": {"example": 7}}
+    valid = freshness.encode_state(body, STATE_KEY)
+    positive = [valid, b" \n\t" + valid + b" ",
+                json.dumps(json.loads(valid), indent=2).encode()]
+    for raw in positive:
+        if freshness.decode_state(raw, STATE_KEY) != body:
+            raise RuntimeError("valid authenticated state changed")
+    critical = {
+        "duplicate-generation": valid.replace(b'"generation":0', b'"generation":9,"generation":0'),
+        "hidden-NaN-generation": valid.replace(b'"generation":0', b'"generation":NaN,"generation":0'),
+    }
+    negatives = {**critical,
+        "duplicate-generation-identical": valid.replace(b'"generation":0', b'"generation":0,"generation":0'),
+        "escaped-duplicate-key": valid.replace(b'"generation":0', b'"generati\\u006fn":9,"generation":0'),
+        "duplicate-shard": valid.replace(b'"example":7', b'"example":99,"example":7'),
+        "hidden-Infinity": valid.replace(b'"generation":0', b'"generation":Infinity,"generation":0'),
+        "hidden-negative-Infinity": valid.replace(b'"generation":0', b'"generation":-Infinity,"generation":0'),
+        "boolean-generation": valid.replace(b'"generation":0', b'"generation":true'),
+        "integer-length": valid.replace(b'"generation":0', b'"generation":12345678901234567890'),
+        "invalid-UTF8": b'\xff',
+        "lexical-depth": b'[' * 65 + b'0' + b']' * 65,
+        "lexical-atoms": b'[' + b'0,' * freshness.MAX_JSON_ATOMS + b'0]',
+        "byte-limit": b' ' * (freshness.MAX_STATE_BYTES + 1),
+        "changed-body-valid-syntax": valid.replace(b'"generation":0', b'"generation":1'),
+    }
+    rejected_rows = []
+    for name, raw in negatives.items():
+        try:
+            freshness.decode_state(raw, STATE_KEY)
+        except freshness.FreshnessError as exc:
+            message = str(exc)
+            if name == "lexical-depth" and "depth" not in message:
+                raise RuntimeError("depth case did not reject lexically")
+            if name == "lexical-atoms" and "atom" not in message:
+                raise RuntimeError("atom case did not reject lexically")
+            if name == "hidden-NaN-generation" and "non-finite" not in message:
+                raise RuntimeError("hidden constant did not reject before overwrite")
+            rejected_rows.append({"case": name, "bytes": len(raw), "rejection": message})
+        else:
+            raise RuntimeError("malformed state accepted: " + name)
+    policy = checker.read_json(ROOT / "data/example-policy.json")
+    log = checker.read_json(ROOT / "data/example-ledger.json")
+    candidate = issue(policy, log, "policyA", 8)
+    unchanged = []
+    with tempfile.TemporaryDirectory(prefix="freshness-json-boundary-") as directory:
+        path = Path(directory) / "state.json"
+        for name, raw in critical.items():
+            path.write_bytes(raw)
+            try:
+                freshness.accept_bound(path, STATE_KEY, policy, log, candidate,
+                                       {"policyA": AUTHORITY_A}, {"policyA": CHECKER_A})
+            except freshness.FreshnessError:
+                if path.read_bytes() != raw:
+                    raise RuntimeError("rejected state was modified")
+                unchanged.append(name)
+            else:
+                raise RuntimeError("malformed persisted state accepted: " + name)
+    return {"status": "passed", "valid_controls": len(positive),
+            "rejected_cases": rejected_rows, "rejected_count": len(rejected_rows),
+            "persisted_state_rejections_unchanged": unchanged,
+            "fixture_keys_only": True,
+            "interpretation": "Malformed encodings of an unchanged canonical authenticated body are rejected. No HMAC bypass or state rollback is claimed."}
+
+
 def main():
     cpu = time.process_time()
     wall = time.perf_counter()
     policy = checker.read_json(ROOT / "data" / "example-policy.json")
     ledger = checker.read_json(ROOT / "data" / "example-ledger.json")
     tamper_cases = []
+    json_checks = json_boundaries()
 
     with tempfile.TemporaryDirectory(prefix="containment-freshness-") as temp_name:
         temp = Path(temp_name)
@@ -176,7 +248,7 @@ def main():
         race_state = race_dir / "state.json"
         write_initial(race_state, policy, ledger)
         command = [
-            sys.executable,
+            sys.executable, "-S",
             str(ROOT / "tests" / "freshness_worker.py"),
             str(policy_path),
             str(ledger_path),
@@ -206,7 +278,7 @@ def main():
             state = directory / "state.json"
             write_initial(state, policy, ledger)
             completed = subprocess.run(
-                command[:2] + [str(policy_path), str(ledger_path), str(state), stage],
+                command[:3] + [str(policy_path), str(ledger_path), str(state), stage],
                 cwd=ROOT,
                 capture_output=True,
                 text=True,
@@ -227,6 +299,7 @@ def main():
             )
 
     result = {
+        "json_boundaries": json_checks,
         "contract": freshness.CONTRACT,
         "authenticated_state_reopened": True,
         "strict_replay_rejected_after_process_restart": True,
@@ -262,4 +335,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if sys.argv[1:] == ["--json-only"]:
+        result = json_boundaries()
+        (ROOT / "results/freshness-json.json").write_text(json.dumps(result, indent=2) + "\n")
+        print(json.dumps(result))
+    else:
+        main()

@@ -69,7 +69,7 @@ def run(shape):
     rows=[]; records=[]
     for n in SIZES:
         for rep in range(1,4):
-            cmd=[sys.executable,str(Path(__file__).resolve()),'--child',shape,str(n),str(rep)]
+            cmd=[sys.executable,'-S',str(Path(__file__).resolve()),'--child',shape,str(n),str(rep)]
             env={**os.environ,'PYTHONDONTWRITEBYTECODE':'1'}
             before=resource.getrusage(resource.RUSAGE_CHILDREN);start=time.perf_counter()
             done=subprocess.run(cmd,capture_output=True,text=True,env=env,timeout=30,check=False)

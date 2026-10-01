@@ -138,7 +138,7 @@
   ],
   "labels_are_generated_fixture_facts": true,
   "source_text_was_not_executed": true,
-  "cpu_seconds": 2.18792243,
-  "wall_seconds": 2.1891706760002307,
-  "peak_rss_kib": 98728
+  "cpu_seconds": 2.6520142780000002,
+  "wall_seconds": 2.6520863089999693,
+  "peak_rss_kib": 17920
 }

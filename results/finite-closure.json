@@ -4,151 +4,151 @@
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 0,
       "cases": 32768,
-      "cpu_seconds": 0.2919710379999999
+      "cpu_seconds": 0.351958215
     },
     {
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 1,
       "cases": 32768,
-      "cpu_seconds": 0.30396220900000004
+      "cpu_seconds": 0.37597447399999995
     },
     {
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 2,
       "cases": 32768,
-      "cpu_seconds": 0.3039595850000001
+      "cpu_seconds": 0.3959529319999999
     },
     {
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 3,
       "cases": 32768,
-      "cpu_seconds": 0.31198852300000013
+      "cpu_seconds": 0.37597003900000003
     },
     {
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 4,
       "cases": 32768,
-      "cpu_seconds": 0.2999644229999996
+      "cpu_seconds": 0.39201378500000006
     },
     {
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 5,
       "cases": 32768,
-      "cpu_seconds": 0.31196447800000016
+      "cpu_seconds": 0.367987144
     },
     {
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 6,
       "cases": 32768,
-      "cpu_seconds": 0.3079797110000002
+      "cpu_seconds": 0.38397925099999997
     },
     {
       "family": "three-node-all-mask-DAG",
       "first_edge_mask": 7,
       "cases": 32768,
-      "cpu_seconds": 0.3199596259999997
+      "cpu_seconds": 0.4160249789999999
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 0,
       "cases": 4096,
-      "cpu_seconds": 0.05600039800000012
+      "cpu_seconds": 0.06796999200000009
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 1,
       "cases": 4096,
-      "cpu_seconds": 0.05999953499999977
+      "cpu_seconds": 0.06400410300000026
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 2,
       "cases": 4096,
-      "cpu_seconds": 0.05999969400000005
+      "cpu_seconds": 0.06799979799999978
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 3,
       "cases": 4096,
-      "cpu_seconds": 0.059999054000000385
+      "cpu_seconds": 0.07198392500000006
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 4,
       "cases": 4096,
-      "cpu_seconds": 0.05998603499999966
+      "cpu_seconds": 0.06797463699999984
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 5,
       "cases": 4096,
-      "cpu_seconds": 0.059987207000000264
+      "cpu_seconds": 0.06800228900000027
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 6,
       "cases": 4096,
-      "cpu_seconds": 0.059993905999999875
+      "cpu_seconds": 0.08000336500000005
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 7,
       "cases": 4096,
-      "cpu_seconds": 0.06400111499999994
+      "cpu_seconds": 0.07600286599999961
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 8,
       "cases": 4096,
-      "cpu_seconds": 0.05599954699999987
+      "cpu_seconds": 0.06799293800000017
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 9,
       "cases": 4096,
-      "cpu_seconds": 0.059998873000000064
+      "cpu_seconds": 0.07200327600000023
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 10,
       "cases": 4096,
-      "cpu_seconds": 0.060024813000000066
+      "cpu_seconds": 0.08000315399999991
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 11,
       "cases": 4096,
-      "cpu_seconds": 0.059963069999999785
+      "cpu_seconds": 0.08000423599999973
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 12,
       "cases": 4096,
-      "cpu_seconds": 0.06400311800000047
+      "cpu_seconds": 0.08399706099999982
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 13,
       "cases": 4096,
-      "cpu_seconds": 0.05999885299999974
+      "cpu_seconds": 0.07600169900000076
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 14,
       "cases": 4096,
-      "cpu_seconds": 0.0599971220000004
+      "cpu_seconds": 0.07198039699999992
     },
     {
       "family": "four-node-all-directed-B-graphs",
       "edge_prefix": 15,
       "cases": 4096,
-      "cpu_seconds": 0.06397931199999984
+      "cpu_seconds": 0.07200481599999975
     }
   ],
   "cases": 327680,
   "disagreements": 0,
   "encoding": "3-node forward DAG: 3 edges x masks 0..7 and 3 seeds x labels 0..7. 4-node directed no-self-edge graphs: 12 Boolean B edges and 4 Boolean B seeds. No claim of exhaustive larger or all mixed-label cyclic graphs.",
-  "cpu_seconds": 3.415681245,
-  "wall_seconds": 3.418008256000121,
-  "peak_rss_kib": 94372
+  "cpu_seconds": 4.227789371,
+  "wall_seconds": 4.228071208000074,
+  "peak_rss_kib": 11028
 }

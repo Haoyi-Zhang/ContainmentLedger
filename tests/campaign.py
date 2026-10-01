@@ -267,13 +267,15 @@ def run():
 
     files_per_project = Counter(path.relative_to(public_root).parts[0] for path in files)
     source_bytes = sum(path.stat().st_size for path in files)
-    source_lines = sum(path.read_text(encoding='utf-8').count('\n') + 1 for path in files)
+    source_lines = sum(raw.count(b'\n') + (1 if raw and not raw.endswith(b'\n') else 0)
+                       for raw in (path.read_bytes() for path in files))
     metrics = {
         'source_projects': len(files_per_project),
         'files_per_project': dict(sorted(files_per_project.items())),
         'source_files': len(files),
         'source_bytes': source_bytes,
         'source_lines': source_lines,
+        'source_line_definition': 'Physical LF lines, adding one only for a nonempty unterminated last line.',
         'families': len(fixtures.SCENARIOS),
         'valid_cases': len(rows),
         'positive_cases': sum(row['expected_blocked'] for row in rows),

@@ -65,13 +65,42 @@ checkpoints. These observations apply to process death on the evaluated POSIX
 filesystem; they do not establish arbitrary power-loss or network-filesystem
 durability.
 
+### Which operation replays which evidence
+
+`capsule.issue(policy, ledger, ...)` performs local checker replay before issuing
+a capsule. `capsule.verify_bound(policy, ledger, capsule, ...)` authenticates,
+checks local policy/ledger bindings, and reruns the checker. In contrast,
+`capsule.verify(capsule, ...)` authenticates the capsule and validates its bounded
+schema, summary, digests and supplied expectations; it has no original ledger
+to replay. `capsule.compose(...)` calls `verify` on each capsule, rejects
+duplicate identities and duplicate shards, and composes authenticated
+summaries without replaying the original ledgers. Thus this path trusts the
+checker role to have honestly replayed before authenticating its assertion;
+HMAC key possession alone is not proof that replay occurred.
+
+`freshness.accept_bound(...)` is separate: under its state lock it calls
+`verify_bound`, then persists the strictly advanced per-shard sequence floor.
+Calling `verify` or `compose` does not advance that file. The deployment suite
+counts real checker calls for issue/verify/compose/verify_bound/accept_bound as
+1/0/0/1/1, while preserving all actual return values.
+
+The untrusted byte readers for policy/ledger JSON and authenticated freshness
+state enforce lexical depth/atom limits and reject duplicate keys and non-finite
+constants. The state file additionally has its own 4 MiB ceiling. Capsule APIs
+accept already-decoded Python objects: they cannot recover a duplicate key that
+an external permissive decoder already discarded. Fixed input-selection and
+result JSON are trusted local artifact metadata, not hardened ingress APIs.
+
 ## Retained inputs, observed equality, and builder bridge
 
 `data/public/` contains 24 exact files from six public releases: CPython 3.13.5,
 Go 1.23.2, Ruby 3.3.8, Perl 5.40.1, npm CLI 10.9.2, and pip 25.1.1. The retained
-set totals 268,614 bytes and 8,215 physical lines. Four files are fixed per
+set totals 268,614 bytes and 8,191 physical LF lines. Four files are fixed per
 release. Selection, upstream locations, byte counts, and license information
 are recorded in `data/selection.json`; notices are under `licenses/`.
+All 24 files end in LF. A trailing empty split segment is not a physical line;
+the earlier `count("\n") + 1` convention counted 24 such segments. No upstream
+source bytes were changed.
 
 The files are treated only as UTF-8 text. They are never imported, compiled,
 executed, used to train a model, or classified as actually poisoned. Generated
@@ -99,37 +128,79 @@ full BigCode builder, benchmark collection, or operational policy authority.
 
 ## Complete reproduction
 
-Requirements: Python 3.10 or newer on a POSIX system with the standard
-`resource` module. No third-party Python package, network access, GPU, compiler,
-service, credential, or private data is required.
+Requirements: Python 3.10 or newer on **Linux/POSIX with procfs**, `resource`,
+`wait4`, and child-subreaper support. No third-party Python package, network,
+GPU, model API, service, credential, or private data is required. The `-S`
+option skips unrelated site initialization; it does not disable any check.
 
-Run from this directory:
+Run these five commands from this directory, sequentially:
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python reproduce.py --checks
-PYTHONDONTWRITEBYTECODE=1 python reproduce.py --scale chain-distinct
-PYTHONDONTWRITEBYTECODE=1 python reproduce.py --scale alias-copy
-PYTHONDONTWRITEBYTECODE=1 python reproduce.py --scale many-roots
-PYTHONDONTWRITEBYTECODE=1 python reproduce.py --verify
+PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python -S reproduce.py --checks
+PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python -S reproduce.py --scale chain-distinct
+PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python -S reproduce.py --scale alias-copy
+PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python -S reproduce.py --scale many-roots
+PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python -S reproduce.py --verify
 ```
 
-`--checks` runs the pilot, 480-case campaign, mutation campaign, finite closure
-and cut oracles, contextual characterization, natural-equality workload,
-retained builder-function bridge, authenticated capsule/publication suite,
-persistent freshness suite, parser/representation boundaries, and both
-command-line validators. The three scaling commands run 12 fresh-process
-observations each at 512, 2,048, 8,192, and 20,000 logical vertices. `--verify`
-checks and collates the saved part reports; it does not rerun experiments.
+`--checks` first runs the mandatory **hardening part**: eight small upstream
+matching/nonmatching queries through both maintained loading paths, fixture-key
+JSON boundary checks, seven supervisor probes, the exact package/source audit,
+and the existing additional oracle/mutation/transform/microbenchmark gate. It
+then runs the **checks part**: pilot, assigned-policy and mutation campaigns,
+finite closure/cut/context oracles, natural equality, the retained builder
+bridge, capsule/publication and persistent-freshness tests, parser/emitter
+boundaries, both CLI validators, and the emitter example. There is no unmetered
+scientific prelude. In particular, all two warmups and eleven repetitions for
+each of the supplementary microbenchmark's three shapes and eight sizes are
+inside the hardening worker's CPU, wall and RSS observations.
 
-Each part uses one worker. A child has a 30-second wall limit and an outer part
-a 35-second limit. The runner uses private process groups, kills the group on
-timeout or interruption, and sets a 3 GiB address-space ceiling where supported.
-These are execution guards, not tight worst-case resource proofs.
+The other three parts run the original scaling shapes, each with three fresh
+processes at each of 512, 2,048, 8,192 and 20,000 vertices. `--verify` checks the
+five saved part records, their **current source/input SHA-256 bindings**, the
+hashes of generated evidence files, command statuses, and scientific
+invariants. It does not rerun experiments. Those checks remain active under
+`python -O`; an old PASS from different source or changed evidence is rejected.
+The source inventory is measured afresh (29 maintained Python files in this
+packet), not copied from an earlier audit. Result JSON contains measurement
+provenance rather than a release manifest or security attestation.
+
+One supervised coordinator runs at a time, with affinity limited to at most
+four available CPUs. The explicitly bounded publication/freshness races each
+launch eight small contenders, not eight unbounded campaign workers. The
+hardening, core-check and each scaling part have 170, 90 and 60 second wall
+budgets. Each launched command has a wall deadline no larger than its remaining
+part budget (160 seconds in hardening, 55 elsewhere), with a reserved three
+seconds for cleanup. A worker and its descendants inherit a 3 GiB per-process
+address-space ceiling and a CPU ceiling. Aggregate descendant RSS is sampled
+every 10 ms and killed above 3 GiB; this sampling is not a proof of an
+instantaneous memory bound. Address-space refusal is tested with a much smaller
+64 MiB fixture limit.
+
+The Linux subreaper waits for orphaned descendants; process groups and tracked
+process descendants are killed on timeout/interruption, nonzero-worker cleanup,
+or unexpected surviving descendants. Every command retains stdout/stderr,
+exit status, termination reason, waited CPU, peak-process RSS, sampled group
+RSS and cleanup status. A catchable failed or interrupted part is recorded as failed
+before returning nonzero; an abruptly killed coordinator leaves a non-passing
+`running` record, never an old success; it cannot validate the old success record.
+
+`results/reproduction.json` distinguishes worker/descendant CPU, coordinator
+CPU, five-part wall time, and saved-result verification overhead. The total
+covers the supervised scientific work, including the additional scaling gate;
+it excludes earlier development, document compilation, archive packaging,
+inter-command idle time and interpreter startup before entering the part.
+Peak process RSS is not summed or misreported as simultaneous group memory.
 
 ## Retained evidence
 
 | Evidence | Result and scope |
 |---|---|
+| `results/upstream-regression.json` | 8 pure matching/nonmatching queries through the shared complete fixed-path loader |
+| `results/freshness-json.json` | 3 valid fixture-key controls, 14 syntax/authentication boundary rejections, 2 persisted malformed states left unchanged |
+| `results/runner-guards.json` | 7 controlled supervisor cases; five expected worker failures retain real metrics and clean descendants |
+| `results/reviewer-hardening.json` | 14,400 small-model cases, 12 listed abstract mutants, 120 retained-line rewrites checked by both replayers, and 264 supplementary quotient-oracle timing repetitions |
+| `results/package-audit.json` | exact delivery whitelist, 29 maintained Python files, fixed upstream excerpt and physical LF accounting |
 | `results/campaign.json` | 6 projects, 24 files, 20 families, 480 assigned-policy cases: 336 blocked and 144 clean |
 | `results/mutations.json` | 288 malformed or false-claim records rejected by both replay implementations |
 | `results/composition.json` | 2,457 merge contexts and 4,962 output masks; complete summaries equal joined replay throughout |
@@ -144,7 +215,7 @@ These are execution guards, not tight worst-case resource proofs.
 | `results/boundaries.json` | 144 clean archives emitted/read; all 336 blocked archives refused; 20 parser/text/export boundary checks |
 | `results/diagnoses.json` | 288 inclusion-minimal outcomes and 192 uncuttable-path outcomes across the 480 valid cases |
 | `results/scaling-*.json` / `.csv` | three deterministic shapes, four sizes through 20,000 vertices, three fresh processes per size |
-| `results/reproduction.json` | authoritative final sequential-part timing, CPU, and peak-child-RSS accounting |
+| `results/reproduction.json` | five-part source-bound timing, worker/coordinator CPU, peak-process RSS and sampled group-RSS accounting |
 
 The same-information fixed-point comparator ties scoped replay on every valid
 fixture. That is expected: the contribution is the scope contract,
@@ -186,11 +257,11 @@ groups; deterministic inclusion-minimal diagnosis is capped at 64.
 ## Minimal example
 
 ```sh
-PYTHONDONTWRITEBYTECODE=1 python src/ledger.py \
+PYTHONDONTWRITEBYTECODE=1 python -S src/ledger.py \
   data/example-policy.json data/example-ledger.json
-PYTHONDONTWRITEBYTECODE=1 python src/checker.py \
+PYTHONDONTWRITEBYTECODE=1 python -S src/checker.py \
   data/example-policy.json data/example-ledger.json
-PYTHONDONTWRITEBYTECODE=1 python src/emitter.py \
+PYTHONDONTWRITEBYTECODE=1 python -S src/emitter.py \
   data/example-policy.json data/example-ledger.json checked.zip
 ```
 
@@ -216,3 +287,10 @@ superiority over prior systems. Process-death tests are not power-loss tests.
 The parser, filesystem, and denial-of-service campaigns are bounded, not
 exhaustive. All performance numbers are observations from saved fresh
 processes, not service-level guarantees or worst-case resource bounds.
+
+The additional-evidence ledger explicitly marks unavailable inherited ancillary
+records. A prior reviewer-audit report, separate reviewer-hardening proof note,
+and online 55-record reference-validation result were not supplied and are not
+reconstructed. The retained `proofs/arguments.md`, current regenerated tests, and
+paper's offline citation-coverage audit must not be confused with those missing
+records.

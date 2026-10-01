@@ -54,8 +54,8 @@
   "unauthorized_repair_rejected_by_both": true,
   "greedy_size": 3,
   "exact_minimum_size": 1,
-  "cpu_seconds": 0.004010073000000003,
-  "wall_seconds": 0.002957467999749497,
-  "peak_rss_kib": 94384,
+  "cpu_seconds": 0.003990997000000003,
+  "wall_seconds": 0.0029697919999307487,
+  "peak_rss_kib": 11028,
   "interpretation": "Finite checks only. No corpus code executed; no model, poisoning attack, or production workload."
 }

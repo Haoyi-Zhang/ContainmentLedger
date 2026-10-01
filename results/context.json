@@ -7,7 +7,7 @@
   "two_by_two_bipartite_relations_distinguished": 16,
   "actual_rewrite_pipeline_probe_contexts": 64,
   "disagreements": 0,
-  "cpu_seconds": 0.23197688299999997,
-  "wall_seconds": 0.22974062899993442,
-  "peak_rss_kib": 94764
+  "cpu_seconds": 0.22791632300000003,
+  "wall_seconds": 0.22708622400000422,
+  "peak_rss_kib": 11136
 }

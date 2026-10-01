@@ -1,5 +1,5 @@
 {
-  "cpu_seconds": 0.06458743300000003,
+  "cpu_seconds": 0.099967573,
   "emitter_publication": {
     "atomic_hard_link_commits": 1,
     "destination_unlink_calls": 0,
@@ -9,11 +9,13 @@
     "proof_implementation_boundary_aligned": true
   },
   "evidence_tables": {
+    "additional_evidence_rows": 8,
     "all_resource_locators_https": true,
     "claim_evidence_rows": 30,
     "external_internals_modified": 0,
     "external_resource_rows": 118,
-    "scholarly_or_standard_resource_rows": 85
+    "scholarly_or_standard_resource_rows": 85,
+    "unavailable_inherited_ancillary_records": 2
   },
   "package_shape": {
     "forbidden_workflow_or_private_names": 0,
@@ -30,13 +32,15 @@
       "proofs",
       "reproduce.py",
       "results",
+      "reviewer-evidence-ledger.csv",
       "src",
       "tests",
       "upstream"
     ]
   },
-  "peak_rss_kib": 96304,
+  "peak_rss_kib": 14236,
   "public_inputs": {
+    "all_selected_files_end_in_LF": true,
     "all_selected_files_have_retained_license": true,
     "all_selected_files_utf8": true,
     "files_per_project": {
@@ -49,7 +53,7 @@
     },
     "selection_bytes": 268614,
     "selection_files": 24,
-    "selection_logical_lines": 8215,
+    "selection_physical_lines": 8191,
     "selection_projects": 6
   },
   "retained_upstream": {
@@ -77,9 +81,9 @@
     "forbidden_dynamic_execution_calls": 0,
     "forbidden_network_imports": 0,
     "producer_checker_cross_imports": 0,
-    "python_files_ast_parsed": 26,
+    "python_files_ast_parsed": 29,
     "shell_true_subprocess_calls": 0
   },
   "status": "passed",
-  "wall_seconds": 0.0645975309998903
+  "wall_seconds": 0.09849874699989414
 }

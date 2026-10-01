@@ -24,6 +24,33 @@ def independent_scan(content: str, filters: dict[str, list[str]]):
     return True, None, None
 
 
+def smoke():
+    """Two tiny pure-query branches through both maintained loading paths."""
+    import hashlib
+    import reviewer_hardening
+    module = builder_adapter.load_upstream()
+    scanner, path, digest = reviewer_hardening._extract_find_substrings(ROOT)
+    rows = []
+    for loader_name, function in (("builder_adapter", module.find_substrings),
+                                  ("reviewer_hardening", scanner)):
+        for content, expected in (("alpha NEEDLE omega", (False, "fixture_match", "needle")),
+                                  ("alpha absent omega", (True, None, None))):
+            for matched in (True, False):
+                actual = function({"content": content}, {"fixture": ["needle"]}, return_matched=matched)
+                wanted = expected if matched else expected[:2]
+                if actual != wanted:
+                    raise RuntimeError(f"upstream pure-query regression: {loader_name}: {actual!r}")
+                rows.append({"loader": loader_name, "matched_branch": not expected[0],
+                             "return_matched": matched, "actual": list(actual)})
+    result = {"status": "passed", "queries": rows, "query_count": len(rows),
+              "upstream_excerpt": str(path.relative_to(ROOT)),
+              "upstream_excerpt_sha256": digest,
+              "helper_loaded": callable(module.benchmark_name_to_filter_reason),
+              "scope": "Pure matching/nonmatching queries only, not a full-campaign result."}
+    (ROOT / "results/upstream-regression.json").write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps(result))
+
+
 def main():
     cpu = time.process_time()
     wall = time.perf_counter()
@@ -141,4 +168,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    smoke() if sys.argv[1:] == ["--smoke"] else main()

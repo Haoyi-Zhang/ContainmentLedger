@@ -23,6 +23,8 @@ import capsule
 CONTRACT = "containment-ledger/local-freshness/hmac-sha256/v1"
 MAX_STATE_BYTES = 4 * 1024 * 1024
 MAX_SHARDS = 20000
+MAX_JSON_DEPTH = 64
+MAX_JSON_ATOMS = 1000000
 Checkpoint = Callable[[str], None]
 
 
@@ -98,12 +100,66 @@ def encode_state(body: dict, state_key: bytes) -> bytes:
     return _canonical(record) + b"\n"
 
 
+def _json_budget(raw: bytes) -> None:
+    """Bound lexical nesting/atoms before constructing any JSON object."""
+    depth = atoms = 0
+    quoted = escaped = literal = False
+    for char in raw:
+        if quoted:
+            if escaped:
+                escaped = False
+            elif char == 92:
+                escaped = True
+            elif char == 34:
+                quoted = False
+        elif char == 34:
+            quoted = True
+            literal = False
+            atoms += 1
+        elif char in (123, 91):
+            depth += 1
+            atoms += 1
+            literal = False
+            _require(depth <= MAX_JSON_DEPTH, "freshness JSON depth limit")
+        elif char in (125, 93):
+            depth -= 1
+            literal = False
+            _require(depth >= 0, "freshness JSON nesting")
+        elif char in b" \t\r\n,:":
+            literal = False
+        elif not literal:
+            atoms += 1
+            literal = True
+        _require(atoms <= MAX_JSON_ATOMS, "freshness JSON atom limit")
+    _require(depth == 0 and not quoted, "freshness JSON incomplete syntax")
+
+
 def decode_state(raw: bytes, state_key: bytes) -> dict:
     key = _state_key(state_key)
     _require(type(raw) is bytes and 0 < len(raw) <= MAX_STATE_BYTES, "freshness state size")
+    _json_budget(raw)
+
+    def pairs(items):
+        result = {}
+        for name, value in items:
+            _require(name not in result, "freshness duplicate JSON key")
+            result[name] = value
+        return result
+
+    def constant(value):
+        raise FreshnessError("freshness non-finite JSON constant")
+
+    def integer(value):
+        # Valid state counters fit in a nonnegative signed 64-bit integer.
+        _require(len(value.lstrip("-")) <= 19, "freshness JSON integer length")
+        return int(value)
+
     try:
-        record = json.loads(raw.decode("utf-8"))
-    except (UnicodeError, ValueError) as exc:
+        record = json.loads(raw.decode("utf-8"), object_pairs_hook=pairs,
+                            parse_constant=constant, parse_int=integer)
+    except FreshnessError:
+        raise
+    except (UnicodeError, ValueError, RecursionError) as exc:
         raise FreshnessError("freshness state JSON") from exc
     _require(type(record) is dict and set(record) == {"body", "tag"}, "freshness record fields")
     body = _validate_body(record["body"])

@@ -19,7 +19,6 @@ performance claim.
 from __future__ import annotations
 
 import argparse
-import ast
 import hashlib
 import itertools
 import json
@@ -33,6 +32,10 @@ import statistics
 import sys
 import time
 from typing import Callable, Iterable, Iterator, Mapping, Sequence
+
+import builder_adapter
+import checker
+import ledger
 
 SCHEMA = "pcl-reviewer-hardening/v1"
 SEED = 20260920
@@ -355,35 +358,17 @@ def mutation_campaign() -> dict[str, object]:
 
 
 def _extract_find_substrings(artifact_root: Path) -> tuple[Callable[..., object], Path, str]:
-    candidates = []
-    for path in artifact_root.rglob("*.py"):
-        try:
-            text = path.read_text(encoding="utf-8")
-        except (OSError, UnicodeDecodeError):
-            continue
-        if "def find_substrings" not in text or "substring.lower() in content" not in text:
-            continue
-        try:
-            parsed = ast.parse(text)
-        except SyntaxError:
-            continue
-        if any(isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name == "find_substrings" for node in parsed.body):
-            candidates.append((path, text))
-    if not candidates:
-        raise FileNotFoundError("vendored upstream find_substrings function not found")
-    path, text = sorted(candidates, key=lambda item: (len(item[1]), str(item[0])))[0]
-    tree = ast.parse(text)
-    function = next(
-        node for node in tree.body
-        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) and node.name == "find_substrings"
-    )
-    source = ast.get_source_segment(text, function)
-    if source is None:
-        raise AssertionError("cannot extract upstream function")
-    namespace: dict[str, object] = {}
-    exec(compile(source, str(path), "exec"), namespace, namespace)
-    digest = hashlib.sha256(source.encode("utf-8")).hexdigest()
-    return namespace["find_substrings"], path, digest  # type: ignore[return-value]
+    """Reuse the fixed-path module loader, including the upstream helper.
+
+    Only the retained dependency-free excerpt is imported. No source search,
+    isolated function compilation, or corpus-code execution is permitted.
+    """
+    expected = artifact_root.resolve() / "upstream" / "bigcode-dataset" / "find_substrings_excerpt.py"
+    module = builder_adapter.load_upstream()
+    actual = Path(module.__file__).resolve()
+    if actual != expected or not callable(getattr(module, "benchmark_name_to_filter_reason", None)):
+        raise RuntimeError("unexpected or incomplete retained upstream module")
+    return module.find_substrings, actual, hashlib.sha256(actual.read_bytes()).hexdigest()
 
 
 def _scanner_includes(result: object) -> bool:
@@ -393,27 +378,21 @@ def _scanner_includes(result: object) -> bool:
 
 
 def _candidate_lines(artifact_root: Path) -> list[tuple[str, str]]:
-    extensions = {
-        ".py", ".c", ".h", ".go", ".rb", ".pl", ".pm", ".js", ".mjs", ".ts",
-        ".java", ".rs", ".sh", ".cc", ".cpp", ".hpp",
-    }
+    """Read only the exact selected public text files, never implementation code."""
+    selection = json.loads((artifact_root / "data" / "selection.json").read_text(encoding="utf-8"))
     rows: list[tuple[str, str]] = []
-    for path in sorted(artifact_root.rglob("*")):
-        if not path.is_file() or path.suffix.lower() not in extensions:
-            continue
-        parts = set(path.parts)
-        if not ({"inputs", "corpus", "upstream"} & parts):
-            continue
-        try:
-            text = path.read_text(encoding="utf-8")
-        except (OSError, UnicodeDecodeError):
-            continue
+    public_root = artifact_root / "data" / "public"
+    for record in sorted(selection["files"], key=lambda item: item["file"]):
+        relative = Path(record["file"])
+        if relative.is_absolute() or ".." in relative.parts:
+            raise ValueError("unsafe selected source path")
+        path = public_root / relative
+        text = path.read_bytes().decode("utf-8")
         for line_no, line in enumerate(text.splitlines(), 1):
             stripped = line.strip()
             if 18 <= len(stripped) <= 120 and re.search(r"[A-Za-z_][A-Za-z0-9_]{4,}", stripped):
                 if not stripped.startswith(("//", "#", "/*", "*", "=cut")):
                     rows.append((f"{path.relative_to(artifact_root)}:{line_no}", stripped))
-    # Stable de-duplication by exact text.
     seen: set[str] = set()
     unique = []
     for origin, line in rows:
@@ -499,9 +478,22 @@ def transform_bridge(artifact_root: Path) -> dict[str, object]:
             original_rejected = not _scanner_includes(original_result)
             endpoint_passed = _scanner_includes(endpoint_result)
             clean_passed = _scanner_includes(clean_result)
-            # A declared derivation edge root -> output is sufficient in the
-            # frozen contract for the output to remain tainted.
-            lineage_blocked = 1 in iterative_closure(2, ((0, 1),), ((0,), (1,)), (0,))
+            # Exercise the actual fixed text algebra, not just a two-node oracle.
+            local_policy = {"roots": [{"id": "source", "code": root,
+                "intent": "static-line", "labels": ledger.B}], "repairs": []}
+            local_log = {
+                "units": [
+                    {"id": "imported", "op": "import", "source": "source",
+                     "code": root, "intent": "static-line"},
+                    {"id": "rewritten", "op": "rewrite", "parent": "imported",
+                     "old": root, "new": rewritten, "code": rewritten, "intent": "static-line"}],
+                "bundles": [{"id": "collected", "op": "collect",
+                    "items": [{"name": "line.txt", "unit": "rewritten"}]}],
+                "final": "collected", "outputs": [{"name": "line.txt", "unit": "rewritten",
+                    "code": rewritten, "intent": "static-line"}], "claims": {}}
+            ledger.annotate(local_policy, local_log)
+            lineage_blocked = (ledger.validate(local_policy, local_log)["blocked"] == 1
+                               and checker.verify(local_policy, local_log)["blocked"] == 1)
             if not (original_rejected and endpoint_passed and clean_passed and lineage_blocked):
                 raise AssertionError(f"transform bridge invariant failed: {family} {origin}")
             original_rejections += 1
@@ -526,8 +518,10 @@ def transform_bridge(artifact_root: Path) -> dict[str, object]:
         raise AssertionError(f"insufficient family coverage: {per_family}")
     return {
         "upstream_function_path": str(scanner_path.relative_to(artifact_root)),
-        "upstream_function_sha256": scanner_digest,
+        "upstream_excerpt_sha256": scanner_digest,
         "retained_candidate_lines": len(candidates),
+        "candidate_source": "data/selection.json -> data/public (24 retained files)",
+        "lineage_check": "ledger.validate and checker.verify on each literal rewrite",
         "transform_families": list(TRANSFORMS),
         "cases": len(cases),
         "cases_by_family": per_family,
@@ -537,7 +531,7 @@ def transform_bridge(artifact_root: Path) -> dict[str, object]:
         "clean_control_passes": clean_control_passes,
         "case_records": cases,
         "claim_boundary": (
-            "Function-level evidence on retained static source text; no source file is executed, "
+            "Generated labels and exact textual rewrites, without semantic-equivalence claims. Function-level evidence on retained static source text; no source file is executed, "
             "and the matrix does not reproduce the complete upstream distributed builder."
         ),
     }
@@ -697,7 +691,7 @@ def scaling_study() -> dict[str, object]:
 
 
 def run(artifact_root: Path) -> dict[str, object]:
-    started = time.time()
+    started = time.perf_counter()
     small = exact_small_model()
     mutation = mutation_campaign()
     bridge = transform_bridge(artifact_root)
@@ -714,7 +708,7 @@ def run(artifact_root: Path) -> dict[str, object]:
         "mutation_campaign": mutation,
         "transform_bridge": bridge,
         "scaling": scaling,
-        "elapsed_seconds": time.time() - started,
+        "elapsed_seconds": time.perf_counter() - started,
         "limitations": [
             "The exhaustive domain has four nodes and directed acyclic transformation facts; larger random cases are mutation witnesses, not exhaustive coverage.",
             "Mutants are a documented set of plausible mistakes, not every possible implementation defect.",

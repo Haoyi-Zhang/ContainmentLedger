@@ -10,7 +10,8 @@
   },
   "source_files": 24,
   "source_bytes": 268614,
-  "source_lines": 8215,
+  "source_lines": 8191,
+  "source_line_definition": "Physical LF lines, adding one only for a nonempty unterminated last line.",
   "families": 20,
   "valid_cases": 480,
   "positive_cases": 336,
@@ -126,7 +127,7 @@
       "exact_context_rate": 1.0
     }
   },
-  "cpu_seconds": 1.1059232470000002,
-  "wall_seconds": 1.1043438480000987,
-  "peak_rss_kib": 99372
+  "cpu_seconds": 1.3483337839999998,
+  "wall_seconds": 1.347533495999869,
+  "peak_rss_kib": 16248
 }

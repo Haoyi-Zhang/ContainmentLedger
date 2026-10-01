@@ -428,8 +428,9 @@ This distinction is explicit in the separate audit adapter.
 
 ## H. Implementation obligations and finite evidence
 
-The JSON entry points bound byte size, lexical depth and token-like syntax
-atoms before decoding, reject repeated object keys and non-finite constants,
+The two policy/ledger byte readers and the authenticated freshness-state
+decoder bound byte size, lexical depth and token-like syntax atoms before
+decoding, reject repeated object keys and non-finite constants,
 and reject booleans used as integers. The text checks reject invalid Unicode
 scalar encodings and oversized values. Replay imposes node, edge, record,
 member-obligation, aggregate text and expanded-export byte bounds. These are
@@ -479,6 +480,26 @@ HMAC forgery under the stated assumption. A compromised key, rolled-back
 freshness state, or false trusted policy is outside the conclusion. The result
 is shared-key integrity, not public verifiability, non-repudiation,
 transparency, key distribution or consensus on rollback state. ∎
+
+**API and role boundary.** `issue` and `verify_bound` perform local checker
+replay. `verify` authenticates and validates a bounded capsule but does not
+receive or replay its original ledger. `compose` calls `verify`, rejects
+repeated capsule identities and repeated shards, then composes summaries.
+Summary-only composition therefore trusts the checker role to have correctly
+replayed before authenticating its assertion; possession of a checker key is
+not itself evidence of correct replay. `accept_bound` separately calls
+`verify_bound` and persists a strictly advanced local sequence floor. The
+functional call-count regression checks 1/0/0/1/1 local checker invocations
+for these five paths; it does not replace the mathematical composition argument.
+
+The state decoder rejects malformed wire syntax before canonicalizing for
+HMAC verification. The fixture tests insert a duplicate generation and a NaN
+that a last-key-wins decoder would discard, while keeping the valid canonical
+body and tag. These are parser-boundary cases, not MAC forgeries or rollback
+attacks. Valid canonical/whitespace encodings remain accepted; rejected
+persisted inputs are not rewritten. Already-decoded capsule objects and fixed
+local metadata files have no claimed lexical provenance from an external JSON
+parser.
 
 **Proposition I2 (process-death publication boundary).** Assume an opened,
 trusted POSIX directory in which creation of a hard-link name is atomic and a
