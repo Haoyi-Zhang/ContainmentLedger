@@ -457,15 +457,18 @@ The deployment profile adds two conditional guarantees to the logical replay
 contract. They do not strengthen the truth of the registry or policy, and they
 do not turn a diagnostic into permission to change an output.
 
-**Proposition I1 (capsule binding, conditional on HMAC authenticity).** Assume
+**Proposition I1 (computational capsule binding).** Assume
 the policy-authority and checker HMAC keys are uncompromised, HMAC-SHA256 is
-unforgeable for the adversary, canonical JSON encoding is deterministic, and
+unforgeable for the adversary, SHA-256 is collision resistant on the canonical
+policy and ledger domains, canonical JSON encoding is deterministic, and
 the verifier retains an authentic expected epoch and per-shard sequence floor.
 If bound verification accepts a capsule with a locally supplied policy and
 ledger, then the accepted contract identifier, shard, epoch, sequence, policy
 digest, ledger digest, summary digest, output names, and complete quotient
 summary are the values authenticated by the two roles and recomputed from that
-policy and ledger.
+policy and ledger, except with the corresponding MAC-forgery or hash-collision
+failure probability. This is computational object binding, not unconditional
+injectivity of the digest.
 
 **Argument.** The authority tag covers a domain-separated tuple containing the
 contract, epoch and policy digest. The checker tag covers a second
@@ -474,9 +477,12 @@ tag itself, including the authority tag. Verification rejects a noncanonical
 schema, recomputes both tags, recomputes the summary digest, and enforces the
 caller-held epoch, shard and sequence constraints. Bound verification then
 recomputes the policy and ledger digests, reruns the separately implemented checker,
-compares the resulting summary digest and requires the exact output order.
-Changing any covered field without the corresponding key therefore requires an
-HMAC forgery under the stated assumption. A compromised key, rolled-back
+compares its validated summary structurally with the authenticated summary,
+and requires the exact output order. Changing a covered authenticated field
+requires a MAC forgery. Substituting a different canonical policy or ledger
+under unchanged authenticated digests requires a SHA-256 collision. The union
+of those bad events bounds failure; summary equality needs no additional
+digest-to-object inference. A compromised key, rolled-back
 freshness state, or false trusted policy is outside the conclusion. The result
 is shared-key integrity, not public verifiability, non-repudiation,
 transparency, key distribution or consensus on rollback state. ∎

@@ -1,7 +1,8 @@
 """Authenticated containment-summary capsules (standard library only).
 
-The profile binds a checked local summary to exact policy and ledger bytes with
-HMAC-SHA256.  It is a shared-key integrity profile, not a public signature,
+The profile computationally binds a checked local summary to canonical policy
+and ledger bytes under HMAC authenticity and SHA-256 collision resistance.
+It is a shared-key integrity profile, not a public signature,
 transparency service, non-repudiation mechanism, or key-distribution system.
 Freshness requires verifier-maintained epoch/sequence state.
 """
@@ -338,7 +339,7 @@ def verify_bound(
     _require(hmac.compare_digest(result["policy_digest"], digest(policy)), "policy binding")
     _require(hmac.compare_digest(result["ledger_digest"], digest(ledger)), "ledger binding")
     local_summary = validate_summary(checker.verify(policy, ledger, summary=True))
-    _require(hmac.compare_digest(digest(local_summary), digest(result["summary"])), "summary replay binding")
+    _require(local_summary == result["summary"], "summary replay binding")
     _require(result["output_names"] == [item["name"] for item in ledger["outputs"]], "output binding")
     return result
 

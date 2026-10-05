@@ -43,7 +43,10 @@ A capsule binds:
 
 A policy-authority key authenticates the policy binding and a separate checker
 key authenticates the complete capsule body. Bound verification reruns the
-checker and compares the local policy, ledger, summary, and outputs. Composition
+checker and compares the local policy and ledger digests, full summary, and outputs.
+Exact-object binding is computational: it assumes HMAC-SHA256 unforgeability
+and SHA-256 collision resistance on canonical policy and ledger objects.
+The complete authenticated summary is compared structurally. Composition
 rejects duplicate capsule identities and multiple revisions for one shard.
 
 `src/freshness.py` adds an authenticated local state file. Under a POSIX file
@@ -162,8 +165,10 @@ hashes of generated evidence files, command statuses, and scientific
 invariants. It does not rerun experiments. Those checks remain active under
 `python -O`; an old PASS from different source or changed evidence is rejected.
 The source inventory is measured afresh (29 maintained Python files in this
-packet), not copied from an earlier audit. Result JSON contains measurement
-provenance rather than a release manifest or security attestation.
+packet), not copied from an earlier audit. Result JSON records the source and
+input snapshot used for each measurement. The retained measurements precede
+the summary-comparison change; changed source requires a fresh supervised run
+before its results can satisfy the current-source verification command.
 
 One supervised coordinator runs at a time, with affinity limited to at most
 four available CPUs. The explicitly bounded publication/freshness races each
