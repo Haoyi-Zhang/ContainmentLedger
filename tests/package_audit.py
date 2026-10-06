@@ -5,7 +5,6 @@ import ast
 import csv
 import json
 import re
-import resource
 import stat
 import sys
 import time
@@ -17,9 +16,11 @@ RESULT = ROOT / "results" / "package-audit.json"
 ALLOWED_TOP_LEVEL = {
     "LICENSE", "README.md", "claim_evidence_ledger.csv", "data",
     "external_resources.csv", "licenses", "proofs", "reproduce.py",
-    "results", "src", "tests", "upstream", "reviewer-evidence-ledger.csv",
+    "results", "src", "tests", "upstream", "reviewer-evidence-ledger.csv", ".github",
 }
 EXPECTED_PYTHON_FILES = ['reproduce.py', 'src/builder_adapter.py', 'src/capsule.py', 'src/checker.py', 'src/corpus_adapter.py', 'src/cutcheck.py', 'src/cuts.py', 'src/diagnose.py', 'src/emitter.py', 'src/fixtures.py', 'src/freshness.py', 'src/ledger.py', 'src/merge.py', 'src/reviewer_hardening.py', 'tests/boundaries.py', 'tests/builder_bridge.py', 'tests/campaign.py', 'tests/context.py', 'tests/deployment.py', 'tests/emitter_worker.py', 'tests/finite.py', 'tests/freshness.py', 'tests/freshness_worker.py', 'tests/natural.py', 'tests/package_audit.py', 'tests/pilot.py', 'tests/reviewer_hardening.py', 'tests/runner_guards.py', 'tests/scaling.py']
+EXPECTED_PYTHON_FILES.append('tests/scientific_regressions.py')
+EXPECTED_PYTHON_FILES.sort()
 FORBIDDEN_NETWORK_ROOTS = {
     "aiohttp", "ftplib", "http", "httplib", "requests", "socket", "telnetlib",
     "urllib", "urllib3", "webbrowser",
@@ -115,7 +116,7 @@ def public_input_audit() -> dict:
         total_lines += physical_lines
         per_project[record.get("project")] += 1
     actual_paths = {
-        str(path.relative_to(ROOT / "data" / "public"))
+        path.relative_to(ROOT / "data" / "public").as_posix()
         for path in (ROOT / "data" / "public").rglob("*") if path.is_file()
     }
     require(actual_paths == expected_paths, "selected file inventory mismatch")
@@ -146,10 +147,10 @@ def source_audit() -> dict:
         + list((ROOT / "src").glob("*.py"))
         + list((ROOT / "tests").glob("*.py"))
     )
-    require([str(path.relative_to(ROOT)) for path in python_files] == EXPECTED_PYTHON_FILES,
+    require([path.relative_to(ROOT).as_posix() for path in python_files] == EXPECTED_PYTHON_FILES,
             "maintained Python source inventory mismatch")
     for directory in ("src", "tests"):
-        require({str(path.relative_to(ROOT)) for path in (ROOT / directory).iterdir() if path.is_file()}
+        require({path.relative_to(ROOT).as_posix() for path in (ROOT / directory).iterdir() if path.is_file()}
                 == {name for name in EXPECTED_PYTHON_FILES if name.startswith(directory + "/")},
                 "unexpected source/test file")
     forbidden_imports = []
@@ -158,7 +159,7 @@ def source_audit() -> dict:
     dynamic_import_sites = []
     import_graph: dict[str, set[str]] = {}
     for path in python_files:
-        relative = str(path.relative_to(ROOT))
+        relative = path.relative_to(ROOT).as_posix()
         text = path.read_text(encoding="utf-8")
         tree = ast.parse(text, filename=relative)
         imports = set()
@@ -338,15 +339,24 @@ def evidence_table_audit() -> dict:
 
 
 def package_shape_audit() -> dict:
-    actual_top = {path.name for path in ROOT.iterdir()}
+    # Checkout metadata is not an artifact input. Do not traverse its objects,
+    # hooks or config; all delivered material still receives the usual audit.
+    actual_top = {path.name for path in ROOT.iterdir() if path.name != '.git'}
     require(actual_top == ALLOWED_TOP_LEVEL,
             f"artifact top-level mismatch: {sorted(actual_top ^ ALLOWED_TOP_LEVEL)}")
     symlinks = []
     nested_archives = []
     cache_artifacts = []
     forbidden_names = []
-    for path in ROOT.rglob("*"):
-        relative = str(path.relative_to(ROOT))
+    def material_paths():
+        for entry in ROOT.iterdir():
+            if entry.name == '.git':
+                continue
+            yield entry
+            if entry.is_dir() and not entry.is_symlink():
+                yield from entry.rglob('*')
+    for path in material_paths():
+        relative = path.relative_to(ROOT).as_posix()
         mode = path.lstat().st_mode
         if stat.S_ISLNK(mode):
             symlinks.append(relative)
@@ -371,6 +381,7 @@ def package_shape_audit() -> dict:
 
 
 def main() -> None:
+    import resource  # Host RSS reporting belongs to the Linux/POSIX runner.
     cpu = time.process_time()
     wall = time.perf_counter()
     result = {

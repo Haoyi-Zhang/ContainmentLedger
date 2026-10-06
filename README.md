@@ -149,6 +149,7 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python -S reproduce.py --verify
 `--checks` first runs the mandatory **hardening part**: eight small upstream
 matching/nonmatching queries through both maintained loading paths, fixture-key
 JSON boundary checks, seven supervisor probes, the exact package/source audit,
+nine empty-diagnostic regressions (including unused registered labels),
 and the existing additional oracle/mutation/transform/microbenchmark gate. It
 then runs the **checks part**: pilot, assigned-policy and mutation campaigns,
 finite closure/cut/context oracles, natural equality, the retained builder
@@ -164,10 +165,11 @@ five saved part records, their **current source/input SHA-256 bindings**, the
 hashes of generated evidence files, command statuses, and scientific
 invariants. It does not rerun experiments. Those checks remain active under
 `python -O`; an old PASS from different source or changed evidence is rejected.
-The source inventory is measured afresh (29 maintained Python files in this
+The source inventory is measured afresh (30 maintained Python files in this
 packet), not copied from an earlier audit. Result JSON records the source and
-input snapshot used for each measurement. The retained measurements precede
-the summary-comparison change; changed source requires a fresh supervised run
+input snapshot used for each measurement. The retained POSIX measurements are
+bound to an earlier source/input snapshot, not to the current tree; changed
+source requires a fresh supervised run
 before its results can satisfy the current-source verification command.
 
 One supervised coordinator runs at a time, with affinity limited to at most
@@ -197,6 +199,26 @@ it excludes earlier development, document compilation, archive packaging,
 inter-command idle time and interpreter startup before entering the part.
 Peak process RSS is not summed or misreported as simultaneous group memory.
 
+The flat repository's `scientific-checks.yml` runs the material gate, all five
+supervised reproduction parts and the current-source verification gate on Ubuntu 24.04.
+The whole scientific shell has a 600-second deadline (plus five seconds for
+forced termination), a 3 GiB per-process address-space ceiling and a 600-second
+per-process CPU ceiling; the tighter internal part/worker limits still apply.
+The workflow preserves logs and result records even after failure. A saved
+historical record is not a successful execution of this workflow.
+
+The small diagnostic/inventory regression is also portable:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -B -S tests/scientific_regressions.py
+```
+
+It prints nine empty-output diagnostic cases and static inventory checks.
+It does not emulate POSIX file locks, publication, resource measurements or
+the full reproduction campaign. The diagnostic graph adapters both represent
+a wholly empty replay by one isolated, nonterminal vertex, so direct use of
+either adapter yields a valid empty separator problem.
+
 ## Retained evidence
 
 | Evidence | Result and scope |
@@ -205,7 +227,7 @@ Peak process RSS is not summed or misreported as simultaneous group memory.
 | `results/freshness-json.json` | 3 valid fixture-key controls, 14 syntax/authentication boundary rejections, 2 persisted malformed states left unchanged |
 | `results/runner-guards.json` | 7 controlled supervisor cases; five expected worker failures retain real metrics and clean descendants |
 | `results/reviewer-hardening.json` | 14,400 small-model cases, 12 listed abstract mutants, 120 retained-line rewrites checked by both replayers, and 264 supplementary quotient-oracle timing repetitions |
-| `results/package-audit.json` | exact delivery whitelist, 29 maintained Python files, fixed upstream excerpt and physical LF accounting |
+| `results/package-audit.json` | retained whitelist/source audit; a current run inventories 30 maintained Python files, the fixed upstream excerpt and physical LF accounting |
 | `results/campaign.json` | 6 projects, 24 files, 20 families, 480 assigned-policy cases: 336 blocked and 144 clean |
 | `results/mutations.json` | 288 malformed or false-claim records rejected by both replay implementations |
 | `results/composition.json` | 2,457 merge contexts and 4,962 output masks; complete summaries equal joined replay throughout |

@@ -1,0 +1,46 @@
+name: Scientific checks
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bounded-offline-science:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+      README_ENTRY: README.md
+      MIN_EXPECTED_PYTHON_SOURCES: '38'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Run all offline gates within one resource and time envelope
+        shell: bash
+        run: |
+          mkdir -p results/workflow-raw
+          ulimit -v 3145728
+          ulimit -t 600
+          timeout --signal=TERM --kill-after=5s 600s bash -euo pipefail <<'RUN'
+          python -B .github/scripts/check_repository.py 2>&1 | tee results/workflow-raw/material-integrity.log
+          python -B -S reproduce.py --checks 2>&1 | tee results/workflow-raw/checks.log
+          python -B -S reproduce.py --scale chain-distinct 2>&1 | tee results/workflow-raw/chain-distinct.log
+          python -B -S reproduce.py --scale alias-copy 2>&1 | tee results/workflow-raw/alias-copy.log
+          python -B -S reproduce.py --scale many-roots 2>&1 | tee results/workflow-raw/many-roots.log
+          python -B -S reproduce.py --verify 2>&1 | tee results/workflow-raw/verify.log
+          RUN
+      - name: Preserve raw output and source-bound records on success or failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: scientific-check-output
+          path: results/
+          if-no-files-found: error
+          retention-days: 14

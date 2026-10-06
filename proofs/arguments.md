@@ -444,6 +444,12 @@ line by line. Separately implemented traversals, exact tiny Boolean oracles,
 mutations, stress shapes and clean extraction are intended to reveal
 counterexamples, not to substitute for machine-checked refinement.
 
+Both diagnostic graph adapters encode a wholly empty replay as one isolated,
+nonterminal vertex. This satisfies the generic graph format's positive vertex
+bound without adding any source, target or path. Its empty separator remains
+inclusion-minimal, and direct graph construction agrees with the convenience
+diagnosis wrapper on this boundary.
+
 The evidence bindings and actual counts are in `claim_evidence_ledger.csv`.
 No proposition claims semantic cleanliness, safety of a learned model,
 malicious-author attribution, universal contamination detection, reliable
@@ -574,11 +580,13 @@ final text no longer contains `p`, rerunning that same endpoint filter can
 accept even though a content-scoped restriction assigned to the root still
 reaches the descendant through the declared rewrite edge.
 
-**Argument.** Exact substring membership is a predicate of the current byte
-string. Replacing one character in the only selected occurrence makes that
-predicate false. The ledger's content label instead follows the declared
-root-to-child derivation and therefore remains in the least fixed point unless
-a separately authorized rule removes it. The retained BigCode function and an
+**Argument.** The retained predicate checks substring membership in lowercased
+text. The bridge changes one character of the probe in every exact occurrence
+and explicitly checks that the rewritten text passes the same predicate; it
+does not assume that one edit removes other case-insensitive matches. The
+ledger's content label instead follows the declared
+root-to-child derivation and therefore remains in the least fixed point. The
+retained BigCode function and a
 separate four-case oracle instantiate the membership predicate; 25 bounded
 rewrite cases instantiate the distinction. This observation does not imply
 that BigCode's complete production pipeline relies only on a final scan, that

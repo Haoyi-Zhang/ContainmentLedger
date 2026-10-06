@@ -30,13 +30,12 @@ def graph(policy,log,groups):
                     encoded.append([number[hub]+offset,number[v]+offset,None])
                     encoded.append([number[v]+offset,number[hub]+offset,None])
     encoded.sort(key=lambda e:(e[0],e[1],'' if e[2] is None else e[2]))
-    return {'n':3*len(names),'edges':encoded,
+    # The generic cut format has a nonempty vertex universe. Represent an
+    # empty replay by one isolated, nonterminal vertex in both adapters.
+    return {'n':max(1,3*len(names)),'edges':encoded,
             'sources':[number[v]+k for v in names for k,bit in enumerate((1,2,4)) if seeds[v]&bit],
             'targets':sorted({number[v]+k for v in outputs for k in range(3)})}
 
 def diagnose(policy,log,groups):
     g=graph(policy,log,groups)
-    if not g['n']:
-        # Encode an isolated, nonterminal vertex for the generic graph format.
-        g['n']=1
     return g,cuts.minimize(g)

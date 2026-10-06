@@ -25,7 +25,7 @@ PART_LIMITS = {'hardening': 170.0, 'checks': 90.0,
 PARTS = list(PART_LIMITS)
 PART_OUTPUTS = {
     'hardening': ['upstream-regression.json', 'freshness-json.json', 'runner-guards.json',
-                  'package-audit.json', 'reviewer-hardening.json'],
+                  'package-audit.json', 'reviewer-hardening.json', 'scientific-regressions.json'],
     'checks': ['pilot.json', 'campaign.json', 'mutations.json', 'composition.json',
                'composition-baselines.json', 'corpus-cases.csv', 'finite-closure.json',
                'finite-cuts.json', 'context.json', 'natural-duplicates.json',
@@ -289,6 +289,9 @@ def validate_hardening():
     guards = get('runner-guards.json')
     audit = get('package-audit.json')
     hardening = get('reviewer-hardening.json')
+    regression = get('scientific-regressions.json')
+    _require(regression['status'] == 'passed' and regression['diagnostic_cases'] == 9,
+             'empty diagnostic and inventory regressions')
     _require(smoke['status'] == 'passed' and smoke['query_count'] == 8, 'upstream smoke')
     _require(state['status'] == 'passed' and state['valid_controls'] == 3 and state['rejected_count'] == 14, 'state syntax')
     _require(len(state['persisted_state_rejections_unchanged']) == 2, 'persisted malformed states')
@@ -405,7 +408,9 @@ def execute_part(part):
     try:
         if part == 'hardening':
             for command in (['tests/builder_bridge.py', '--smoke'], ['tests/freshness.py', '--json-only'],
-                            ['tests/runner_guards.py'], ['tests/package_audit.py'], ['tests/reviewer_hardening.py']):
+                            ['tests/runner_guards.py'], ['tests/package_audit.py'],
+                            ['tests/scientific_regressions.py', '--output', 'results/scientific-regressions.json'],
+                            ['tests/reviewer_hardening.py']):
                 run(command)
             outcome['checks'] = validate_hardening()
         elif part == 'checks':
