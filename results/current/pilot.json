@@ -1,0 +1,61 @@
+{
+  "stage": "pre-lock-pilot",
+  "workers": 1,
+  "records": [
+    {
+      "file": "abc.py",
+      "scenario": "C07",
+      "expected_blocked": true,
+      "blocked": 1
+    },
+    {
+      "file": "abc.py",
+      "scenario": "C08",
+      "expected_blocked": false,
+      "blocked": 0
+    },
+    {
+      "file": "abc.py",
+      "scenario": "C09",
+      "expected_blocked": false,
+      "blocked": 0
+    },
+    {
+      "file": "abc.py",
+      "scenario": "C15",
+      "expected_blocked": true,
+      "blocked": 1
+    },
+    {
+      "file": "bisect.py",
+      "scenario": "C07",
+      "expected_blocked": true,
+      "blocked": 1
+    },
+    {
+      "file": "bisect.py",
+      "scenario": "C08",
+      "expected_blocked": false,
+      "blocked": 0
+    },
+    {
+      "file": "bisect.py",
+      "scenario": "C09",
+      "expected_blocked": false,
+      "blocked": 0
+    },
+    {
+      "file": "bisect.py",
+      "scenario": "C15",
+      "expected_blocked": true,
+      "blocked": 1
+    }
+  ],
+  "unauthorized_repair_rejected_by_both": true,
+  "greedy_size": 3,
+  "exact_minimum_size": 1,
+  "cpu_seconds": 0.0019986310000000007,
+  "wall_seconds": 0.0019358920000058788,
+  "peak_rss_kib": 14424,
+  "interpretation": "Finite checks only. No corpus code executed; no model, poisoning attack, or production workload."
+}

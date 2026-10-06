@@ -1,0 +1,21 @@
+{"command": ["python", "-S", "tests/builder_bridge.py", "--smoke"], "status": "passed", "exit_code": 0, "wall_seconds": 0.07991225799999313}
+{"command": ["python", "-S", "tests/freshness.py", "--json-only"], "status": "passed", "exit_code": 0, "wall_seconds": 0.2238622910000032}
+{"command": ["python", "-S", "tests/runner_guards.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.9527694449999871}
+{"command": ["python", "-S", "tests/package_audit.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.17092223299999887}
+{"command": ["python", "-S", "tests/scientific_regressions.py", "--output", "results/scientific-regressions.json"], "status": "passed", "exit_code": 0, "wall_seconds": 0.14987044100000446}
+{"command": ["python", "-S", "tests/reviewer_hardening.py"], "status": "passed", "exit_code": 0, "wall_seconds": 9.910225507000007}
+{"status": "passed-part", "part": "hardening", "wall_seconds": 11.50237711199999, "total_cpu_seconds": 14.323464000000001, "peak_child_rss_kib": 53168}
+{"command": ["python", "-S", "tests/pilot.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.05185162200000093}
+{"command": ["python", "-S", "tests/campaign.py"], "status": "passed", "exit_code": 0, "wall_seconds": 1.0025061139999991}
+{"command": ["python", "-S", "tests/finite.py", "closure"], "status": "passed", "exit_code": 0, "wall_seconds": 3.8166346069999975}
+{"command": ["python", "-S", "tests/finite.py", "cuts"], "status": "passed", "exit_code": 0, "wall_seconds": 0.6670400870000037}
+{"command": ["python", "-S", "tests/context.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.23494881799999234}
+{"command": ["python", "-S", "tests/natural.py"], "status": "passed", "exit_code": 0, "wall_seconds": 1.6611065280000048}
+{"command": ["python", "-S", "tests/builder_bridge.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.0970580370000107}
+{"command": ["python", "-S", "tests/deployment.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.4868195560000004}
+{"command": ["python", "-S", "tests/freshness.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.6164078890000013}
+{"command": ["python", "-S", "tests/boundaries.py"], "status": "passed", "exit_code": 0, "wall_seconds": 0.6493454279999895}
+{"command": ["python", "-S", "src/ledger.py", "data/example-policy.json", "data/example-ledger.json"], "status": "passed", "exit_code": 0, "wall_seconds": 0.0406930329999966}
+{"command": ["python", "-S", "src/checker.py", "data/example-policy.json", "data/example-ledger.json"], "status": "passed", "exit_code": 0, "wall_seconds": 0.03932706400000541}
+{"command": ["python", "-S", "src/emitter.py", "data/example-policy.json", "data/example-ledger.json", "/tmp/containment-emission-yssfez6v/checked.zip"], "status": "passed", "exit_code": 0, "wall_seconds": 0.0521890859999985}
+{"status": "passed-part", "part": "checks", "wall_seconds": 9.42995055499999, "total_cpu_seconds": 12.086295, "peak_child_rss_kib": 27200}

@@ -1,0 +1,154 @@
+{
+  "batches": [
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 0,
+      "cases": 32768,
+      "cpu_seconds": 0.340973577
+    },
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 1,
+      "cases": 32768,
+      "cpu_seconds": 0.34995735699999997
+    },
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 2,
+      "cases": 32768,
+      "cpu_seconds": 0.36167412100000007
+    },
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 3,
+      "cases": 32768,
+      "cpu_seconds": 0.3508611079999999
+    },
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 4,
+      "cases": 32768,
+      "cpu_seconds": 0.3456572230000001
+    },
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 5,
+      "cases": 32768,
+      "cpu_seconds": 0.35389198899999985
+    },
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 6,
+      "cases": 32768,
+      "cpu_seconds": 0.3519793259999999
+    },
+    {
+      "family": "three-node-all-mask-DAG",
+      "first_edge_mask": 7,
+      "cases": 32768,
+      "cpu_seconds": 0.35591488100000035
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 0,
+      "cases": 4096,
+      "cpu_seconds": 0.056997212999999824
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 1,
+      "cases": 4096,
+      "cpu_seconds": 0.057998768000000034
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 2,
+      "cases": 4096,
+      "cpu_seconds": 0.059998809999999736
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 3,
+      "cases": 4096,
+      "cpu_seconds": 0.06100099500000011
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 4,
+      "cases": 4096,
+      "cpu_seconds": 0.058988224000000145
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 5,
+      "cases": 4096,
+      "cpu_seconds": 0.059998970999999734
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 6,
+      "cases": 4096,
+      "cpu_seconds": 0.060001264000000276
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 7,
+      "cases": 4096,
+      "cpu_seconds": 0.061990180000000006
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 8,
+      "cases": 4096,
+      "cpu_seconds": 0.05799254899999973
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 9,
+      "cases": 4096,
+      "cpu_seconds": 0.06100099500000011
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 10,
+      "cases": 4096,
+      "cpu_seconds": 0.05999679700000016
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 11,
+      "cases": 4096,
+      "cpu_seconds": 0.060987597000000004
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 12,
+      "cases": 4096,
+      "cpu_seconds": 0.0609907599999997
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 13,
+      "cases": 4096,
+      "cpu_seconds": 0.0609910100000004
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 14,
+      "cases": 4096,
+      "cpu_seconds": 0.06099382399999964
+    },
+    {
+      "family": "four-node-all-directed-B-graphs",
+      "edge_prefix": 15,
+      "cases": 4096,
+      "cpu_seconds": 0.061996400000000396
+    }
+  ],
+  "cases": 327680,
+  "disagreements": 0,
+  "encoding": "3-node forward DAG: 3 edges x masks 0..7 and 3 seeds x labels 0..7. 4-node directed no-self-edge graphs: 12 Boolean B edges and 4 Boolean B seeds. No claim of exhaustive larger or all mixed-label cyclic graphs.",
+  "cpu_seconds": 3.7728339390000003,
+  "wall_seconds": 3.773848502000007,
+  "peak_rss_kib": 14984
+}

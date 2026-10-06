@@ -1,0 +1,2 @@
+{"command": ["python", "-S", "tests/scaling.py", "--shape", "many-roots"], "status": "passed", "exit_code": 0, "wall_seconds": 4.228234878000009}
+{"status": "passed-part", "part": "scaling-many-roots", "wall_seconds": 4.2370905080000085, "total_cpu_seconds": 5.41571, "peak_child_rss_kib": 71056}

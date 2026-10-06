@@ -1,0 +1,2 @@
+{"command": ["python", "-S", "tests/scaling.py", "--shape", "chain-distinct"], "status": "passed", "exit_code": 0, "wall_seconds": 4.864294412999996}
+{"status": "passed-part", "part": "scaling-chain-distinct", "wall_seconds": 4.872702391999994, "total_cpu_seconds": 6.242298, "peak_child_rss_kib": 90988}

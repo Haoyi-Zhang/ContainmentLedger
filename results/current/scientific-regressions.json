@@ -1,0 +1,166 @@
+{
+  "status": "passed",
+  "diagnostic_cases": 9,
+  "records": [
+    {
+      "case": 0,
+      "roots": 0,
+      "vertices": 1,
+      "source_states": 0,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 1,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 0,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 2,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 1,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 3,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 1,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 4,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 2,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 5,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 1,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 6,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 2,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 7,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 2,
+      "targets": 0,
+      "cut_size": 0
+    },
+    {
+      "case": 8,
+      "roots": 1,
+      "vertices": 3,
+      "source_states": 3,
+      "targets": 0,
+      "cut_size": 0
+    }
+  ],
+  "inventory": {
+    "package_shape": {
+      "top_level_entries": [
+        ".github",
+        "LICENSE",
+        "README.md",
+        "claim_evidence_ledger.csv",
+        "data",
+        "external_resources.csv",
+        "licenses",
+        "proofs",
+        "reproduce.py",
+        "results",
+        "reviewer-evidence-ledger.csv",
+        "src",
+        "tests",
+        "upstream"
+      ],
+      "symlinks": 0,
+      "nested_archives": 0,
+      "python_cache_artifacts": 0,
+      "forbidden_workflow_or_private_names": 0
+    },
+    "source_safety": {
+      "python_files_ast_parsed": 30,
+      "forbidden_network_imports": 0,
+      "forbidden_dynamic_execution_calls": 0,
+      "shell_true_subprocess_calls": 0,
+      "dynamic_import_sites": [
+        [
+          "src/builder_adapter.py",
+          32,
+          "importlib.util.spec_from_file_location"
+        ],
+        [
+          "src/builder_adapter.py",
+          36,
+          "spec.loader.exec_module"
+        ]
+      ],
+      "producer_checker_cross_imports": 0,
+      "cut_generator_verifier_cross_imports": 0
+    },
+    "public_inputs": {
+      "selection_projects": 6,
+      "selection_files": 24,
+      "selection_bytes": 268614,
+      "selection_physical_lines": 8191,
+      "all_selected_files_end_in_LF": true,
+      "files_per_project": {
+        "CPython": 4,
+        "Go": 4,
+        "Perl": 4,
+        "Ruby": 4,
+        "npm CLI": 4,
+        "pip": 4
+      },
+      "all_selected_files_utf8": true,
+      "all_selected_files_have_retained_license": true
+    },
+    "retained_upstream": {
+      "retained_bigcode_functions_ast_matched": 2,
+      "bigcode_commit_and_blob_identifiers_present": true,
+      "humaneval_example_exact_record_matched": true,
+      "humaneval_commit_and_blob_identifiers_present": true,
+      "upstream_license_files_present": 2
+    },
+    "evidence_tables": {
+      "additional_evidence_rows": 8,
+      "unavailable_inherited_ancillary_records": 2,
+      "external_resource_rows": 118,
+      "scholarly_or_standard_resource_rows": 85,
+      "claim_evidence_rows": 30,
+      "all_resource_locators_https": true,
+      "external_internals_modified": 0
+    },
+    "emitter_source": {
+      "atomic_hard_link_commits": 1,
+      "fsync_calls": 3,
+      "overwrite_capable_publication_calls": 0,
+      "destination_unlink_calls": 0,
+      "exclusive_and_no_follow_flags_present": true,
+      "proof_implementation_boundary_aligned": true
+    }
+  },
+  "cpu_seconds": 0.092996618,
+  "wall_seconds": 0.0924112919999942,
+  "scope": "Owned empty-ledger inputs and static retained-input/source checks; no POSIX publication, persistent freshness, or performance rerun."
+}

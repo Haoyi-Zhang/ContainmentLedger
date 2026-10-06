@@ -1,0 +1,307 @@
+{
+  "cases": [
+    {
+      "actual": {
+        "cleanup_pids": [],
+        "command": [
+          "python",
+          "-S",
+          "tests/runner_guards.py",
+          "--probe",
+          "normal"
+        ],
+        "exit_code": 0,
+        "limits": {
+          "address_space_bytes_per_process": 134217728,
+          "cleanup_seconds": 3,
+          "cpu_seconds_per_process": 5,
+          "rss_sample_interval_seconds": 0.01,
+          "sampled_group_rss_bytes": 134217728,
+          "wall_seconds": 2.0
+        },
+        "peak_child_rss_kib": 20516,
+        "reaped_processes": [
+          {
+            "cpu_seconds": 0.06622499999999999,
+            "exit_code": 0,
+            "peak_rss_kib": 20516,
+            "pid": 2028
+          }
+        ],
+        "remaining_descendants": [],
+        "sampled_peak_group_rss_kib": 20516,
+        "status": "passed",
+        "stderr": "",
+        "stdout": "{\"count\": 60009, \"address_space_limit\": 134217728, \"cpu_affinity_count\": 2}\n",
+        "termination_reason": null,
+        "wall_seconds": 0.08098215799999764,
+        "whole_child_cpu_seconds": 0.06622499999999999
+      },
+      "case": "normal",
+      "expected_worker_status": "passed"
+    },
+    {
+      "actual": {
+        "cleanup_pids": [],
+        "command": [
+          "python",
+          "-S",
+          "tests/runner_guards.py",
+          "--probe",
+          "fail"
+        ],
+        "exit_code": 7,
+        "limits": {
+          "address_space_bytes_per_process": 134217728,
+          "cleanup_seconds": 3,
+          "cpu_seconds_per_process": 5,
+          "rss_sample_interval_seconds": 0.01,
+          "sampled_group_rss_bytes": 134217728,
+          "wall_seconds": 2.0
+        },
+        "peak_child_rss_kib": 20420,
+        "reaped_processes": [
+          {
+            "cpu_seconds": 0.045074,
+            "exit_code": 7,
+            "peak_rss_kib": 20420,
+            "pid": 2029
+          }
+        ],
+        "remaining_descendants": [],
+        "sampled_peak_group_rss_kib": 15500,
+        "status": "failed",
+        "stderr": "intentional nonzero worker exit\n",
+        "stdout": "",
+        "termination_reason": "nonzero_exit",
+        "wall_seconds": 0.05554817399999479,
+        "whole_child_cpu_seconds": 0.045074
+      },
+      "case": "fail",
+      "expected_worker_status": "failed"
+    },
+    {
+      "actual": {
+        "cleanup_pids": [
+          2030,
+          2031
+        ],
+        "command": [
+          "python",
+          "-S",
+          "tests/runner_guards.py",
+          "--probe",
+          "timeout"
+        ],
+        "exit_code": -9,
+        "limits": {
+          "address_space_bytes_per_process": 134217728,
+          "cleanup_seconds": 3,
+          "cpu_seconds_per_process": 5,
+          "rss_sample_interval_seconds": 0.01,
+          "sampled_group_rss_bytes": 134217728,
+          "wall_seconds": 0.35
+        },
+        "peak_child_rss_kib": 20444,
+        "reaped_processes": [
+          {
+            "cpu_seconds": 0.040519,
+            "exit_code": -9,
+            "peak_rss_kib": 20360,
+            "pid": 2030
+          },
+          {
+            "cpu_seconds": 0.039857,
+            "exit_code": -9,
+            "peak_rss_kib": 20444,
+            "pid": 2031
+          }
+        ],
+        "remaining_descendants": [],
+        "sampled_peak_group_rss_kib": 40804,
+        "status": "failed",
+        "stderr": "",
+        "stdout": "{\"descendant_pid\": 2031}\n",
+        "termination_reason": "wall_timeout",
+        "wall_seconds": 0.38317263999999795,
+        "whole_child_cpu_seconds": 0.080376
+      },
+      "case": "timeout",
+      "expected_worker_status": "failed"
+    },
+    {
+      "actual": {
+        "cleanup_pids": [],
+        "command": [
+          "python",
+          "-S",
+          "tests/runner_guards.py",
+          "--probe",
+          "allocate"
+        ],
+        "exit_code": 0,
+        "limits": {
+          "address_space_bytes_per_process": 67108864,
+          "cleanup_seconds": 3,
+          "cpu_seconds_per_process": 5,
+          "rss_sample_interval_seconds": 0.01,
+          "sampled_group_rss_bytes": 134217728,
+          "wall_seconds": 2.0
+        },
+        "peak_child_rss_kib": 20416,
+        "reaped_processes": [
+          {
+            "cpu_seconds": 0.053908,
+            "exit_code": 0,
+            "peak_rss_kib": 20416,
+            "pid": 2032
+          }
+        ],
+        "remaining_descendants": [],
+        "sampled_peak_group_rss_kib": 20416,
+        "status": "passed",
+        "stderr": "",
+        "stdout": "{\"allocation_refused\": true}\n",
+        "termination_reason": null,
+        "wall_seconds": 0.09035233300001266,
+        "whole_child_cpu_seconds": 0.053908
+      },
+      "case": "allocate",
+      "expected_worker_status": "passed"
+    },
+    {
+      "actual": {
+        "cleanup_pids": [
+          2033
+        ],
+        "command": [
+          "python",
+          "-S",
+          "tests/runner_guards.py",
+          "--probe",
+          "group-memory"
+        ],
+        "exit_code": -9,
+        "limits": {
+          "address_space_bytes_per_process": 134217728,
+          "cleanup_seconds": 3,
+          "cpu_seconds_per_process": 5,
+          "rss_sample_interval_seconds": 0.01,
+          "sampled_group_rss_bytes": 25165824,
+          "wall_seconds": 2.0
+        },
+        "peak_child_rss_kib": 53168,
+        "reaped_processes": [
+          {
+            "cpu_seconds": 0.044777,
+            "exit_code": -9,
+            "peak_rss_kib": 53168,
+            "pid": 2033
+          }
+        ],
+        "remaining_descendants": [],
+        "sampled_peak_group_rss_kib": 53168,
+        "status": "failed",
+        "stderr": "",
+        "stdout": "33554432\n",
+        "termination_reason": "sampled_aggregate_rss_limit",
+        "wall_seconds": 0.07477658399999143,
+        "whole_child_cpu_seconds": 0.044777
+      },
+      "case": "group-memory",
+      "expected_worker_status": "failed"
+    },
+    {
+      "actual": {
+        "cleanup_pids": [
+          2035
+        ],
+        "command": [
+          "python",
+          "-S",
+          "tests/runner_guards.py",
+          "--probe",
+          "orphan"
+        ],
+        "exit_code": 0,
+        "limits": {
+          "address_space_bytes_per_process": 134217728,
+          "cleanup_seconds": 3,
+          "cpu_seconds_per_process": 5,
+          "rss_sample_interval_seconds": 0.01,
+          "sampled_group_rss_bytes": 134217728,
+          "wall_seconds": 2.0
+        },
+        "peak_child_rss_kib": 20412,
+        "reaped_processes": [
+          {
+            "cpu_seconds": 0.045666,
+            "exit_code": 0,
+            "peak_rss_kib": 20412,
+            "pid": 2034
+          },
+          {
+            "cpu_seconds": 0.013335,
+            "exit_code": -9,
+            "peak_rss_kib": 20388,
+            "pid": 2035
+          }
+        ],
+        "remaining_descendants": [],
+        "sampled_peak_group_rss_kib": 15716,
+        "status": "failed",
+        "stderr": "",
+        "stdout": "{\"descendant_pid\": 2035}\n",
+        "termination_reason": "unwaited_descendants_after_worker_exit",
+        "wall_seconds": 0.0748565289999874,
+        "whole_child_cpu_seconds": 0.059001
+      },
+      "case": "orphan",
+      "expected_worker_status": "failed"
+    },
+    {
+      "actual": {
+        "cleanup_pids": [
+          2036
+        ],
+        "command": [
+          "python",
+          "-S",
+          "tests/runner_guards.py",
+          "--probe",
+          "interrupt"
+        ],
+        "exit_code": -9,
+        "limits": {
+          "address_space_bytes_per_process": 134217728,
+          "cleanup_seconds": 3,
+          "cpu_seconds_per_process": 5,
+          "rss_sample_interval_seconds": 0.01,
+          "sampled_group_rss_bytes": 134217728,
+          "wall_seconds": 2.0
+        },
+        "peak_child_rss_kib": 20516,
+        "reaped_processes": [
+          {
+            "cpu_seconds": 0.040723999999999996,
+            "exit_code": -9,
+            "peak_rss_kib": 20516,
+            "pid": 2036
+          }
+        ],
+        "remaining_descendants": [],
+        "sampled_peak_group_rss_kib": 20516,
+        "status": "failed",
+        "stderr": "",
+        "stdout": "",
+        "termination_reason": "interrupted: received signal 15",
+        "wall_seconds": 0.12243705600000965,
+        "whole_child_cpu_seconds": 0.040723999999999996
+      },
+      "case": "interrupt",
+      "expected_worker_status": "failed"
+    }
+  ],
+  "scope": "Benign bounded worker probes only. Per-process address-space limits are hard; aggregate RSS is sampled. Linux subreaping covers adopted descendants; no universal hostile-process or kernel-failure guarantee.",
+  "status": "passed"
+}

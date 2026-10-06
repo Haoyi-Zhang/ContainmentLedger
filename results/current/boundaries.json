@@ -1,0 +1,33 @@
+{
+  "clean_archives_emitted_and_read_back": 144,
+  "blocked_archives_not_created": 336,
+  "inclusion_minimal_diagnoses": 288,
+  "uncuttable_diagnoses": 192,
+  "boundary_checks": [
+    "malformed JSON rejected",
+    "malformed JSON rejected",
+    "malformed JSON rejected",
+    "malformed JSON rejected",
+    "malformed JSON rejected",
+    "malformed JSON rejected",
+    "malformed JSON rejected",
+    "malformed JSON rejected",
+    "member Unicode scalar checked",
+    "member Unicode scalar checked",
+    "empty ledger",
+    "normalizer boundary",
+    "normalizer boundary",
+    "normalizer boundary",
+    "normalizer boundary",
+    "Boolean index rejected",
+    "Boolean index rejected",
+    "copy replay",
+    "expanded export budget enforced",
+    "expanded export budget enforced"
+  ],
+  "false_clean_claims_rejected_and_diagnosable": 336,
+  "observable_history_boundary_demonstrated": true,
+  "cpu_seconds": 0.40720855499999997,
+  "wall_seconds": 0.5984094639999995,
+  "peak_rss_kib": 24640
+}

@@ -204,8 +204,12 @@ supervised reproduction parts and the current-source verification gate on Ubuntu
 The whole scientific shell has a 600-second deadline (plus five seconds for
 forced termination), a 3 GiB per-process address-space ceiling and a 600-second
 per-process CPU ceiling; the tighter internal part/worker limits still apply.
-The workflow preserves logs and result records even after failure. A saved
-historical record is not a successful execution of this workflow.
+The workflow preserves logs and result records even after failure. The current
+Linux execution in `results/current/` completes all five parts and 22 commands:
+35.843 accounted wall seconds, 45.486 accounted CPU seconds, and 101,700 KiB
+peak child RSS. It reproduces 327,680 closure instances, 262,144 contexts,
+15,625 grouped-cut graphs and 2,059 rejected mutations; 52 greedy cardinality
+gaps remain in the results. Historical timing samples retain their own context.
 
 The small diagnostic/inventory regression is also portable:
 

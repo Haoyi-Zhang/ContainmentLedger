@@ -1,0 +1,326 @@
+{
+  "checks": {
+    "reports": [
+      "upstream-regression.json",
+      "freshness-json.json",
+      "runner-guards.json",
+      "package-audit.json",
+      "reviewer-hardening.json",
+      "scientific-regressions.json"
+    ],
+    "status": "passed"
+  },
+  "commands": [
+    {
+      "cleanup_pids": [],
+      "command": [
+        "python",
+        "-S",
+        "tests/builder_bridge.py",
+        "--smoke"
+      ],
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes_per_process": 3221225472,
+        "cleanup_seconds": 3,
+        "cpu_seconds_per_process": 160,
+        "rss_sample_interval_seconds": 0.01,
+        "sampled_group_rss_bytes": 3221225472,
+        "wall_seconds": 160
+      },
+      "peak_child_rss_kib": 20124,
+      "reaped_processes": [
+        {
+          "cpu_seconds": 0.05393099999999999,
+          "exit_code": 0,
+          "peak_rss_kib": 20124,
+          "pid": 2025
+        }
+      ],
+      "remaining_descendants": [],
+      "sampled_peak_group_rss_kib": 19440,
+      "status": "passed",
+      "stderr": "",
+      "stdout": "{\"status\": \"passed\", \"queries\": [{\"loader\": \"builder_adapter\", \"matched_branch\": true, \"return_matched\": true, \"actual\": [false, \"fixture_match\", \"needle\"]}, {\"loader\": \"builder_adapter\", \"matched_branch\": true, \"return_matched\": false, \"actual\": [false, \"fixture_match\"]}, {\"loader\": \"builder_adapter\", \"matched_branch\": false, \"return_matched\": true, \"actual\": [true, null, null]}, {\"loader\": \"builder_adapter\", \"matched_branch\": false, \"return_matched\": false, \"actual\": [true, null]}, {\"loader\": \"reviewer_hardening\", \"matched_branch\": true, \"return_matched\": true, \"actual\": [false, \"fixture_match\", \"needle\"]}, {\"loader\": \"reviewer_hardening\", \"matched_branch\": true, \"return_matched\": false, \"actual\": [false, \"fixture_match\"]}, {\"loader\": \"reviewer_hardening\", \"matched_branch\": false, \"return_matched\": true, \"actual\": [true, null, null]}, {\"loader\": \"reviewer_hardening\", \"matched_branch\": false, \"return_matched\": false, \"actual\": [true, null]}], \"query_count\": 8, \"upstream_excerpt\": \"upstream/bigcode-dataset/find_substrings_excerpt.py\", \"upstream_excerpt_sha256\": \"65aa3d5401b98cb067ab4103fa86ce168d516117db65dc4492dbf9c069813a7e\", \"helper_loaded\": true, \"scope\": \"Pure matching/nonmatching queries only, not a full-campaign result.\"}\n",
+      "termination_reason": null,
+      "wall_seconds": 0.07991225799999313,
+      "whole_child_cpu_seconds": 0.05393099999999999
+    },
+    {
+      "cleanup_pids": [],
+      "command": [
+        "python",
+        "-S",
+        "tests/freshness.py",
+        "--json-only"
+      ],
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes_per_process": 3221225472,
+        "cleanup_seconds": 3,
+        "cpu_seconds_per_process": 160,
+        "rss_sample_interval_seconds": 0.01,
+        "sampled_group_rss_bytes": 3221225472,
+        "wall_seconds": 160
+      },
+      "peak_child_rss_kib": 27100,
+      "reaped_processes": [
+        {
+          "cpu_seconds": 0.20751,
+          "exit_code": 0,
+          "peak_rss_kib": 27100,
+          "pid": 2026
+        }
+      ],
+      "remaining_descendants": [],
+      "sampled_peak_group_rss_kib": 26972,
+      "status": "passed",
+      "stderr": "",
+      "stdout": "{\"status\": \"passed\", \"valid_controls\": 3, \"rejected_cases\": [{\"case\": \"duplicate-generation\", \"bytes\": 230, \"rejection\": \"freshness duplicate JSON key\"}, {\"case\": \"hidden-NaN-generation\", \"bytes\": 232, \"rejection\": \"freshness non-finite JSON constant\"}, {\"case\": \"duplicate-generation-identical\", \"bytes\": 230, \"rejection\": \"freshness duplicate JSON key\"}, {\"case\": \"escaped-duplicate-key\", \"bytes\": 235, \"rejection\": \"freshness duplicate JSON key\"}, {\"case\": \"duplicate-shard\", \"bytes\": 228, \"rejection\": \"freshness duplicate JSON key\"}, {\"case\": \"hidden-Infinity\", \"bytes\": 237, \"rejection\": \"freshness non-finite JSON constant\"}, {\"case\": \"hidden-negative-Infinity\", \"bytes\": 238, \"rejection\": \"freshness non-finite JSON constant\"}, {\"case\": \"boolean-generation\", \"bytes\": 218, \"rejection\": \"freshness generation\"}, {\"case\": \"integer-length\", \"bytes\": 234, \"rejection\": \"freshness JSON integer length\"}, {\"case\": \"invalid-UTF8\", \"bytes\": 1, \"rejection\": \"freshness state JSON\"}, {\"case\": \"lexical-depth\", \"bytes\": 131, \"rejection\": \"freshness JSON depth limit\"}, {\"case\": \"lexical-atoms\", \"bytes\": 2000003, \"rejection\": \"freshness JSON atom limit\"}, {\"case\": \"byte-limit\", \"bytes\": 4194305, \"rejection\": \"freshness state size\"}, {\"case\": \"changed-body-valid-syntax\", \"bytes\": 215, \"rejection\": \"freshness authentication\"}], \"rejected_count\": 14, \"persisted_state_rejections_unchanged\": [\"duplicate-generation\", \"hidden-NaN-generation\"], \"fixture_keys_only\": true, \"interpretation\": \"Malformed encodings of an unchanged canonical authenticated body are rejected. No HMAC bypass or state rollback is claimed.\"}\n",
+      "termination_reason": null,
+      "wall_seconds": 0.2238622910000032,
+      "whole_child_cpu_seconds": 0.20751
+    },
+    {
+      "cleanup_pids": [],
+      "command": [
+        "python",
+        "-S",
+        "tests/runner_guards.py"
+      ],
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes_per_process": 3221225472,
+        "cleanup_seconds": 3,
+        "cpu_seconds_per_process": 160,
+        "rss_sample_interval_seconds": 0.01,
+        "sampled_group_rss_bytes": 3221225472,
+        "wall_seconds": 160
+      },
+      "peak_child_rss_kib": 53168,
+      "reaped_processes": [
+        {
+          "cpu_seconds": 0.720127,
+          "exit_code": 0,
+          "peak_rss_kib": 53168,
+          "pid": 2027
+        }
+      ],
+      "remaining_descendants": [],
+      "sampled_peak_group_rss_kib": 61644,
+      "status": "passed",
+      "stderr": "",
+      "stdout": "{\"status\": \"passed\", \"cases\": 7, \"expected_worker_failures\": 5}\n",
+      "termination_reason": null,
+      "wall_seconds": 0.9527694449999871,
+      "whole_child_cpu_seconds": 0.720127
+    },
+    {
+      "cleanup_pids": [],
+      "command": [
+        "python",
+        "-S",
+        "tests/package_audit.py"
+      ],
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes_per_process": 3221225472,
+        "cleanup_seconds": 3,
+        "cpu_seconds_per_process": 160,
+        "rss_sample_interval_seconds": 0.01,
+        "sampled_group_rss_bytes": 3221225472,
+        "wall_seconds": 160
+      },
+      "peak_child_rss_kib": 17996,
+      "reaped_processes": [
+        {
+          "cpu_seconds": 0.143455,
+          "exit_code": 0,
+          "peak_rss_kib": 17996,
+          "pid": 2037
+        }
+      ],
+      "remaining_descendants": [],
+      "sampled_peak_group_rss_kib": 17868,
+      "status": "passed",
+      "stderr": "",
+      "stdout": "{\n  \"cpu_seconds\": 0.11039357,\n  \"emitter_publication\": {\n    \"atomic_hard_link_commits\": 1,\n    \"destination_unlink_calls\": 0,\n    \"exclusive_and_no_follow_flags_present\": true,\n    \"fsync_calls\": 3,\n    \"overwrite_capable_publication_calls\": 0,\n    \"proof_implementation_boundary_aligned\": true\n  },\n  \"evidence_tables\": {\n    \"additional_evidence_rows\": 8,\n    \"all_resource_locators_https\": true,\n    \"claim_evidence_rows\": 30,\n    \"external_internals_modified\": 0,\n    \"external_resource_rows\": 118,\n    \"scholarly_or_standard_resource_rows\": 85,\n    \"unavailable_inherited_ancillary_records\": 2\n  },\n  \"package_shape\": {\n    \"forbidden_workflow_or_private_names\": 0,\n    \"nested_archives\": 0,\n    \"python_cache_artifacts\": 0,\n    \"symlinks\": 0,\n    \"top_level_entries\": [\n      \".github\",\n      \"LICENSE\",\n      \"README.md\",\n      \"claim_evidence_ledger.csv\",\n      \"data\",\n      \"external_resources.csv\",\n      \"licenses\",\n      \"proofs\",\n      \"reproduce.py\",\n      \"results\",\n      \"reviewer-evidence-ledger.csv\",\n      \"src\",\n      \"tests\",\n      \"upstream\"\n    ]\n  },\n  \"peak_rss_kib\": 17996,\n  \"public_inputs\": {\n    \"all_selected_files_end_in_LF\": true,\n    \"all_selected_files_have_retained_license\": true,\n    \"all_selected_files_utf8\": true,\n    \"files_per_project\": {\n      \"CPython\": 4,\n      \"Go\": 4,\n      \"Perl\": 4,\n      \"Ruby\": 4,\n      \"npm CLI\": 4,\n      \"pip\": 4\n    },\n    \"selection_bytes\": 268614,\n    \"selection_files\": 24,\n    \"selection_physical_lines\": 8191,\n    \"selection_projects\": 6\n  },\n  \"retained_upstream\": {\n    \"bigcode_commit_and_blob_identifiers_present\": true,\n    \"humaneval_commit_and_blob_identifiers_present\": true,\n    \"humaneval_example_exact_record_matched\": true,\n    \"retained_bigcode_functions_ast_matched\": 2,\n    \"upstream_license_files_present\": 2\n  },\n  \"scope\": \"Offline package-shape, retained-byte accounting, AST-level source-safety, publication-source invariants, upstream-excerpt identity, and evidence-table integrity checks. These checks do not prove semantic correctness, arbitrary-file-system durability, or remote source availability.\",\n  \"source_safety\": {\n    \"cut_generator_verifier_cross_imports\": 0,\n    \"dynamic_import_sites\": [\n      [\n        \"src/builder_adapter.py\",\n        32,\n        \"importlib.util.spec_from_file_location\"\n      ],\n      [\n        \"src/builder_adapter.py\",\n        36,\n        \"spec.loader.exec_module\"\n      ]\n    ],\n    \"forbidden_dynamic_execution_calls\": 0,\n    \"forbidden_network_imports\": 0,\n    \"producer_checker_cross_imports\": 0,\n    \"python_files_ast_parsed\": 30,\n    \"shell_true_subprocess_calls\": 0\n  },\n  \"status\": \"passed\",\n  \"wall_seconds\": 0.11731031099999711\n}\n",
+      "termination_reason": null,
+      "wall_seconds": 0.17092223299999887,
+      "whole_child_cpu_seconds": 0.143455
+    },
+    {
+      "cleanup_pids": [],
+      "command": [
+        "python",
+        "-S",
+        "tests/scientific_regressions.py",
+        "--output",
+        "results/scientific-regressions.json"
+      ],
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes_per_process": 3221225472,
+        "cleanup_seconds": 3,
+        "cpu_seconds_per_process": 160,
+        "rss_sample_interval_seconds": 0.01,
+        "sampled_group_rss_bytes": 3221225472,
+        "wall_seconds": 160
+      },
+      "peak_child_rss_kib": 18428,
+      "reaped_processes": [
+        {
+          "cpu_seconds": 0.131501,
+          "exit_code": 0,
+          "peak_rss_kib": 18428,
+          "pid": 2038
+        }
+      ],
+      "remaining_descendants": [],
+      "sampled_peak_group_rss_kib": 17892,
+      "status": "passed",
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"passed\",\n  \"diagnostic_cases\": 9,\n  \"records\": [\n    {\n      \"case\": 0,\n      \"roots\": 0,\n      \"vertices\": 1,\n      \"source_states\": 0,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 1,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 0,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 2,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 1,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 3,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 1,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 4,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 2,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 5,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 1,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 6,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 2,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 7,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 2,\n      \"targets\": 0,\n      \"cut_size\": 0\n    },\n    {\n      \"case\": 8,\n      \"roots\": 1,\n      \"vertices\": 3,\n      \"source_states\": 3,\n      \"targets\": 0,\n      \"cut_size\": 0\n    }\n  ],\n  \"inventory\": {\n    \"package_shape\": {\n      \"top_level_entries\": [\n        \".github\",\n        \"LICENSE\",\n        \"README.md\",\n        \"claim_evidence_ledger.csv\",\n        \"data\",\n        \"external_resources.csv\",\n        \"licenses\",\n        \"proofs\",\n        \"reproduce.py\",\n        \"results\",\n        \"reviewer-evidence-ledger.csv\",\n        \"src\",\n        \"tests\",\n        \"upstream\"\n      ],\n      \"symlinks\": 0,\n      \"nested_archives\": 0,\n      \"python_cache_artifacts\": 0,\n      \"forbidden_workflow_or_private_names\": 0\n    },\n    \"source_safety\": {\n      \"python_files_ast_parsed\": 30,\n      \"forbidden_network_imports\": 0,\n      \"forbidden_dynamic_execution_calls\": 0,\n      \"shell_true_subprocess_calls\": 0,\n      \"dynamic_import_sites\": [\n        [\n          \"src/builder_adapter.py\",\n          32,\n          \"importlib.util.spec_from_file_location\"\n        ],\n        [\n          \"src/builder_adapter.py\",\n          36,\n          \"spec.loader.exec_module\"\n        ]\n      ],\n      \"producer_checker_cross_imports\": 0,\n      \"cut_generator_verifier_cross_imports\": 0\n    },\n    \"public_inputs\": {\n      \"selection_projects\": 6,\n      \"selection_files\": 24,\n      \"selection_bytes\": 268614,\n      \"selection_physical_lines\": 8191,\n      \"all_selected_files_end_in_LF\": true,\n      \"files_per_project\": {\n        \"CPython\": 4,\n        \"Go\": 4,\n        \"Perl\": 4,\n        \"Ruby\": 4,\n        \"npm CLI\": 4,\n        \"pip\": 4\n      },\n      \"all_selected_files_utf8\": true,\n      \"all_selected_files_have_retained_license\": true\n    },\n    \"retained_upstream\": {\n      \"retained_bigcode_functions_ast_matched\": 2,\n      \"bigcode_commit_and_blob_identifiers_present\": true,\n      \"humaneval_example_exact_record_matched\": true,\n      \"humaneval_commit_and_blob_identifiers_present\": true,\n      \"upstream_license_files_present\": 2\n    },\n    \"evidence_tables\": {\n      \"additional_evidence_rows\": 8,\n      \"unavailable_inherited_ancillary_records\": 2,\n      \"external_resource_rows\": 118,\n      \"scholarly_or_standard_resource_rows\": 85,\n      \"claim_evidence_rows\": 30,\n      \"all_resource_locators_https\": true,\n      \"external_internals_modified\": 0\n    },\n    \"emitter_source\": {\n      \"atomic_hard_link_commits\": 1,\n      \"fsync_calls\": 3,\n      \"overwrite_capable_publication_calls\": 0,\n      \"destination_unlink_calls\": 0,\n      \"exclusive_and_no_follow_flags_present\": true,\n      \"proof_implementation_boundary_aligned\": true\n    }\n  },\n  \"cpu_seconds\": 0.092996618,\n  \"wall_seconds\": 0.0924112919999942,\n  \"scope\": \"Owned empty-ledger inputs and static retained-input/source checks; no POSIX publication, persistent freshness, or performance rerun.\"\n}\n",
+      "termination_reason": null,
+      "wall_seconds": 0.14987044100000446,
+      "whole_child_cpu_seconds": 0.131501
+    },
+    {
+      "cleanup_pids": [],
+      "command": [
+        "python",
+        "-S",
+        "tests/reviewer_hardening.py"
+      ],
+      "exit_code": 0,
+      "limits": {
+        "address_space_bytes_per_process": 3221225472,
+        "cleanup_seconds": 3,
+        "cpu_seconds_per_process": 160,
+        "rss_sample_interval_seconds": 0.01,
+        "sampled_group_rss_bytes": 3221225472,
+        "wall_seconds": 160
+      },
+      "peak_child_rss_kib": 25888,
+      "reaped_processes": [
+        {
+          "cpu_seconds": 9.892821,
+          "exit_code": 0,
+          "peak_rss_kib": 25888,
+          "pid": 2039
+        }
+      ],
+      "remaining_descendants": [],
+      "sampled_peak_group_rss_kib": 25784,
+      "status": "passed",
+      "stderr": "",
+      "stdout": "{\"status\": \"passed\", \"small_model_cases\": 14400, \"mutants_killed\": 12, \"transform_cases\": 120, \"timing_records\": 264}\n",
+      "termination_reason": null,
+      "wall_seconds": 9.910225507000007,
+      "whole_child_cpu_seconds": 9.892821
+    }
+  ],
+  "coordinator_cpu_seconds": 3.174119,
+  "coordinator_peak_rss_kib": 22048,
+  "execution_identity": {
+    "input_sha256": {
+      "claim_evidence_ledger.csv": "f134bde0ac16c9b2e9ab7837a3f2cf85f0fde61ec466be4e663ea347e27fb258",
+      "data/builder/bridge-policy.json": "bc1f9fd155d19a8809c7ec5ad4041aa09921f211d2722be581a0735493558fef",
+      "data/example-ledger.json": "764ccc50220426dfa13e1f45e3395fd794d3bd0b3722b21bc164b178fd51f2e4",
+      "data/example-policy.json": "53c932f7ef9277a3e01e0fe1570ee7148ce3fdd0aba1ff71224a78afefcae1e3",
+      "data/observational-counterexample.json": "7b118787ba9c63e103a4972dd4f344b049110f4e49ccc962d4e98c0366da3306",
+      "data/public/cpython/abc.py": "e558702a95cdce3febd289da021715d2b92bc43995b8a1bc58dfa1c3d8010287",
+      "data/public/cpython/bisect.py": "f1cf7b85fc36b5da249813fc5ab97d9464f8cc1bc817f7146206fa2713e35999",
+      "data/public/cpython/colorsys.py": "65e3dfbf7bad61d4d7d7731a69dd7e75a347fd350d91327a51010a94e6fd2f1d",
+      "data/public/cpython/keyword.py": "18c2be738c04ad20ad375f6a71db34b3823c7f40b0340f5294d0e89f3c9b093b",
+      "data/public/go/csv-reader.go": "c37960d74220590547febce08339aa321f4d85c524740451e14692ebbc9fef1e",
+      "data/public/go/path.go": "0a5024c364387eeea9ab5fe0b285f0d62355e8cd181cdbddfdfa227f6916d94c",
+      "data/public/go/sort.go": "f414ff4021ea34d3a55f9c0fc9afdf45ef6f7f88f1bd1167047642b3cea66ed7",
+      "data/public/go/tar-format.go": "5194151b1052559f84ebefb2dfa66608b803b5014391349289212d1cf13c4803",
+      "data/public/npm/cli-entry.js": "1024d2511a619c857fd67f79c3fb4d509c690cf2430373953b94713f18020b26",
+      "data/public/npm/dedupe.js": "5261952e803312c4bc343d3f21702adfbbb219fe6f13fd2cb79e39383a09f03c",
+      "data/public/npm/pack.js": "57929264691500c4a5055c0ab1c28b82db6246a05910004b2b85c9f81b77ca7c",
+      "data/public/npm/reify-finish.js": "dbf72f99478080de94ce1bd10e82563b28339a99fae67d665157ad8a0691cbe6",
+      "data/public/perl/AutoLoader.pm": "9a3bd486186b8a4a910b88bd8a503ee4f077b3c36fdc8e450fda74f899bacbc8",
+      "data/public/perl/AutoSplit.pm": "87c24fe374c2d2c0e6c673684dce91a9900a274502f574b935e7f4f89489dcfb",
+      "data/public/perl/Benchmark.pm": "51a1b6f2a7839c403b06308a5bc82b90d5982490011b5bc8753cd3368a89c1db",
+      "data/public/perl/English.pm": "f857b95e26385272525a7519267c8c63648d692608b7633b46d267c38092ccb3",
+      "data/public/pip/cache.py": "4a38492b50ba35ba27ad4e00c985ca4ce1f40863a4e5c26b62deb499100d9cf3",
+      "data/public/pip/direct-url.py": "949d5f2154e0939506e52cd3351d05a604860108c28651fede8b60884240848b",
+      "data/public/pip/prepare.py": "fa2f5d630c0926337b87ab194da6dccfce2d8b3827ec402c634b079cb01fb374",
+      "data/public/pip/req-install.py": "80ca056a4f73ae18c794768e4313c585e1cab48a1ba69160ab55ab29e97f9d31",
+      "data/public/ruby/abbrev.rb": "c0e9d990c140b2c9679370ae48126f7dc28ecc0fa0ba67555110859238e0bc26",
+      "data/public/ruby/base64.rb": "4f9ec2f5e19c750a029e783b365c549b08ba79d08b31a90e442fcb1d4d6a8861",
+      "data/public/ruby/benchmark.rb": "f85ac9128b28f2d1aca6a45d425476d7f63bb14971d1e2823116c7f7e27dac0f",
+      "data/public/ruby/tsort.rb": "6bcb55163ca31d1e8fa09d3e73bcca5f096909853449f98184ef2d029045e414",
+      "data/selection.json": "f32e38a82b2bd84fa45b8e74ed62b0eef2de82dbe49b8ae8f8530a452fbcf9a4",
+      "external_resources.csv": "5a223792621d332112f94fab1ad010bc2428b524b95b211a1c5e4497e219d686",
+      "licenses/CPython-LICENSE.txt": "78b12c3a81360b357002334f0e70ea0e92eebf7a9b358805c03c48484945f3bb",
+      "licenses/CPython-distribution-copyright.txt": "f1cbf908e1daa8789b389fdcf17811ed36b675d736b39a103591399861350382",
+      "licenses/Go-LICENSE.txt": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067",
+      "licenses/Perl-copyright.txt": "8adf04cb72ca0719dee8fdb8d711768548d10373905eac21e8a640881c230257",
+      "licenses/Ruby-copyright.txt": "e204965f1ce0e936fba339d0292f6ddc8ff7058a17586b3af2361523a8c18f66",
+      "licenses/npm-LICENSE.txt": "7610d223851f421d315df5e77974f1c68a04b97e02060e5bbbcf13d95e3ca257",
+      "licenses/pip-LICENSE.txt": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+      "proofs/arguments.md": "8117f12f5fd54f5cea989469b496954f2433a2060d6b3e0111b349b1d7a03320",
+      "reviewer-evidence-ledger.csv": "135ba175000b3926b641feffd8f0d5dfc93e7cee91bff4b0458c7425d0cab446",
+      "upstream/bigcode-dataset/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "upstream/bigcode-dataset/NOTICE.md": "4296a5c5f4ad8517612d979781529039a1bc22a011c7b2f5331368cb0bfc2c34",
+      "upstream/bigcode-dataset/find_substrings_excerpt.py": "65aa3d5401b98cb067ab4103fa86ce168d516117db65dc4492dbf9c069813a7e",
+      "upstream/human-eval/LICENSE": "bcba3de214851cce46ed5af42d6698044616eeace887c3231bc7a20474ab639e",
+      "upstream/human-eval/NOTICE.md": "05a85ecd56e2ef3e373e4ae4838a1272922035a3f251172461de5a40920e1f35",
+      "upstream/human-eval/example_problem.jsonl": "701442bbe5a65db1e4ac218d0d2bb29a6caf9615a769759bcf4ca38621ba1d7f"
+    },
+    "python_sources": 30,
+    "sha256": "999b3d42523ccb294ed58a914acc50f7def4b5ea427197a659c52af19b993e32",
+    "source_sha256": {
+      "reproduce.py": "5a39939db4af3612a71d2f6a730510fa4d5778714f0c8b6176cd00c0e7238373",
+      "src/builder_adapter.py": "b61c432875ac42277932ff101592aa0186b535afb237dbd7956084f998fc7b50",
+      "src/capsule.py": "c93a0a0d0773deb35b857e7208ca24fdf799d6643f112e1a1269c75689783d72",
+      "src/checker.py": "6f95992b45b0e83fe0d3d4b0b196383b21ad625c62093635ac70842aba3f5c98",
+      "src/corpus_adapter.py": "8ce7ac8bf2313fadb88ccc81602ce5c02809a993cd07643ac6f3a7e6f6004306",
+      "src/cutcheck.py": "1a89bae69548161e6d7c0de2700b30888b2b7abd2a9ff97ed66f4e7281d86801",
+      "src/cuts.py": "e22fc10ca5cf7adde76ed3478953fa0a5a7b52b98cc3b270029a9a62a49000b0",
+      "src/diagnose.py": "2a53851b6669dc19fd16b1ee895a646f36f883db282c892125e01660dedc36bd",
+      "src/emitter.py": "b1b4bc47e12bedb920ecf503464632890aa35065fd533130ec9362253a893996",
+      "src/fixtures.py": "5b1e533a936491d026a63a95bba9885b986fa4351aa049da595f1b760b42656d",
+      "src/freshness.py": "92aa7495ea07d3a4c0878079ca427ceed3a621a53f74cf1e7834bc1394b18c71",
+      "src/ledger.py": "8d5783f688b87fd9bae46c408b41dc5020376a74aef32ada94085e7fbb564958",
+      "src/merge.py": "bd3d4f13157a5fd5b96419bd030942cee5b8bb1d9c9136bf21d34b4059b9dad8",
+      "src/reviewer_hardening.py": "122bad03cd77c7e47c3dffa7704e26bfe028982e245e5852842ed6c6fc9e4306",
+      "tests/boundaries.py": "95f473781d466c0486299f3d3f99c8c7c72b4a0363d23bf26cb9cdf9821e71e2",
+      "tests/builder_bridge.py": "0497603fb14c846a57b912b86178d3b080b580b0eef5749050c1bb19e9710d2d",
+      "tests/campaign.py": "7d618838399947db46d8de9f1c7101b642e460ad87d26ba65c0fd9214c338176",
+      "tests/context.py": "38def8a5007d889fe2859326c4d36fb69112de49ea241f1cc12003572531f8c8",
+      "tests/deployment.py": "7df58dffd26fb991d35ad5e932dc3b0db67b358bc9ac112807f1ebdb27093c76",
+      "tests/emitter_worker.py": "ea3d19aa9149d4df49204d18ef9a24dd20f5afc99e62669062de8b995bd6959d",
+      "tests/finite.py": "36954336cb8f2329160dab0ca7adc05f27653a4c4bf7edcf3738c593bdcafa5d",
+      "tests/freshness.py": "37ac19a68fecc1c0813a8349001041ad7fddfc64d0b1329542a032a4af3c0339",
+      "tests/freshness_worker.py": "8c79ce251d373da423f1824c4334330f38d481f9e8667d064d56550c54e0e24d",
+      "tests/natural.py": "408439bb5a1e591d18fede468f617971560a20d6b9959390b4246f82271c281e",
+      "tests/package_audit.py": "84aaf126a114f1981f9998449bae7d4e1561724668e4610995580f716b141eb7",
+      "tests/pilot.py": "43ab21930df5f373b4b9fc5710dd2efbda8ebe74fbde36d2c5bbe2833e8955b7",
+      "tests/reviewer_hardening.py": "6e2355db695d5c98899182491c313644248961c26ac97f6e9b0dbc43df81495f",
+      "tests/runner_guards.py": "1d129d6e9ee4f6f2a2b33fa63bad46c833667c386371c929f4297818940d989e",
+      "tests/scaling.py": "af75dea387ae245db19986ae27a63745fea2e8fc47212ab65dcc4734ec860b1e",
+      "tests/scientific_regressions.py": "34b21dc2924acef005ae980d2cef29e669dc4d56a67f44e722ae84365c5763c3"
+    }
+  },
+  "part": "hardening",
+  "part_wall_limit_seconds": 170.0,
+  "peak_child_rss_kib": 53168,
+  "result_sha256": {
+    "freshness-json.json": "8bd791013bc1f4f4ac20a01b2be682abb2036694f6bf57c92792ca1241ace34c",
+    "package-audit.json": "0f46ab3aae54d89f6830b2f725a25982ed5b18230888ef9082d7635db5be2204",
+    "reviewer-hardening.json": "56f0aaf80f2858c21e08e1eb68116c3094f3ed9c6c16ca1f3c2711452dd79784",
+    "runner-guards.json": "467e540a2ad4706f280b966377cc2a3175b4e062ba82456d24f341b7338b5512",
+    "scientific-regressions.json": "29329efe7c03719511cbb88c3ecbf2bb09eafba0f528b84ba369a2611ab7b41c",
+    "upstream-regression.json": "deb33754f249106ebfca5056b0c5c6828ec3a0eaac45c977a5e2a3207ccfe430"
+  },
+  "sampled_peak_group_rss_kib": 61644,
+  "status": "passed-part",
+  "total_cpu_seconds": 14.323464000000001,
+  "wall_seconds": 11.50237711199999,
+  "whole_child_cpu_seconds": 11.149345,
+  "worker_count": 1
+}

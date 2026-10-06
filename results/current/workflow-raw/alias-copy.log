@@ -1,0 +1,2 @@
+{"command": ["python", "-S", "tests/scaling.py", "--shape", "alias-copy"], "status": "passed", "exit_code": 0, "wall_seconds": 5.7814190150000115}
+{"status": "passed-part", "part": "scaling-alias-copy", "wall_seconds": 5.789828986000003, "total_cpu_seconds": 7.407342, "peak_child_rss_kib": 101700}

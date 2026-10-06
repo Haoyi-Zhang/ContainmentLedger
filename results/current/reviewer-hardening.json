@@ -1,0 +1,4754 @@
+{
+  "elapsed_seconds": 9.84614507500001,
+  "limitations": [
+    "The exhaustive domain has four nodes and directed acyclic transformation facts; larger random cases are mutation witnesses, not exhaustive coverage.",
+    "Mutants are a documented set of plausible mistakes, not every possible implementation defect.",
+    "The transform bridge calls one upstream predicate and does not reproduce the complete distributed dataset builder.",
+    "Microbenchmark timing is host-specific and does not establish a general complexity theorem."
+  ],
+  "mutation_campaign": {
+    "mutants": {
+      "cache_before_late_alias": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 1,
+          "n": 4,
+          "observed": [
+            0,
+            1
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 1463
+      },
+      "collapse_all_identities": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            2,
+            3
+          ],
+          "index": 4,
+          "n": 4,
+          "observed": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0,
+            2
+          ]
+        },
+        "killed_cases": 1288
+      },
+      "diagnosis_as_implicit_repair": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 0,
+          "n": 4,
+          "observed": [
+            0,
+            1,
+            2
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 2006
+      },
+      "drop_alias_relation": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 1,
+          "n": 4,
+          "observed": [
+            0,
+            1
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 1463
+      },
+      "drop_cross_partition_edges": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 0,
+          "n": 4,
+          "observed": [
+            0,
+            1
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 528
+      },
+      "drop_non_endpoint_intermediates": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 0,
+          "n": 4,
+          "observed": [
+            0,
+            1
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 383
+      },
+      "expand_aliases_only_at_roots": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 1,
+          "n": 4,
+          "observed": [
+            0,
+            1
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 394
+      },
+      "intersect_instead_of_union_edges": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 0,
+          "n": 4,
+          "observed": [
+            0
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 940
+      },
+      "keep_only_first_composed_root": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            2,
+            3
+          ],
+          "index": 4,
+          "n": 4,
+          "observed": [
+            0,
+            3
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0,
+            2
+          ]
+        },
+        "killed_cases": 256
+      },
+      "reverse_transform_edges": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 0,
+          "n": 4,
+          "observed": [
+            0
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 1274
+      },
+      "single_pass_instead_of_fixed_point": {
+        "first_witness": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "index": 0,
+          "n": 4,
+          "observed": [
+            0,
+            1
+          ],
+          "partition": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "roots": [
+            0
+          ]
+        },
+        "killed_cases": 433
+      },
+      "treat_transform_edges_as_undirected": {
+        "first_witness": {
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "expected": [
+            0,
+            2,
+            4
+          ],
+          "index": 8,
+          "n": 5,
+          "observed": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "partition": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2
+            ]
+          ],
+          "roots": [
+            4
+          ]
+        },
+        "killed_cases": 771
+      }
+    },
+    "mutants_killed": 12,
+    "mutants_total": 12,
+    "witness_cases": 2006
+  },
+  "scaling": {
+    "claim_boundary": "Medians, dispersion, and raw repetitions characterize this deterministic microbenchmark only; they are not production throughput or latency measurements.",
+    "environment": {
+      "cpu_model": "AMD EPYC 9V45 96-Core Processor",
+      "implementation": "CPython",
+      "logical_cpus": 2,
+      "machine": "x86_64",
+      "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "processor": "x86_64",
+      "python": "3.12.14 (main, Aug 13 2026, 02:47:42) [GCC 13.3.0]",
+      "pythonhashseed": "0"
+    },
+    "records": [
+      {
+        "elapsed_ns": 34542258,
+        "loops": 2048,
+        "per_call_ns": 16866.3369140625,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 36093790,
+        "loops": 2048,
+        "per_call_ns": 17623.9208984375,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35027310,
+        "loops": 2048,
+        "per_call_ns": 17103.1787109375,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 36183475,
+        "loops": 2048,
+        "per_call_ns": 17667.71240234375,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 36811548,
+        "loops": 2048,
+        "per_call_ns": 17974.388671875,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35095597,
+        "loops": 2048,
+        "per_call_ns": 17136.52197265625,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 36458305,
+        "loops": 2048,
+        "per_call_ns": 17801.90673828125,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35495490,
+        "loops": 2048,
+        "per_call_ns": 17331.7822265625,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 36088606,
+        "loops": 2048,
+        "per_call_ns": 17621.3896484375,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 36398244,
+        "loops": 2048,
+        "per_call_ns": 17772.580078125,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 34576593,
+        "loops": 2048,
+        "per_call_ns": 16883.10205078125,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35329476,
+        "loops": 1024,
+        "per_call_ns": 34501.44140625,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35754753,
+        "loops": 1024,
+        "per_call_ns": 34916.7509765625,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35230831,
+        "loops": 1024,
+        "per_call_ns": 34405.1083984375,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35768533,
+        "loops": 1024,
+        "per_call_ns": 34930.2080078125,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 34189088,
+        "loops": 1024,
+        "per_call_ns": 33387.78125,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35949631,
+        "loops": 1024,
+        "per_call_ns": 35107.0615234375,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 37122717,
+        "loops": 1024,
+        "per_call_ns": 36252.6533203125,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 34404293,
+        "loops": 1024,
+        "per_call_ns": 33597.9423828125,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35815504,
+        "loops": 1024,
+        "per_call_ns": 34976.078125,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 34249659,
+        "loops": 1024,
+        "per_call_ns": 33446.9326171875,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35666239,
+        "loops": 1024,
+        "per_call_ns": 34830.3115234375,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 34312104,
+        "loops": 512,
+        "per_call_ns": 67015.828125,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34652358,
+        "loops": 512,
+        "per_call_ns": 67680.38671875,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34268238,
+        "loops": 512,
+        "per_call_ns": 66930.15234375,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34595562,
+        "loops": 512,
+        "per_call_ns": 67569.45703125,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 33952156,
+        "loops": 512,
+        "per_call_ns": 66312.8046875,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34801202,
+        "loops": 512,
+        "per_call_ns": 67971.09765625,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34025060,
+        "loops": 512,
+        "per_call_ns": 66455.1953125,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 36221127,
+        "loops": 512,
+        "per_call_ns": 70744.388671875,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 35157260,
+        "loops": 512,
+        "per_call_ns": 68666.5234375,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 33783526,
+        "loops": 512,
+        "per_call_ns": 65983.44921875,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34963377,
+        "loops": 512,
+        "per_call_ns": 68287.845703125,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 36317943,
+        "loops": 256,
+        "per_call_ns": 141866.96484375,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 34535432,
+        "loops": 256,
+        "per_call_ns": 134904.03125,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 36441619,
+        "loops": 256,
+        "per_call_ns": 142350.07421875,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 34486287,
+        "loops": 256,
+        "per_call_ns": 134712.05859375,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35923877,
+        "loops": 256,
+        "per_call_ns": 140327.64453125,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 34353156,
+        "loops": 256,
+        "per_call_ns": 134192.015625,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35911920,
+        "loops": 256,
+        "per_call_ns": 140280.9375,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35887943,
+        "loops": 256,
+        "per_call_ns": 140187.27734375,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35002096,
+        "loops": 256,
+        "per_call_ns": 136726.9375,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 36158532,
+        "loops": 256,
+        "per_call_ns": 141244.265625,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 34443923,
+        "loops": 256,
+        "per_call_ns": 134546.57421875,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 39666328,
+        "loops": 128,
+        "per_call_ns": 309893.1875,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 40064099,
+        "loops": 128,
+        "per_call_ns": 313000.7734375,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39821081,
+        "loops": 128,
+        "per_call_ns": 311102.1953125,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39672838,
+        "loops": 128,
+        "per_call_ns": 309944.046875,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39361227,
+        "loops": 128,
+        "per_call_ns": 307509.5859375,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 38325754,
+        "loops": 128,
+        "per_call_ns": 299419.953125,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39752968,
+        "loops": 128,
+        "per_call_ns": 310570.0625,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39198792,
+        "loops": 128,
+        "per_call_ns": 306240.5625,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39654670,
+        "loops": 128,
+        "per_call_ns": 309802.109375,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39409310,
+        "loops": 128,
+        "per_call_ns": 307885.234375,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39066582,
+        "loops": 128,
+        "per_call_ns": 305207.671875,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 40876890,
+        "loops": 64,
+        "per_call_ns": 638701.40625,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40775418,
+        "loops": 64,
+        "per_call_ns": 637115.90625,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40372845,
+        "loops": 64,
+        "per_call_ns": 630825.703125,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40472736,
+        "loops": 64,
+        "per_call_ns": 632386.5,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40851657,
+        "loops": 64,
+        "per_call_ns": 638307.140625,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40591434,
+        "loops": 64,
+        "per_call_ns": 634241.15625,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 41760660,
+        "loops": 64,
+        "per_call_ns": 652510.3125,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40095836,
+        "loops": 64,
+        "per_call_ns": 626497.4375,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40335768,
+        "loops": 64,
+        "per_call_ns": 630246.375,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40516432,
+        "loops": 64,
+        "per_call_ns": 633069.25,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 40629542,
+        "loops": 64,
+        "per_call_ns": 634836.59375,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 42015805,
+        "loops": 32,
+        "per_call_ns": 1312993.90625,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41230770,
+        "loops": 32,
+        "per_call_ns": 1288461.5625,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41082456,
+        "loops": 32,
+        "per_call_ns": 1283826.75,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41349750,
+        "loops": 32,
+        "per_call_ns": 1292179.6875,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41289118,
+        "loops": 32,
+        "per_call_ns": 1290284.9375,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41824947,
+        "loops": 32,
+        "per_call_ns": 1307029.59375,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41081705,
+        "loops": 32,
+        "per_call_ns": 1283803.28125,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41067734,
+        "loops": 32,
+        "per_call_ns": 1283366.6875,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41676994,
+        "loops": 32,
+        "per_call_ns": 1302406.0625,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40940933,
+        "loops": 32,
+        "per_call_ns": 1279404.15625,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 42050848,
+        "loops": 32,
+        "per_call_ns": 1314089.0,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 44053912,
+        "loops": 16,
+        "per_call_ns": 2753369.5,
+        "repetition": 0,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43159602,
+        "loops": 16,
+        "per_call_ns": 2697475.125,
+        "repetition": 1,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 44089086,
+        "loops": 16,
+        "per_call_ns": 2755567.875,
+        "repetition": 2,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 44904867,
+        "loops": 16,
+        "per_call_ns": 2806554.1875,
+        "repetition": 3,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43258551,
+        "loops": 16,
+        "per_call_ns": 2703659.4375,
+        "repetition": 4,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43746468,
+        "loops": 16,
+        "per_call_ns": 2734154.25,
+        "repetition": 5,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 44356029,
+        "loops": 16,
+        "per_call_ns": 2772251.8125,
+        "repetition": 6,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43625806,
+        "loops": 16,
+        "per_call_ns": 2726612.875,
+        "repetition": 7,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 42959761,
+        "loops": 16,
+        "per_call_ns": 2684985.0625,
+        "repetition": 8,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 46040652,
+        "loops": 16,
+        "per_call_ns": 2877540.75,
+        "repetition": 9,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43032230,
+        "loops": 16,
+        "per_call_ns": 2689514.375,
+        "repetition": 10,
+        "shape": "chain",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 13419631,
+        "loops": 2048,
+        "per_call_ns": 6552.55419921875,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13384998,
+        "loops": 2048,
+        "per_call_ns": 6535.6435546875,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13255383,
+        "loops": 2048,
+        "per_call_ns": 6472.35498046875,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13333751,
+        "loops": 2048,
+        "per_call_ns": 6510.62060546875,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13444168,
+        "loops": 2048,
+        "per_call_ns": 6564.53515625,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13253270,
+        "loops": 2048,
+        "per_call_ns": 6471.3232421875,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13261141,
+        "loops": 2048,
+        "per_call_ns": 6475.16650390625,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13123464,
+        "loops": 2048,
+        "per_call_ns": 6407.94140625,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13010363,
+        "loops": 2048,
+        "per_call_ns": 6352.71630859375,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12829700,
+        "loops": 2048,
+        "per_call_ns": 6264.501953125,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12853245,
+        "loops": 2048,
+        "per_call_ns": 6275.99853515625,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 64,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12102252,
+        "loops": 1024,
+        "per_call_ns": 11818.60546875,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12257326,
+        "loops": 1024,
+        "per_call_ns": 11970.044921875,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12148401,
+        "loops": 1024,
+        "per_call_ns": 11863.6728515625,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12114460,
+        "loops": 1024,
+        "per_call_ns": 11830.52734375,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12368905,
+        "loops": 1024,
+        "per_call_ns": 12079.0087890625,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12166939,
+        "loops": 1024,
+        "per_call_ns": 11881.7763671875,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11196444,
+        "loops": 1024,
+        "per_call_ns": 10934.02734375,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11506182,
+        "loops": 1024,
+        "per_call_ns": 11236.505859375,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12114080,
+        "loops": 1024,
+        "per_call_ns": 11830.15625,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12100710,
+        "loops": 1024,
+        "per_call_ns": 11817.099609375,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12146678,
+        "loops": 1024,
+        "per_call_ns": 11861.990234375,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 128,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11786345,
+        "loops": 512,
+        "per_call_ns": 23020.205078125,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11489197,
+        "loops": 512,
+        "per_call_ns": 22439.837890625,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 10807237,
+        "loops": 512,
+        "per_call_ns": 21107.884765625,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12087139,
+        "loops": 512,
+        "per_call_ns": 23607.693359375,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11829540,
+        "loops": 512,
+        "per_call_ns": 23104.5703125,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11775499,
+        "loops": 512,
+        "per_call_ns": 22999.021484375,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11772514,
+        "loops": 512,
+        "per_call_ns": 22993.19140625,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11675868,
+        "loops": 512,
+        "per_call_ns": 22804.4296875,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 10375966,
+        "loops": 512,
+        "per_call_ns": 20265.55859375,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11742509,
+        "loops": 512,
+        "per_call_ns": 22934.587890625,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11856110,
+        "loops": 512,
+        "per_call_ns": 23156.46484375,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 256,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11565641,
+        "loops": 256,
+        "per_call_ns": 45178.28515625,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11525511,
+        "loops": 256,
+        "per_call_ns": 45021.52734375,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 10157355,
+        "loops": 256,
+        "per_call_ns": 39677.16796875,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11430658,
+        "loops": 256,
+        "per_call_ns": 44651.0078125,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11543959,
+        "loops": 256,
+        "per_call_ns": 45093.58984375,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11550469,
+        "loops": 256,
+        "per_call_ns": 45119.01953125,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11721948,
+        "loops": 256,
+        "per_call_ns": 45788.859375,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11197906,
+        "loops": 256,
+        "per_call_ns": 43741.8203125,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 10608998,
+        "loops": 256,
+        "per_call_ns": 41441.3984375,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11579954,
+        "loops": 256,
+        "per_call_ns": 45234.1953125,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11600454,
+        "loops": 256,
+        "per_call_ns": 45314.2734375,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 512,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11812815,
+        "loops": 128,
+        "per_call_ns": 92287.6171875,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11791353,
+        "loops": 128,
+        "per_call_ns": 92119.9453125,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 10850693,
+        "loops": 128,
+        "per_call_ns": 84771.0390625,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11418250,
+        "loops": 128,
+        "per_call_ns": 89205.078125,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11955430,
+        "loops": 128,
+        "per_call_ns": 93401.796875,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11804722,
+        "loops": 128,
+        "per_call_ns": 92224.390625,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11788949,
+        "loops": 128,
+        "per_call_ns": 92101.1640625,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 12415995,
+        "loops": 128,
+        "per_call_ns": 96999.9609375,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11903482,
+        "loops": 128,
+        "per_call_ns": 92995.953125,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 10496708,
+        "loops": 128,
+        "per_call_ns": 82005.53125,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 11772864,
+        "loops": 128,
+        "per_call_ns": 91975.5,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 1024,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13069221,
+        "loops": 64,
+        "per_call_ns": 204206.578125,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14129302,
+        "loops": 64,
+        "per_call_ns": 220770.34375,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13186609,
+        "loops": 64,
+        "per_call_ns": 206040.765625,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13961148,
+        "loops": 64,
+        "per_call_ns": 218142.9375,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13212728,
+        "loops": 64,
+        "per_call_ns": 206448.875,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14104595,
+        "loops": 64,
+        "per_call_ns": 220384.296875,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13418940,
+        "loops": 64,
+        "per_call_ns": 209670.9375,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14080708,
+        "loops": 64,
+        "per_call_ns": 220011.0625,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13410607,
+        "loops": 64,
+        "per_call_ns": 209540.734375,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14119408,
+        "loops": 64,
+        "per_call_ns": 220615.75,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13413451,
+        "loops": 64,
+        "per_call_ns": 209585.171875,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 2048,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14463057,
+        "loops": 32,
+        "per_call_ns": 451970.53125,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13811894,
+        "loops": 32,
+        "per_call_ns": 431621.6875,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14394492,
+        "loops": 32,
+        "per_call_ns": 449827.875,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13514324,
+        "loops": 32,
+        "per_call_ns": 422322.625,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14379249,
+        "loops": 32,
+        "per_call_ns": 449351.53125,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13748778,
+        "loops": 32,
+        "per_call_ns": 429649.3125,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14287120,
+        "loops": 32,
+        "per_call_ns": 446472.5,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13518370,
+        "loops": 32,
+        "per_call_ns": 422449.0625,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14171476,
+        "loops": 32,
+        "per_call_ns": 442858.625,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13585171,
+        "loops": 32,
+        "per_call_ns": 424536.59375,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14241882,
+        "loops": 32,
+        "per_call_ns": 445058.8125,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 4096,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13681406,
+        "loops": 16,
+        "per_call_ns": 855087.875,
+        "repetition": 0,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14693314,
+        "loops": 16,
+        "per_call_ns": 918332.125,
+        "repetition": 1,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14612071,
+        "loops": 16,
+        "per_call_ns": 913254.4375,
+        "repetition": 2,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13820977,
+        "loops": 16,
+        "per_call_ns": 863811.0625,
+        "repetition": 3,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14802228,
+        "loops": 16,
+        "per_call_ns": 925139.25,
+        "repetition": 4,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13782248,
+        "loops": 16,
+        "per_call_ns": 861390.5,
+        "repetition": 5,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 14920797,
+        "loops": 16,
+        "per_call_ns": 932549.8125,
+        "repetition": 6,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 15109272,
+        "loops": 16,
+        "per_call_ns": 944329.5,
+        "repetition": 7,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13758092,
+        "loops": 16,
+        "per_call_ns": 859880.75,
+        "repetition": 8,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 15235923,
+        "loops": 16,
+        "per_call_ns": 952245.1875,
+        "repetition": 9,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 13888349,
+        "loops": 16,
+        "per_call_ns": 868021.8125,
+        "repetition": 10,
+        "shape": "alias_copy",
+        "size": 8192,
+        "tainted_nodes": 2
+      },
+      {
+        "elapsed_ns": 35487209,
+        "loops": 2048,
+        "per_call_ns": 17327.73876953125,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35086273,
+        "loops": 2048,
+        "per_call_ns": 17131.96923828125,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 36188988,
+        "loops": 2048,
+        "per_call_ns": 17670.404296875,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 34609363,
+        "loops": 2048,
+        "per_call_ns": 16899.10302734375,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35983248,
+        "loops": 2048,
+        "per_call_ns": 17569.9453125,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 34421720,
+        "loops": 2048,
+        "per_call_ns": 16807.48046875,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35883126,
+        "loops": 2048,
+        "per_call_ns": 17521.0576171875,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35217200,
+        "loops": 2048,
+        "per_call_ns": 17195.8984375,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35464033,
+        "loops": 2048,
+        "per_call_ns": 17316.42236328125,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35933492,
+        "loops": 2048,
+        "per_call_ns": 17545.650390625,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 34290371,
+        "loops": 2048,
+        "per_call_ns": 16743.34521484375,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 64,
+        "tainted_nodes": 64
+      },
+      {
+        "elapsed_ns": 35163730,
+        "loops": 1024,
+        "per_call_ns": 34339.580078125,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 33573659,
+        "loops": 1024,
+        "per_call_ns": 32786.7763671875,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35263611,
+        "loops": 1024,
+        "per_call_ns": 34437.1201171875,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 33607260,
+        "loops": 1024,
+        "per_call_ns": 32819.58984375,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35183670,
+        "loops": 1024,
+        "per_call_ns": 34359.052734375,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 33551496,
+        "loops": 1024,
+        "per_call_ns": 32765.1328125,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35218387,
+        "loops": 1024,
+        "per_call_ns": 34392.9560546875,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 33580330,
+        "loops": 1024,
+        "per_call_ns": 32793.291015625,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35070409,
+        "loops": 1024,
+        "per_call_ns": 34248.4462890625,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 33459206,
+        "loops": 1024,
+        "per_call_ns": 32675.005859375,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 35040264,
+        "loops": 1024,
+        "per_call_ns": 34219.0078125,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 128,
+        "tainted_nodes": 128
+      },
+      {
+        "elapsed_ns": 33052974,
+        "loops": 512,
+        "per_call_ns": 64556.58984375,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34372846,
+        "loops": 512,
+        "per_call_ns": 67134.46484375,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 33136730,
+        "loops": 512,
+        "per_call_ns": 64720.17578125,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34292314,
+        "loops": 512,
+        "per_call_ns": 66977.17578125,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 32790136,
+        "loops": 512,
+        "per_call_ns": 64043.234375,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34188548,
+        "loops": 512,
+        "per_call_ns": 66774.5078125,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 32994745,
+        "loops": 512,
+        "per_call_ns": 64442.861328125,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 33120425,
+        "loops": 512,
+        "per_call_ns": 64688.330078125,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34172333,
+        "loops": 512,
+        "per_call_ns": 66742.837890625,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 32784508,
+        "loops": 512,
+        "per_call_ns": 64032.2421875,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34405275,
+        "loops": 512,
+        "per_call_ns": 67197.802734375,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 256,
+        "tainted_nodes": 256
+      },
+      {
+        "elapsed_ns": 34980724,
+        "loops": 256,
+        "per_call_ns": 136643.453125,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 34821023,
+        "loops": 256,
+        "per_call_ns": 136019.62109375,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35255438,
+        "loops": 256,
+        "per_call_ns": 137716.5546875,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 34068947,
+        "loops": 256,
+        "per_call_ns": 133081.82421875,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35289369,
+        "loops": 256,
+        "per_call_ns": 137849.09765625,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 33901895,
+        "loops": 256,
+        "per_call_ns": 132429.27734375,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35175618,
+        "loops": 256,
+        "per_call_ns": 137404.7578125,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35045983,
+        "loops": 256,
+        "per_call_ns": 136898.37109375,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35498997,
+        "loops": 256,
+        "per_call_ns": 138667.95703125,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 33737136,
+        "loops": 256,
+        "per_call_ns": 131785.6875,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 35320146,
+        "loops": 256,
+        "per_call_ns": 137969.3203125,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 512,
+        "tainted_nodes": 512
+      },
+      {
+        "elapsed_ns": 38449070,
+        "loops": 128,
+        "per_call_ns": 300383.359375,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39058701,
+        "loops": 128,
+        "per_call_ns": 305146.1015625,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39047554,
+        "loops": 128,
+        "per_call_ns": 305059.015625,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 38943596,
+        "loops": 128,
+        "per_call_ns": 304246.84375,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 38480257,
+        "loops": 128,
+        "per_call_ns": 300627.0078125,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 38482120,
+        "loops": 128,
+        "per_call_ns": 300641.5625,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39459226,
+        "loops": 128,
+        "per_call_ns": 308275.203125,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39271802,
+        "loops": 128,
+        "per_call_ns": 306810.953125,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39312223,
+        "loops": 128,
+        "per_call_ns": 307126.7421875,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39294416,
+        "loops": 128,
+        "per_call_ns": 306987.625,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 38040283,
+        "loops": 128,
+        "per_call_ns": 297189.7109375,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 1024,
+        "tainted_nodes": 1024
+      },
+      {
+        "elapsed_ns": 39553158,
+        "loops": 64,
+        "per_call_ns": 618018.09375,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39638997,
+        "loops": 64,
+        "per_call_ns": 619359.328125,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39839469,
+        "loops": 64,
+        "per_call_ns": 622491.703125,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39692197,
+        "loops": 64,
+        "per_call_ns": 620190.578125,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39612036,
+        "loops": 64,
+        "per_call_ns": 618938.0625,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 38676343,
+        "loops": 64,
+        "per_call_ns": 604317.859375,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39517102,
+        "loops": 64,
+        "per_call_ns": 617454.71875,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39548660,
+        "loops": 64,
+        "per_call_ns": 617947.8125,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39828633,
+        "loops": 64,
+        "per_call_ns": 622322.390625,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39292123,
+        "loops": 64,
+        "per_call_ns": 613939.421875,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39648982,
+        "loops": 64,
+        "per_call_ns": 619515.34375,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 2048,
+        "tainted_nodes": 2048
+      },
+      {
+        "elapsed_ns": 39705074,
+        "loops": 32,
+        "per_call_ns": 1240783.5625,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 39529058,
+        "loops": 32,
+        "per_call_ns": 1235283.0625,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41327563,
+        "loops": 32,
+        "per_call_ns": 1291486.34375,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40220358,
+        "loops": 32,
+        "per_call_ns": 1256886.1875,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40396548,
+        "loops": 32,
+        "per_call_ns": 1262392.125,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40190616,
+        "loops": 32,
+        "per_call_ns": 1255956.75,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40441095,
+        "loops": 32,
+        "per_call_ns": 1263784.21875,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 41365541,
+        "loops": 32,
+        "per_call_ns": 1292673.15625,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40572724,
+        "loops": 32,
+        "per_call_ns": 1267897.625,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40431190,
+        "loops": 32,
+        "per_call_ns": 1263474.6875,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 40609549,
+        "loops": 32,
+        "per_call_ns": 1269048.40625,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 4096,
+        "tainted_nodes": 4096
+      },
+      {
+        "elapsed_ns": 42205879,
+        "loops": 16,
+        "per_call_ns": 2637867.4375,
+        "repetition": 0,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43429417,
+        "loops": 16,
+        "per_call_ns": 2714338.5625,
+        "repetition": 1,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 42211498,
+        "loops": 16,
+        "per_call_ns": 2638218.625,
+        "repetition": 2,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 49815488,
+        "loops": 16,
+        "per_call_ns": 3113468.0,
+        "repetition": 3,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 60672688,
+        "loops": 16,
+        "per_call_ns": 3792043.0,
+        "repetition": 4,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 55782917,
+        "loops": 16,
+        "per_call_ns": 3486432.3125,
+        "repetition": 5,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 42453933,
+        "loops": 16,
+        "per_call_ns": 2653370.8125,
+        "repetition": 6,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43571391,
+        "loops": 16,
+        "per_call_ns": 2723211.9375,
+        "repetition": 7,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43118246,
+        "loops": 16,
+        "per_call_ns": 2694890.375,
+        "repetition": 8,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43193660,
+        "loops": 16,
+        "per_call_ns": 2699603.75,
+        "repetition": 9,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      },
+      {
+        "elapsed_ns": 43825485,
+        "loops": 16,
+        "per_call_ns": 2739092.8125,
+        "repetition": 10,
+        "shape": "many_roots",
+        "size": 8192,
+        "tainted_nodes": 8192
+      }
+    ],
+    "repetitions": 11,
+    "shapes": [
+      "chain",
+      "alias_copy",
+      "many_roots"
+    ],
+    "sizes": [
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192
+    ],
+    "summaries": {
+      "alias_copy:1024": {
+        "bootstrap_median_95pct_ns": [
+          89205.078125,
+          92995.953125
+        ],
+        "mad_ns": 876.0078125,
+        "max_ns": 96999.9609375,
+        "median_ns": 92119.9453125,
+        "min_ns": 82005.53125,
+        "q1_ns": 90590.2890625,
+        "q3_ns": 92641.78515625
+      },
+      "alias_copy:128": {
+        "bootstrap_median_95pct_ns": [
+          11817.099609375,
+          11881.7763671875
+        ],
+        "mad_ns": 33.1455078125,
+        "max_ns": 12079.0087890625,
+        "median_ns": 11830.52734375,
+        "min_ns": 10934.02734375,
+        "q1_ns": 11817.8525390625,
+        "q3_ns": 11872.724609375
+      },
+      "alias_copy:2048": {
+        "bootstrap_median_95pct_ns": [
+          206448.875,
+          220384.296875
+        ],
+        "mad_ns": 5464.359375,
+        "max_ns": 220770.34375,
+        "median_ns": 209670.9375,
+        "min_ns": 204206.578125,
+        "q1_ns": 207994.8046875,
+        "q3_ns": 220197.6796875
+      },
+      "alias_copy:256": {
+        "bootstrap_median_95pct_ns": [
+          22439.837890625,
+          23104.5703125
+        ],
+        "mad_ns": 163.2734375,
+        "max_ns": 23607.693359375,
+        "median_ns": 22993.19140625,
+        "min_ns": 20265.55859375,
+        "q1_ns": 22622.1337890625,
+        "q3_ns": 23062.3876953125
+      },
+      "alias_copy:4096": {
+        "bootstrap_median_95pct_ns": [
+          424536.59375,
+          449351.53125
+        ],
+        "mad_ns": 9111.90625,
+        "max_ns": 451970.53125,
+        "median_ns": 442858.625,
+        "min_ns": 422322.625,
+        "q1_ns": 427092.953125,
+        "q3_ns": 447912.015625
+      },
+      "alias_copy:512": {
+        "bootstrap_median_95pct_ns": [
+          43741.8203125,
+          45234.1953125
+        ],
+        "mad_ns": 220.68359375,
+        "max_ns": 45788.859375,
+        "median_ns": 45093.58984375,
+        "min_ns": 39677.16796875,
+        "q1_ns": 44196.4140625,
+        "q3_ns": 45206.240234375
+      },
+      "alias_copy:64": {
+        "bootstrap_median_95pct_ns": [
+          6352.71630859375,
+          6535.6435546875
+        ],
+        "mad_ns": 64.41357421875,
+        "max_ns": 6564.53515625,
+        "median_ns": 6472.35498046875,
+        "min_ns": 6264.501953125,
+        "q1_ns": 6380.328857421875,
+        "q3_ns": 6523.132080078125
+      },
+      "alias_copy:8192": {
+        "bootstrap_median_95pct_ns": [
+          861390.5,
+          932549.8125
+        ],
+        "mad_ns": 38990.75,
+        "max_ns": 952245.1875,
+        "median_ns": 913254.4375,
+        "min_ns": 855087.875,
+        "q1_ns": 862600.78125,
+        "q3_ns": 928844.53125
+      },
+      "alias_copy:loglog_slope": {
+        "interpretation_boundary": "An implementation-level trend under this host and harness, not an asymptotic proof or a cross-system performance comparison.",
+        "theil_sen_slope_largest_six_sizes": 1.0668918971535284
+      },
+      "chain:1024": {
+        "bootstrap_median_95pct_ns": [
+          306240.5625,
+          310570.0625
+        ],
+        "mad_ns": 1916.875,
+        "max_ns": 313000.7734375,
+        "median_ns": 309802.109375,
+        "min_ns": 299419.953125,
+        "q1_ns": 306875.07421875,
+        "q3_ns": 310257.0546875
+      },
+      "chain:128": {
+        "bootstrap_median_95pct_ns": [
+          33597.9423828125,
+          34976.078125
+        ],
+        "mad_ns": 328.8701171875,
+        "max_ns": 36252.6533203125,
+        "median_ns": 34830.3115234375,
+        "min_ns": 33387.78125,
+        "q1_ns": 34001.525390625,
+        "q3_ns": 34953.14306640625
+      },
+      "chain:2048": {
+        "bootstrap_median_95pct_ns": [
+          630825.703125,
+          638307.140625
+        ],
+        "mad_ns": 3415.453125,
+        "max_ns": 652510.3125,
+        "median_ns": 634241.15625,
+        "min_ns": 626497.4375,
+        "q1_ns": 631606.1015625,
+        "q3_ns": 637711.5234375
+      },
+      "chain:256": {
+        "bootstrap_median_95pct_ns": [
+          66455.1953125,
+          68287.845703125
+        ],
+        "mad_ns": 718.388671875,
+        "max_ns": 70744.388671875,
+        "median_ns": 67569.45703125,
+        "min_ns": 65983.44921875,
+        "q1_ns": 66692.673828125,
+        "q3_ns": 68129.4716796875
+      },
+      "chain:4096": {
+        "bootstrap_median_95pct_ns": [
+          1283803.28125,
+          1307029.59375
+        ],
+        "mad_ns": 6918.25,
+        "max_ns": 1314089.0,
+        "median_ns": 1290284.9375,
+        "min_ns": 1279404.15625,
+        "q1_ns": 1283815.015625,
+        "q3_ns": 1304717.828125
+      },
+      "chain:512": {
+        "bootstrap_median_95pct_ns": [
+          134712.05859375,
+          141244.265625
+        ],
+        "mad_ns": 2162.796875,
+        "max_ns": 142350.07421875,
+        "median_ns": 140187.27734375,
+        "min_ns": 134192.015625,
+        "q1_ns": 134808.044921875,
+        "q3_ns": 140785.955078125
+      },
+      "chain:64": {
+        "bootstrap_median_95pct_ns": [
+          17103.1787109375,
+          17772.580078125
+        ],
+        "mad_ns": 289.607421875,
+        "max_ns": 17974.388671875,
+        "median_ns": 17621.3896484375,
+        "min_ns": 16866.3369140625,
+        "q1_ns": 17119.850341796875,
+        "q3_ns": 17720.146240234375
+      },
+      "chain:8192": {
+        "bootstrap_median_95pct_ns": [
+          2697475.125,
+          2772251.8125
+        ],
+        "mad_ns": 36679.125,
+        "max_ns": 2877540.75,
+        "median_ns": 2734154.25,
+        "min_ns": 2684985.0625,
+        "q1_ns": 2700567.28125,
+        "q3_ns": 2763909.84375
+      },
+      "chain:loglog_slope": {
+        "interpretation_boundary": "An implementation-level trend under this host and harness, not an asymptotic proof or a cross-system performance comparison.",
+        "theil_sen_slope_largest_six_sizes": 1.067420788828836
+      },
+      "many_roots:1024": {
+        "bootstrap_median_95pct_ns": [
+          300627.0078125,
+          306987.625
+        ],
+        "mad_ns": 2067.7265625,
+        "max_ns": 308275.203125,
+        "median_ns": 305059.015625,
+        "min_ns": 297189.7109375,
+        "q1_ns": 300634.28515625,
+        "q3_ns": 306899.2890625
+      },
+      "many_roots:128": {
+        "bootstrap_median_95pct_ns": [
+          32786.7763671875,
+          34359.052734375
+        ],
+        "mad_ns": 218.1123046875,
+        "max_ns": 34437.1201171875,
+        "median_ns": 34219.0078125,
+        "min_ns": 32675.005859375,
+        "q1_ns": 32790.03369140625,
+        "q3_ns": 34349.31640625
+      },
+      "many_roots:2048": {
+        "bootstrap_median_95pct_ns": [
+          617454.71875,
+          620190.578125
+        ],
+        "mad_ns": 1252.515625,
+        "max_ns": 622491.703125,
+        "median_ns": 618938.0625,
+        "min_ns": 604317.859375,
+        "q1_ns": 617701.265625,
+        "q3_ns": 619852.9609375
+      },
+      "many_roots:256": {
+        "bootstrap_median_95pct_ns": [
+          64442.861328125,
+          66977.17578125
+        ],
+        "mad_ns": 687.93359375,
+        "max_ns": 67197.802734375,
+        "median_ns": 64720.17578125,
+        "min_ns": 64032.2421875,
+        "q1_ns": 64499.7255859375,
+        "q3_ns": 66875.841796875
+      },
+      "many_roots:4096": {
+        "bootstrap_median_95pct_ns": [
+          1255956.75,
+          1269048.40625
+        ],
+        "mad_ns": 6588.5,
+        "max_ns": 1292673.15625,
+        "median_ns": 1263474.6875,
+        "min_ns": 1235283.0625,
+        "q1_ns": 1256421.46875,
+        "q3_ns": 1268473.015625
+      },
+      "many_roots:512": {
+        "bootstrap_median_95pct_ns": [
+          133081.82421875,
+          137849.09765625
+        ],
+        "mad_ns": 950.7265625,
+        "max_ns": 138667.95703125,
+        "median_ns": 136898.37109375,
+        "min_ns": 131785.6875,
+        "q1_ns": 134550.72265625,
+        "q3_ns": 137782.826171875
+      },
+      "many_roots:64": {
+        "bootstrap_median_95pct_ns": [
+          16899.10302734375,
+          17545.650390625
+        ],
+        "mad_ns": 229.22802734375,
+        "max_ns": 17670.404296875,
+        "median_ns": 17316.42236328125,
+        "min_ns": 16743.34521484375,
+        "q1_ns": 17015.5361328125,
+        "q3_ns": 17533.35400390625
+      },
+      "many_roots:8192": {
+        "bootstrap_median_95pct_ns": [
+          2653370.8125,
+          3113468.0
+        ],
+        "mad_ns": 60967.75,
+        "max_ns": 3792043.0,
+        "median_ns": 2714338.5625,
+        "min_ns": 2637867.4375,
+        "q1_ns": 2674130.59375,
+        "q3_ns": 2926280.40625
+      },
+      "many_roots:loglog_slope": {
+        "interpretation_boundary": "An implementation-level trend under this host and harness, not an asymptotic proof or a cross-system performance comparison.",
+        "theil_sen_slope_largest_six_sizes": 1.077355873817984
+      }
+    },
+    "timing_clock": "time.perf_counter_ns",
+    "warmups": 2
+  },
+  "schema": "pcl-reviewer-hardening/v1",
+  "seed": 20260920,
+  "small_model": {
+    "cases": 14400,
+    "decomposition_checks": 14400,
+    "edge_masks": 64,
+    "nodes": 4,
+    "oracle_disagreements": 0,
+    "partitions": 15,
+    "renaming_checks": 14400,
+    "root_masks": 15,
+    "root_monotonicity_checks": 57600
+  },
+  "status": "passed",
+  "transform_bridge": {
+    "candidate_source": "data/selection.json -> data/public (24 retained files)",
+    "case_records": [
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:4",
+        "original_rejected": true,
+        "rewritten_length": 58,
+        "rewritten_sha256": "5a34e6e08bab45ba0d256c0645f67b07e16ba1278ce23c7a81eb3ef57c77478a",
+        "root_length": 57,
+        "root_sha256": "e218cb24e7ef3375a0afaa47b5187a470bad2488473ac68ad921232ac82a5b3d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:7",
+        "original_rejected": true,
+        "rewritten_length": 29,
+        "rewritten_sha256": "a0ed6695ab4fe80c1eda788452917be7464e1d94c86ebce14d171d2952310148",
+        "root_length": 28,
+        "root_sha256": "dfed4df7d24cdc46747221dc80c80ef4cdff9b8d1309509b340c0caff2467b36"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:8",
+        "original_rejected": true,
+        "rewritten_length": 44,
+        "rewritten_sha256": "23a472705e4c3d62fd44c8c82d1b11e5bedcc63a0b9b76feae5dc86e3d8a807c",
+        "root_length": 43,
+        "root_sha256": "48f9814750e3e4be74acc2fea8a0207e799d1af9da5817cc104667a07824dfd9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:10",
+        "original_rejected": true,
+        "rewritten_length": 62,
+        "rewritten_sha256": "5212210fd32d4a28de42b905ab81db49feffdd9e5bbb9a7e8975dcad355ace22",
+        "root_length": 61,
+        "root_sha256": "49ca421f1c64fadfde85901a8abdb0a09dc505103f52338981a7ba54269ea396"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:11",
+        "original_rejected": true,
+        "rewritten_length": 58,
+        "rewritten_sha256": "4a1744c22b6daf2014d62516ea6b918eb82444aa309934da6ee5ba591a455699",
+        "root_length": 57,
+        "root_sha256": "798223b00015d937f168471e28c92aaa0ec1c49e58ea977884074b9ddd2f5b59"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:12",
+        "original_rejected": true,
+        "rewritten_length": 64,
+        "rewritten_sha256": "dcd25ab0f2f6394c80bc3c0dec850059a9055c154ec35cdd2d2399f2a765ddb0",
+        "root_length": 63,
+        "root_sha256": "c4a9dc458f337bdbef93ad64bc424460e247730b73f707f05f1ae2eab4f3af6b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:13",
+        "original_rejected": true,
+        "rewritten_length": 59,
+        "rewritten_sha256": "88ddb34317effb93452ac2a34197dd6de2fea940dc804c38491e8a76bdb3905e",
+        "root_length": 58,
+        "root_sha256": "98e12493044926550913ddf12bd30f23761586d2a597042e44865546101b63f9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:14",
+        "original_rejected": true,
+        "rewritten_length": 66,
+        "rewritten_sha256": "d0d246e7f2e9932fcbceba69680771562614a2d2253e670dc8b936d1533cab62",
+        "root_length": 65,
+        "root_sha256": "2224d47202e56ca6bb20ab1c461bb8227a2b7c7f1fa6bc706b1e419f1b43c92d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:15",
+        "original_rejected": true,
+        "rewritten_length": 49,
+        "rewritten_sha256": "7c9b24f9aa8a0fd054cefab41b09eb18b00d120e9da390d426b62dd4641e494f",
+        "root_length": 48,
+        "root_sha256": "cd6c073c88ad93920fb5dabad84616b3b11c0b8bc6db2b14ebe549de8814fd83"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:19",
+        "original_rejected": true,
+        "rewritten_length": 28,
+        "rewritten_sha256": "3b0bdbd79af93aad464965cbe04d68595b7ef1b82873ee10448a1227fcc0e5f1",
+        "root_length": 27,
+        "root_sha256": "146afda1033b3b5e4f413a5645afb40cb471b012063befb3a51df2db7e609984"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:21",
+        "original_rejected": true,
+        "rewritten_length": 48,
+        "rewritten_sha256": "546a4015ce4fd674a80233df31b1f0db7dda8f2d942fd820f1852193fd702491",
+        "root_length": 47,
+        "root_sha256": "a83353fa82696310108ae99f5da8102d8e1eede41d787d5159bd1a65c6fadce9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:24",
+        "original_rejected": true,
+        "rewritten_length": 36,
+        "rewritten_sha256": "888f6250187ff8cd34d1ed607377c9e07df372fb4be58305f4a92b1d5168d5a9",
+        "root_length": 35,
+        "root_sha256": "55ce8afe847ddb08e1fd7ea26d039be363fa983ea75b65c738c85d95e6fdb031"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:28",
+        "original_rejected": true,
+        "rewritten_length": 40,
+        "rewritten_sha256": "cd2987b353963705e06fea5d30bd47c9c167a9683267c4187b476838a3dd25d3",
+        "root_length": 39,
+        "root_sha256": "914a0ab13cb293bd52aa0189abe6e7293b80e22b3e4c4f9d65f57f452112f4eb"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:29",
+        "original_rejected": true,
+        "rewritten_length": 49,
+        "rewritten_sha256": "628e35138dc309777454a71964f356d298df449b5476c21f4a69ad01da20c1a0",
+        "root_length": 48,
+        "root_sha256": "1021799a55335f28af11d42185be64c7bddb196ca4016e638f772cbecb420db9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:31",
+        "original_rejected": true,
+        "rewritten_length": 61,
+        "rewritten_sha256": "e59baea1bd9f91b079e2b799b72e87daf5799387502a88e98049d6436f9aa943",
+        "root_length": 60,
+        "root_sha256": "ad67b3124427dcacfa9b926c381f3d8633682f257d464981517fcfc4464ffd44"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:36",
+        "original_rejected": true,
+        "rewritten_length": 39,
+        "rewritten_sha256": "bd6d82896156dc805de0d8709650d1c9eabaa143277458e6b277e4438fa39b66",
+        "root_length": 38,
+        "root_sha256": "bd8e88baf178e76ce9f1f3a39659f625ce37b0e854c5e1f482ba39ad2dd6a475"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:41",
+        "original_rejected": true,
+        "rewritten_length": 28,
+        "rewritten_sha256": "91599f7d29d9f4768b76cde258bc4d82e676b41211b6963ea134f1dda0578243",
+        "root_length": 27,
+        "root_sha256": "acd9d7841fe6345c4a3a14af240b8db567515c181f2f7e566c86ea209a43cd99"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:43",
+        "original_rejected": true,
+        "rewritten_length": 30,
+        "rewritten_sha256": "d045e40c0938e77a94f125bac7eb4b404a917be867b11dcfd77e4f552bf2f889",
+        "root_length": 29,
+        "root_sha256": "32971dd85e47514d5f7bf28b4e2f8309cba7c0ea1725d752d56ed313578a5673"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:44",
+        "original_rejected": true,
+        "rewritten_length": 37,
+        "rewritten_sha256": "ea75451f417a6dc44f86af9914308a4d31b37435b75a9f11b23376a53617111a",
+        "root_length": 36,
+        "root_sha256": "3bd51e862a44e3b61f42d80409671939cf34a3a80ce9f975be936d8599c1bebe"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:48",
+        "original_rejected": true,
+        "rewritten_length": 42,
+        "rewritten_sha256": "525ff459054f8522098da94e516408af42284acf7d4fd2bdb758eb38c4e43f52",
+        "root_length": 41,
+        "root_sha256": "512400e18aa6436724ada980a48c77d95159b066a685bd7a31016353d36fd229"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:49",
+        "original_rejected": true,
+        "rewritten_length": 50,
+        "rewritten_sha256": "d43e80a8d946e55a8a3b157a7374466d76008feb1f0162e5c1a0176d82c0338d",
+        "root_length": 49,
+        "root_sha256": "5ddd1e980b3522a1455cf44a993d44369239a43bdae741119733a3c709820956"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:51",
+        "original_rejected": true,
+        "rewritten_length": 62,
+        "rewritten_sha256": "2c88002c12241c8e560577e3c6440a03d351a25643cb173e8ed6325358e7baa6",
+        "root_length": 61,
+        "root_sha256": "9d1a072fdc0c93d7d5fbbc0877f0f95f1a31387738230a10e50ece1857236233"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:56",
+        "original_rejected": true,
+        "rewritten_length": 35,
+        "rewritten_sha256": "b457fbf44b543c725775096b029a6884469e4b64fc944da3848cb154f81516e1",
+        "root_length": 34,
+        "root_sha256": "4caf6f0dcf3e404bc803fcfdd1d1bb7a277dd41e6d1eab948af58e079987322b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "whitespace_expansion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:68",
+        "original_rejected": true,
+        "rewritten_length": 34,
+        "rewritten_sha256": "60522973f9915831f8991ebcc1f03709c1dfdc5ddbff8965f4111c9e3550cd4b",
+        "root_length": 33,
+        "root_sha256": "fbf7eb3800903b6eb10ca540c032a0e551d5e61ee737dc920efcc67d5eb9da2d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:4",
+        "original_rejected": true,
+        "rewritten_length": 61,
+        "rewritten_sha256": "4a4b2814e750f906306c9344f54b74a0a9449c27cce95eaa11deff24eadc0b38",
+        "root_length": 57,
+        "root_sha256": "e218cb24e7ef3375a0afaa47b5187a470bad2488473ac68ad921232ac82a5b3d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:7",
+        "original_rejected": true,
+        "rewritten_length": 32,
+        "rewritten_sha256": "e66e5afd291efb134a38c7f7ae44201ae234798e9a7e25929c09dd8438edc881",
+        "root_length": 28,
+        "root_sha256": "dfed4df7d24cdc46747221dc80c80ef4cdff9b8d1309509b340c0caff2467b36"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:8",
+        "original_rejected": true,
+        "rewritten_length": 47,
+        "rewritten_sha256": "7784c08229600b95c333b8d4440b44b3a113e8b239f3188b81b59a490ef62e52",
+        "root_length": 43,
+        "root_sha256": "48f9814750e3e4be74acc2fea8a0207e799d1af9da5817cc104667a07824dfd9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:10",
+        "original_rejected": true,
+        "rewritten_length": 65,
+        "rewritten_sha256": "007321fd7607442bd48842c108d0fdf825c04d35f590168c699bfb63779d1798",
+        "root_length": 61,
+        "root_sha256": "49ca421f1c64fadfde85901a8abdb0a09dc505103f52338981a7ba54269ea396"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:11",
+        "original_rejected": true,
+        "rewritten_length": 61,
+        "rewritten_sha256": "9e5eda3f1d3a3041d9e943d03f8cc8c1e23f9d644393b539f86723ade04724b6",
+        "root_length": 57,
+        "root_sha256": "798223b00015d937f168471e28c92aaa0ec1c49e58ea977884074b9ddd2f5b59"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:12",
+        "original_rejected": true,
+        "rewritten_length": 67,
+        "rewritten_sha256": "13acfdc2cca6175e990c20f10405ed8ab450a61b56d776283fd0f2625873e21b",
+        "root_length": 63,
+        "root_sha256": "c4a9dc458f337bdbef93ad64bc424460e247730b73f707f05f1ae2eab4f3af6b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:13",
+        "original_rejected": true,
+        "rewritten_length": 62,
+        "rewritten_sha256": "b69d381863a058f0e1de32c83b73901dd498baa87f7aa0014cd39ff0879e2973",
+        "root_length": 58,
+        "root_sha256": "98e12493044926550913ddf12bd30f23761586d2a597042e44865546101b63f9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:14",
+        "original_rejected": true,
+        "rewritten_length": 69,
+        "rewritten_sha256": "3e49a92a8e3bddfb7094e88922a636eb58e2b75242fa382475cb5f9c665100e4",
+        "root_length": 65,
+        "root_sha256": "2224d47202e56ca6bb20ab1c461bb8227a2b7c7f1fa6bc706b1e419f1b43c92d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:15",
+        "original_rejected": true,
+        "rewritten_length": 52,
+        "rewritten_sha256": "fb1788ddec268c2dfd1b97ff794f81361ee1b3035f29282dfcef399fd4379809",
+        "root_length": 48,
+        "root_sha256": "cd6c073c88ad93920fb5dabad84616b3b11c0b8bc6db2b14ebe549de8814fd83"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:19",
+        "original_rejected": true,
+        "rewritten_length": 31,
+        "rewritten_sha256": "c84bed1989fcbf6614968b4996b1390b2247f97e0e3e8f2076de4713d030aac0",
+        "root_length": 27,
+        "root_sha256": "146afda1033b3b5e4f413a5645afb40cb471b012063befb3a51df2db7e609984"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:21",
+        "original_rejected": true,
+        "rewritten_length": 51,
+        "rewritten_sha256": "84be6e3b9fe04b52e7f358a8aee748609d8f4d8f3d71cc7e04250f8c36bb3785",
+        "root_length": 47,
+        "root_sha256": "a83353fa82696310108ae99f5da8102d8e1eede41d787d5159bd1a65c6fadce9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:24",
+        "original_rejected": true,
+        "rewritten_length": 39,
+        "rewritten_sha256": "7724b9eab840f5bcab6402880849e0e7e1a4ad7c204c2e8426fb0eb7746a0145",
+        "root_length": 35,
+        "root_sha256": "55ce8afe847ddb08e1fd7ea26d039be363fa983ea75b65c738c85d95e6fdb031"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:28",
+        "original_rejected": true,
+        "rewritten_length": 43,
+        "rewritten_sha256": "cbe5971134a474889f237b06d0fc8b0c16c715f4598956f960faa2f8863af91e",
+        "root_length": 39,
+        "root_sha256": "914a0ab13cb293bd52aa0189abe6e7293b80e22b3e4c4f9d65f57f452112f4eb"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:29",
+        "original_rejected": true,
+        "rewritten_length": 52,
+        "rewritten_sha256": "cd4ab66a0f62f60c02bf3c73906138b9e43b867b55388fb89863f5bd822e2410",
+        "root_length": 48,
+        "root_sha256": "1021799a55335f28af11d42185be64c7bddb196ca4016e638f772cbecb420db9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:31",
+        "original_rejected": true,
+        "rewritten_length": 64,
+        "rewritten_sha256": "ac8d9ecf3ae44715d3fda5cc196f08923adc12383631bab28252244029f5cd1c",
+        "root_length": 60,
+        "root_sha256": "ad67b3124427dcacfa9b926c381f3d8633682f257d464981517fcfc4464ffd44"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:36",
+        "original_rejected": true,
+        "rewritten_length": 42,
+        "rewritten_sha256": "2bae866c858f407769d29f9f74a0da1c6e35f8901c7b1a04e010685131488b1b",
+        "root_length": 38,
+        "root_sha256": "bd8e88baf178e76ce9f1f3a39659f625ce37b0e854c5e1f482ba39ad2dd6a475"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:41",
+        "original_rejected": true,
+        "rewritten_length": 31,
+        "rewritten_sha256": "72c1e748ab643f7bda2a283990f3d015f5af7a11fbe4bc13cfe46e3274b966c5",
+        "root_length": 27,
+        "root_sha256": "acd9d7841fe6345c4a3a14af240b8db567515c181f2f7e566c86ea209a43cd99"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:43",
+        "original_rejected": true,
+        "rewritten_length": 33,
+        "rewritten_sha256": "4f447975f9e457524916137ed8923236349cc6d8b6932d5d23c9414d26b343b9",
+        "root_length": 29,
+        "root_sha256": "32971dd85e47514d5f7bf28b4e2f8309cba7c0ea1725d752d56ed313578a5673"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:44",
+        "original_rejected": true,
+        "rewritten_length": 40,
+        "rewritten_sha256": "855612c56484c57363295f4e07225b3b34848de909e61f5813aa03950c7a2ccc",
+        "root_length": 36,
+        "root_sha256": "3bd51e862a44e3b61f42d80409671939cf34a3a80ce9f975be936d8599c1bebe"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:48",
+        "original_rejected": true,
+        "rewritten_length": 45,
+        "rewritten_sha256": "62968c668aa419d5ac79c0edf4b72d8aec23c847ce5af6b534c604423c3e20d4",
+        "root_length": 41,
+        "root_sha256": "512400e18aa6436724ada980a48c77d95159b066a685bd7a31016353d36fd229"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:49",
+        "original_rejected": true,
+        "rewritten_length": 53,
+        "rewritten_sha256": "5899b512186270ccaf1fc099d99477ac3a65fc69602d806cc8b3feba68db8363",
+        "root_length": 49,
+        "root_sha256": "5ddd1e980b3522a1455cf44a993d44369239a43bdae741119733a3c709820956"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:51",
+        "original_rejected": true,
+        "rewritten_length": 65,
+        "rewritten_sha256": "dc66518ae998e51a446109c4b23c8f5e2dd887e94cb7a25dc38eacf2183b00f5",
+        "root_length": 61,
+        "root_sha256": "9d1a072fdc0c93d7d5fbbc0877f0f95f1a31387738230a10e50ece1857236233"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:56",
+        "original_rejected": true,
+        "rewritten_length": 38,
+        "rewritten_sha256": "323c97ab097c6b48c2de302647abe2a0766da997dc6ed09c4152b94ba50bf46c",
+        "root_length": 34,
+        "root_sha256": "4caf6f0dcf3e404bc803fcfdd1d1bb7a277dd41e6d1eab948af58e079987322b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "line_reflow",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:68",
+        "original_rejected": true,
+        "rewritten_length": 37,
+        "rewritten_sha256": "1bcca2215fae07b66e25e7970be19f8798b69f0e69e1845d2c41cd9bed74f8e9",
+        "root_length": 33,
+        "root_sha256": "fbf7eb3800903b6eb10ca540c032a0e551d5e61ee737dc920efcc67d5eb9da2d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:4",
+        "original_rejected": true,
+        "rewritten_length": 58,
+        "rewritten_sha256": "da285e0b418fed9cf004899307c0245a51b6e15ebf35cee01274d828e88e3524",
+        "root_length": 57,
+        "root_sha256": "e218cb24e7ef3375a0afaa47b5187a470bad2488473ac68ad921232ac82a5b3d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:7",
+        "original_rejected": true,
+        "rewritten_length": 29,
+        "rewritten_sha256": "d1c33203cc5224964e70e255a376551a40cf7aa237046c01b8a890c0a4aecb13",
+        "root_length": 28,
+        "root_sha256": "dfed4df7d24cdc46747221dc80c80ef4cdff9b8d1309509b340c0caff2467b36"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:8",
+        "original_rejected": true,
+        "rewritten_length": 44,
+        "rewritten_sha256": "660ed4433455c3d8b293d40242cfc95a8bd6cdd84efe8a4db38c0a4015adc291",
+        "root_length": 43,
+        "root_sha256": "48f9814750e3e4be74acc2fea8a0207e799d1af9da5817cc104667a07824dfd9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:10",
+        "original_rejected": true,
+        "rewritten_length": 62,
+        "rewritten_sha256": "0514ed1003b3eafd9ca675eab4728c54e1af0310d5cb8258859eac25fe41aaef",
+        "root_length": 61,
+        "root_sha256": "49ca421f1c64fadfde85901a8abdb0a09dc505103f52338981a7ba54269ea396"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:11",
+        "original_rejected": true,
+        "rewritten_length": 58,
+        "rewritten_sha256": "0f739b50512a3f7b9ac8c8100fea2882e47b644aca6f489b0bbd1c875a2f773b",
+        "root_length": 57,
+        "root_sha256": "798223b00015d937f168471e28c92aaa0ec1c49e58ea977884074b9ddd2f5b59"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:12",
+        "original_rejected": true,
+        "rewritten_length": 64,
+        "rewritten_sha256": "3385e8b5546c9f4c70ab775bd480e8dd13776e3862d1d0ba83ad5ad38028400a",
+        "root_length": 63,
+        "root_sha256": "c4a9dc458f337bdbef93ad64bc424460e247730b73f707f05f1ae2eab4f3af6b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:13",
+        "original_rejected": true,
+        "rewritten_length": 59,
+        "rewritten_sha256": "11cf56a5c18696f7ffbe4d1a3511780e054f3c34912fd19dd6db96babded5c56",
+        "root_length": 58,
+        "root_sha256": "98e12493044926550913ddf12bd30f23761586d2a597042e44865546101b63f9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:14",
+        "original_rejected": true,
+        "rewritten_length": 66,
+        "rewritten_sha256": "3fe4ad713d594ac7fd23e3eba80353de3c1a1d0a92092f79f4554ac4803fcee1",
+        "root_length": 65,
+        "root_sha256": "2224d47202e56ca6bb20ab1c461bb8227a2b7c7f1fa6bc706b1e419f1b43c92d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:15",
+        "original_rejected": true,
+        "rewritten_length": 49,
+        "rewritten_sha256": "3f35d51ce05a8d93e6aa8bf9b423fae09caa00ef49235fd7ef457d37ea3987ac",
+        "root_length": 48,
+        "root_sha256": "cd6c073c88ad93920fb5dabad84616b3b11c0b8bc6db2b14ebe549de8814fd83"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:19",
+        "original_rejected": true,
+        "rewritten_length": 28,
+        "rewritten_sha256": "268e743d68d39616da8f4b1549340bccbfb931bbf55400b1648e45e7dd45cd0e",
+        "root_length": 27,
+        "root_sha256": "146afda1033b3b5e4f413a5645afb40cb471b012063befb3a51df2db7e609984"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:21",
+        "original_rejected": true,
+        "rewritten_length": 48,
+        "rewritten_sha256": "5dce08cbd4bfaaa6f09ae6c5db0cddd31136d05e11258adbeb5de39ee6f0e8bb",
+        "root_length": 47,
+        "root_sha256": "a83353fa82696310108ae99f5da8102d8e1eede41d787d5159bd1a65c6fadce9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:24",
+        "original_rejected": true,
+        "rewritten_length": 36,
+        "rewritten_sha256": "3f8f399b49d217213777c78c4079e6a4011fc24f867837a21f690ddafd210580",
+        "root_length": 35,
+        "root_sha256": "55ce8afe847ddb08e1fd7ea26d039be363fa983ea75b65c738c85d95e6fdb031"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:28",
+        "original_rejected": true,
+        "rewritten_length": 40,
+        "rewritten_sha256": "b00b12a4cfb8670307ece5fdf6acf030be53f1a15ece5f1e8069e5e1e7c49f29",
+        "root_length": 39,
+        "root_sha256": "914a0ab13cb293bd52aa0189abe6e7293b80e22b3e4c4f9d65f57f452112f4eb"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:29",
+        "original_rejected": true,
+        "rewritten_length": 49,
+        "rewritten_sha256": "080c4d9381bcfd8f5d42c066201d8f0e08ef6561526c41e61d0b3928f6b048af",
+        "root_length": 48,
+        "root_sha256": "1021799a55335f28af11d42185be64c7bddb196ca4016e638f772cbecb420db9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:31",
+        "original_rejected": true,
+        "rewritten_length": 61,
+        "rewritten_sha256": "39344cf5d643e7a8e7bc78db8ae78f4c5f72719ac1607f78c0dc0d4c67623810",
+        "root_length": 60,
+        "root_sha256": "ad67b3124427dcacfa9b926c381f3d8633682f257d464981517fcfc4464ffd44"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:36",
+        "original_rejected": true,
+        "rewritten_length": 39,
+        "rewritten_sha256": "50c18da07c9f7cb62957efd7500bc5f8bf53b9bcdf6393d539505ae650d51271",
+        "root_length": 38,
+        "root_sha256": "bd8e88baf178e76ce9f1f3a39659f625ce37b0e854c5e1f482ba39ad2dd6a475"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:41",
+        "original_rejected": true,
+        "rewritten_length": 28,
+        "rewritten_sha256": "ae6e075d0a88b496934e0c233e6e6d85c3e2bac4caacef98a6aacac2c0e702b0",
+        "root_length": 27,
+        "root_sha256": "acd9d7841fe6345c4a3a14af240b8db567515c181f2f7e566c86ea209a43cd99"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:43",
+        "original_rejected": true,
+        "rewritten_length": 30,
+        "rewritten_sha256": "4c10e519408fc762fc66c7b9eaf8f9342a3988c72d8a85b00237cbdee0a01beb",
+        "root_length": 29,
+        "root_sha256": "32971dd85e47514d5f7bf28b4e2f8309cba7c0ea1725d752d56ed313578a5673"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:44",
+        "original_rejected": true,
+        "rewritten_length": 37,
+        "rewritten_sha256": "bdd2ce9392305042df145608b059ca0e2cc4c8fb77257e29a8ce18f1e9775d8e",
+        "root_length": 36,
+        "root_sha256": "3bd51e862a44e3b61f42d80409671939cf34a3a80ce9f975be936d8599c1bebe"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:45",
+        "original_rejected": true,
+        "rewritten_length": 27,
+        "rewritten_sha256": "e5adec894e59297ae28b056ab407f7df6aae8b0a423f64c4299af6a4801b05f5",
+        "root_length": 26,
+        "root_sha256": "8511c4578a603f00d6eab47e6996ec5e5f2849ea50123195bb1ad6d73c396554"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:48",
+        "original_rejected": true,
+        "rewritten_length": 42,
+        "rewritten_sha256": "f21dedd8eb27fe24dfc3eddc105051a3e049539d5af79e6b824ec74919651119",
+        "root_length": 41,
+        "root_sha256": "512400e18aa6436724ada980a48c77d95159b066a685bd7a31016353d36fd229"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:49",
+        "original_rejected": true,
+        "rewritten_length": 50,
+        "rewritten_sha256": "91b4d8571a7f28fb0543a4e8db6123a83811c600a81b8b86080364f3229dcc8a",
+        "root_length": 49,
+        "root_sha256": "5ddd1e980b3522a1455cf44a993d44369239a43bdae741119733a3c709820956"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:51",
+        "original_rejected": true,
+        "rewritten_length": 62,
+        "rewritten_sha256": "505a1f38702392467e0735d26fde436a902a6ab971932ef861d074d11ffd2feb",
+        "root_length": 61,
+        "root_sha256": "9d1a072fdc0c93d7d5fbbc0877f0f95f1a31387738230a10e50ece1857236233"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "identifier_substitution",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:56",
+        "original_rejected": true,
+        "rewritten_length": 35,
+        "rewritten_sha256": "513fb79cc3c477a83692d3bc89a31aa5d59af119061e39bf5ff6301c39b6e20f",
+        "root_length": 34,
+        "root_sha256": "4caf6f0dcf3e404bc803fcfdd1d1bb7a277dd41e6d1eab948af58e079987322b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:4",
+        "original_rejected": true,
+        "rewritten_length": 58,
+        "rewritten_sha256": "56130ce3783fe6936dfdc88eeeb6d077010a37ffaaf00254c350b76ae595ed81",
+        "root_length": 57,
+        "root_sha256": "e218cb24e7ef3375a0afaa47b5187a470bad2488473ac68ad921232ac82a5b3d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:7",
+        "original_rejected": true,
+        "rewritten_length": 29,
+        "rewritten_sha256": "9c308c15a2d18d31477f9cfa9a35ce91520eec70a341e30cf7e9f199c19bc540",
+        "root_length": 28,
+        "root_sha256": "dfed4df7d24cdc46747221dc80c80ef4cdff9b8d1309509b340c0caff2467b36"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:14",
+        "original_rejected": true,
+        "rewritten_length": 66,
+        "rewritten_sha256": "2d8ae33f824a1a9e0d4f942169d1c05601b8dfee0b9b4d7c28e2969660d1cebd",
+        "root_length": 65,
+        "root_sha256": "2224d47202e56ca6bb20ab1c461bb8227a2b7c7f1fa6bc706b1e419f1b43c92d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:19",
+        "original_rejected": true,
+        "rewritten_length": 28,
+        "rewritten_sha256": "e24c9136901e7451b2c25ada5f2c96f3d5107c33d8c75a8bbfdb3ef118f9798d",
+        "root_length": 27,
+        "root_sha256": "146afda1033b3b5e4f413a5645afb40cb471b012063befb3a51df2db7e609984"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:21",
+        "original_rejected": true,
+        "rewritten_length": 48,
+        "rewritten_sha256": "2bbb1bce6c741bb7bfb40d008ce239f1df7f8a97ddb3ce66a2332bb417fc6c37",
+        "root_length": 47,
+        "root_sha256": "a83353fa82696310108ae99f5da8102d8e1eede41d787d5159bd1a65c6fadce9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:24",
+        "original_rejected": true,
+        "rewritten_length": 37,
+        "rewritten_sha256": "9ade536e7895ae10ff8c254c4f883231bb76f7a22b34f1f01f7db18eeb925617",
+        "root_length": 35,
+        "root_sha256": "55ce8afe847ddb08e1fd7ea26d039be363fa983ea75b65c738c85d95e6fdb031"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:28",
+        "original_rejected": true,
+        "rewritten_length": 40,
+        "rewritten_sha256": "89ffe333f9fcdb03f47d983d094ddd3da94e74907976fc4b9850f1e70d827002",
+        "root_length": 39,
+        "root_sha256": "914a0ab13cb293bd52aa0189abe6e7293b80e22b3e4c4f9d65f57f452112f4eb"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:31",
+        "original_rejected": true,
+        "rewritten_length": 61,
+        "rewritten_sha256": "74da97b53812ded225e8ae88bc9fdb1b5287dad1c5ca01fceb97d6a32afcf1e5",
+        "root_length": 60,
+        "root_sha256": "ad67b3124427dcacfa9b926c381f3d8633682f257d464981517fcfc4464ffd44"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:36",
+        "original_rejected": true,
+        "rewritten_length": 39,
+        "rewritten_sha256": "2a57f0a5c909aff606a363d63883ce1f33c735059f336accc461946946d60546",
+        "root_length": 38,
+        "root_sha256": "bd8e88baf178e76ce9f1f3a39659f625ce37b0e854c5e1f482ba39ad2dd6a475"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:41",
+        "original_rejected": true,
+        "rewritten_length": 29,
+        "rewritten_sha256": "e3771080e5003e7ff70dfbf9357f37022018d9ad84d56afbdb69cd73958b3613",
+        "root_length": 27,
+        "root_sha256": "acd9d7841fe6345c4a3a14af240b8db567515c181f2f7e566c86ea209a43cd99"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:43",
+        "original_rejected": true,
+        "rewritten_length": 30,
+        "rewritten_sha256": "14d9590865e771cbec5d980c8b77177686862c8ec6e05123337b23fe39ab36fb",
+        "root_length": 29,
+        "root_sha256": "32971dd85e47514d5f7bf28b4e2f8309cba7c0ea1725d752d56ed313578a5673"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:44",
+        "original_rejected": true,
+        "rewritten_length": 38,
+        "rewritten_sha256": "e4f43db848e60f0d3b0948ee814ebce170480f05ee59bb38503e25e2e04d8e5e",
+        "root_length": 36,
+        "root_sha256": "3bd51e862a44e3b61f42d80409671939cf34a3a80ce9f975be936d8599c1bebe"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:45",
+        "original_rejected": true,
+        "rewritten_length": 27,
+        "rewritten_sha256": "dbedb4057372301e1345a92e404ac8b4ac3492c6a52882bfead1c9f55b7ac512",
+        "root_length": 26,
+        "root_sha256": "8511c4578a603f00d6eab47e6996ec5e5f2849ea50123195bb1ad6d73c396554"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:48",
+        "original_rejected": true,
+        "rewritten_length": 42,
+        "rewritten_sha256": "de10b1ff9f479df6cc742e3eecef8d2522322bdd1c5325572bd1de05b9a2a2d0",
+        "root_length": 41,
+        "root_sha256": "512400e18aa6436724ada980a48c77d95159b066a685bd7a31016353d36fd229"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:51",
+        "original_rejected": true,
+        "rewritten_length": 62,
+        "rewritten_sha256": "393a535ac2553289fdf97da070d98c6d5daac02745be4f068139772f0fc856e3",
+        "root_length": 61,
+        "root_sha256": "9d1a072fdc0c93d7d5fbbc0877f0f95f1a31387738230a10e50ece1857236233"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:56",
+        "original_rejected": true,
+        "rewritten_length": 35,
+        "rewritten_sha256": "a9178a27f42bcaecdb9e2a83bc5c6c86146f83caedd818ec46f3fd1094e24b38",
+        "root_length": 34,
+        "root_sha256": "4caf6f0dcf3e404bc803fcfdd1d1bb7a277dd41e6d1eab948af58e079987322b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:68",
+        "original_rejected": true,
+        "rewritten_length": 34,
+        "rewritten_sha256": "f99787b7c6e5607fd0615307f7def679ce4e4c902266dde3625867a7c43eb9f7",
+        "root_length": 33,
+        "root_sha256": "fbf7eb3800903b6eb10ca540c032a0e551d5e61ee737dc920efcc67d5eb9da2d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:71",
+        "original_rejected": true,
+        "rewritten_length": 58,
+        "rewritten_sha256": "2d7981fa3ca47901364f8f9f0da81583abab5304d93b05adcbc6a0f40732f471",
+        "root_length": 57,
+        "root_sha256": "8c3aaf5620907eca96bdeff1f5809ef910fccb04255e050732d325dc2f5578e4"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:76",
+        "original_rejected": true,
+        "rewritten_length": 32,
+        "rewritten_sha256": "39c2822ee11001aa71f4ac036c424c40a1382a4d87dc1cf998e4e6702c444f64",
+        "root_length": 31,
+        "root_sha256": "3e520264216ea7f799b3144b8648b24000e6936e92d249929fa2966fca4c7a11"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:85",
+        "original_rejected": true,
+        "rewritten_length": 61,
+        "rewritten_sha256": "e18f4ee26ad68e9fca54cfefcc5c2fee60812234bdb5d680bb0ac2bd01244460",
+        "root_length": 60,
+        "root_sha256": "3455b08026616f612cf0f7a81c1c46d2d93437385c98818419138932cc94d43d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:86",
+        "original_rejected": true,
+        "rewritten_length": 51,
+        "rewritten_sha256": "d97dd76188c8cfd947acf311b3e52c95d396aac66aa7ef7fc84325ec849855f8",
+        "root_length": 50,
+        "root_sha256": "329f14677184eb56303267e82915796242ae237e47397935f9c2ba9f28715907"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:87",
+        "original_rejected": true,
+        "rewritten_length": 32,
+        "rewritten_sha256": "b4ccc0998f1b4586e045ffb55350ca22e69a5840790d39353b3cb77ec42923af",
+        "root_length": 31,
+        "root_sha256": "c963271bfe58d674caf6ad4f502690e07175fd06a0e4db8ba8feeedeb965718d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:88",
+        "original_rejected": true,
+        "rewritten_length": 20,
+        "rewritten_sha256": "1ca7675b14ad20c46d6fc8a455dc31dccc33d622af97ee1b8b0b9c274d315129",
+        "root_length": 19,
+        "root_sha256": "2800f23759c55b35f8f5adeabdccf21a5c66aa664178e4c98a86439c38399d9a"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "punctuation_spacing",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:89",
+        "original_rejected": true,
+        "rewritten_length": 45,
+        "rewritten_sha256": "8f4062e432ab97bbbc8bd7e3345f6c5979c68684c432b4856181079eab5e6d56",
+        "root_length": 44,
+        "root_sha256": "e619ebf5d2762ef322c01a2ee8f17ccd033e219eede430143692cbddae6a827d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:4",
+        "original_rejected": true,
+        "rewritten_length": 68,
+        "rewritten_sha256": "b030b26808076d6b54a3ebe02971b3bb80ca3d63b7f5a484aaf5b50e5f3630d7",
+        "root_length": 57,
+        "root_sha256": "e218cb24e7ef3375a0afaa47b5187a470bad2488473ac68ad921232ac82a5b3d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:7",
+        "original_rejected": true,
+        "rewritten_length": 39,
+        "rewritten_sha256": "4b09015dc86f3309bb466de44df2da8871f5d7a9273bf116fd5c29d2060b9fea",
+        "root_length": 28,
+        "root_sha256": "dfed4df7d24cdc46747221dc80c80ef4cdff9b8d1309509b340c0caff2467b36"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:8",
+        "original_rejected": true,
+        "rewritten_length": 54,
+        "rewritten_sha256": "ea833ea1cbbcd8c76abf4f1d320772d8d6a60d2bdd10fd766dd09082007bda25",
+        "root_length": 43,
+        "root_sha256": "48f9814750e3e4be74acc2fea8a0207e799d1af9da5817cc104667a07824dfd9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:10",
+        "original_rejected": true,
+        "rewritten_length": 72,
+        "rewritten_sha256": "4a85d15b992fc935e629b3bb5b9575f4f74a5b0f1ac0a2ecc1272c8bcd7d05eb",
+        "root_length": 61,
+        "root_sha256": "49ca421f1c64fadfde85901a8abdb0a09dc505103f52338981a7ba54269ea396"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:11",
+        "original_rejected": true,
+        "rewritten_length": 68,
+        "rewritten_sha256": "b3f1960cb480726c5b84e4ec7d7c77ab20eea4b16abd3b38e1334885188645d2",
+        "root_length": 57,
+        "root_sha256": "798223b00015d937f168471e28c92aaa0ec1c49e58ea977884074b9ddd2f5b59"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:12",
+        "original_rejected": true,
+        "rewritten_length": 74,
+        "rewritten_sha256": "a5ed01c71ced3856de472dea7de0a9d98c1c7f7d9125300f57de100ba04d77fd",
+        "root_length": 63,
+        "root_sha256": "c4a9dc458f337bdbef93ad64bc424460e247730b73f707f05f1ae2eab4f3af6b"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:13",
+        "original_rejected": true,
+        "rewritten_length": 69,
+        "rewritten_sha256": "cff7cce31719c12118113beb17160d8a252e83579248eaad725ade8dc93f5b96",
+        "root_length": 58,
+        "root_sha256": "98e12493044926550913ddf12bd30f23761586d2a597042e44865546101b63f9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:14",
+        "original_rejected": true,
+        "rewritten_length": 76,
+        "rewritten_sha256": "1fbeab4e9d8aaa7cd6f274b020d66a607e307a069112368c9e2216432a8cfad4",
+        "root_length": 65,
+        "root_sha256": "2224d47202e56ca6bb20ab1c461bb8227a2b7c7f1fa6bc706b1e419f1b43c92d"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:15",
+        "original_rejected": true,
+        "rewritten_length": 59,
+        "rewritten_sha256": "6f3174cfef12058df41953c3768448ce825f2b41a0ecd4a3ca0adc782a6d6cba",
+        "root_length": 48,
+        "root_sha256": "cd6c073c88ad93920fb5dabad84616b3b11c0b8bc6db2b14ebe549de8814fd83"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:19",
+        "original_rejected": true,
+        "rewritten_length": 38,
+        "rewritten_sha256": "c0a450827876b31528c57cf414b3a57332a19422612b4158d788df59bc7af0f3",
+        "root_length": 27,
+        "root_sha256": "146afda1033b3b5e4f413a5645afb40cb471b012063befb3a51df2db7e609984"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:21",
+        "original_rejected": true,
+        "rewritten_length": 58,
+        "rewritten_sha256": "b09f3dc5cb4085c41360828703be94a4a8edf54a3d643b6d31a8e0ceb162e3dc",
+        "root_length": 47,
+        "root_sha256": "a83353fa82696310108ae99f5da8102d8e1eede41d787d5159bd1a65c6fadce9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:24",
+        "original_rejected": true,
+        "rewritten_length": 46,
+        "rewritten_sha256": "0868aba9aad20538e49253542af232e8f55f8f76a838af409208c4de6c93a7db",
+        "root_length": 35,
+        "root_sha256": "55ce8afe847ddb08e1fd7ea26d039be363fa983ea75b65c738c85d95e6fdb031"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:28",
+        "original_rejected": true,
+        "rewritten_length": 50,
+        "rewritten_sha256": "4ae36f27ddb3d502626646befbfc9d33ae7069ebf8c0aec615d4852ea5d4ec6a",
+        "root_length": 39,
+        "root_sha256": "914a0ab13cb293bd52aa0189abe6e7293b80e22b3e4c4f9d65f57f452112f4eb"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:29",
+        "original_rejected": true,
+        "rewritten_length": 59,
+        "rewritten_sha256": "93be29eb4c816aade5c47376f859eef36e09a6fcab28620cf034974059c24b4b",
+        "root_length": 48,
+        "root_sha256": "1021799a55335f28af11d42185be64c7bddb196ca4016e638f772cbecb420db9"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:31",
+        "original_rejected": true,
+        "rewritten_length": 71,
+        "rewritten_sha256": "f8d801eb9cabb8b41f70caff97acabb39a91995d791c99303070f16ee59d60cb",
+        "root_length": 60,
+        "root_sha256": "ad67b3124427dcacfa9b926c381f3d8633682f257d464981517fcfc4464ffd44"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:36",
+        "original_rejected": true,
+        "rewritten_length": 49,
+        "rewritten_sha256": "077f39117875a78bb43faca3accc3df43efbd7b707a95f9cabb539100c614ebd",
+        "root_length": 38,
+        "root_sha256": "bd8e88baf178e76ce9f1f3a39659f625ce37b0e854c5e1f482ba39ad2dd6a475"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:41",
+        "original_rejected": true,
+        "rewritten_length": 38,
+        "rewritten_sha256": "b05daeead635a44ebe54d2d9ada64be10e3f9b428df1c2f8ef7df208e9eacdee",
+        "root_length": 27,
+        "root_sha256": "acd9d7841fe6345c4a3a14af240b8db567515c181f2f7e566c86ea209a43cd99"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:43",
+        "original_rejected": true,
+        "rewritten_length": 40,
+        "rewritten_sha256": "66a1b43a64411a6e612c7aff68b60c2904fdbb86c1ab10594330e9adcfe0d236",
+        "root_length": 29,
+        "root_sha256": "32971dd85e47514d5f7bf28b4e2f8309cba7c0ea1725d752d56ed313578a5673"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:44",
+        "original_rejected": true,
+        "rewritten_length": 47,
+        "rewritten_sha256": "334eca92b78e21f297e34788ff30e0136b3ce7bf739e085bfc58d5c1071afaed",
+        "root_length": 36,
+        "root_sha256": "3bd51e862a44e3b61f42d80409671939cf34a3a80ce9f975be936d8599c1bebe"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:45",
+        "original_rejected": true,
+        "rewritten_length": 37,
+        "rewritten_sha256": "0f3632c82bdc6cbb0fe16f75fe7a8994ab5e0ff37c4529520e955e3ad17cc966",
+        "root_length": 26,
+        "root_sha256": "8511c4578a603f00d6eab47e6996ec5e5f2849ea50123195bb1ad6d73c396554"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:48",
+        "original_rejected": true,
+        "rewritten_length": 52,
+        "rewritten_sha256": "03232ce6393f847619765365f5206bfe378b52082a58974c357fef72484d4b55",
+        "root_length": 41,
+        "root_sha256": "512400e18aa6436724ada980a48c77d95159b066a685bd7a31016353d36fd229"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:49",
+        "original_rejected": true,
+        "rewritten_length": 60,
+        "rewritten_sha256": "2b879a37f0bfa8fb443a1d011a03f77c0ffee1a80f6dbf1c247479e9fbd11667",
+        "root_length": 49,
+        "root_sha256": "5ddd1e980b3522a1455cf44a993d44369239a43bdae741119733a3c709820956"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:51",
+        "original_rejected": true,
+        "rewritten_length": 72,
+        "rewritten_sha256": "9ae0eb802295787f923c8f834676b8d14a3342dd0e2fbaec69b3aa3030521cbf",
+        "root_length": 61,
+        "root_sha256": "9d1a072fdc0c93d7d5fbbc0877f0f95f1a31387738230a10e50ece1857236233"
+      },
+      {
+        "clean_control_passed": true,
+        "endpoint_scan_passed": true,
+        "family": "comment_insertion",
+        "lineage_blocked": true,
+        "origin": "data/public/cpython/abc.py:56",
+        "original_rejected": true,
+        "rewritten_length": 45,
+        "rewritten_sha256": "c89ba42b5085189bffe9ac2b9d8833938e62b6821443d23efd792e3d8721f958",
+        "root_length": 34,
+        "root_sha256": "4caf6f0dcf3e404bc803fcfdd1d1bb7a277dd41e6d1eab948af58e079987322b"
+      }
+    ],
+    "cases": 120,
+    "cases_by_family": {
+      "comment_insertion": 24,
+      "identifier_substitution": 24,
+      "line_reflow": 24,
+      "punctuation_spacing": 24,
+      "whitespace_expansion": 24
+    },
+    "claim_boundary": "Generated labels and exact textual rewrites, without semantic-equivalence claims. Function-level evidence on retained static source text; no source file is executed, and the matrix does not reproduce the complete upstream distributed builder.",
+    "clean_control_passes": 120,
+    "lineage_blocks": 120,
+    "lineage_check": "ledger.validate and checker.verify on each literal rewrite",
+    "original_scan_rejections": 120,
+    "retained_candidate_lines": 2708,
+    "rewritten_endpoint_scan_passes": 120,
+    "transform_families": [
+      "whitespace_expansion",
+      "line_reflow",
+      "identifier_substitution",
+      "punctuation_spacing",
+      "comment_insertion"
+    ],
+    "upstream_excerpt_sha256": "65aa3d5401b98cb067ab4103fa86ce168d516117db65dc4492dbf9c069813a7e",
+    "upstream_function_path": "upstream/bigcode-dataset/find_substrings_excerpt.py"
+  }
+}

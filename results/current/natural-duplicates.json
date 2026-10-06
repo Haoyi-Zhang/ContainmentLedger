@@ -1,0 +1,144 @@
+{
+  "source_files": 24,
+  "minimum_canonical_line_length": 8,
+  "duplicate_line_classes": 127,
+  "cross_project_duplicate_classes": 6,
+  "pair_contexts": 216,
+  "cross_project_pair_contexts": 13,
+  "complete_summary_equal_to_joined_replay": 216,
+  "authenticated_capsule_compositions_equal_to_joined_replay": 216,
+  "endpoint_only_false_clean_outputs": 216,
+  "capsules_issued_and_verified": 432,
+  "capsule_canonical_bytes_min": 3941,
+  "capsule_canonical_bytes_max": 75289,
+  "capsule_canonical_bytes_mean": 40916.710648148146,
+  "capsule_wrapper_bytes_min": 560,
+  "capsule_wrapper_bytes_max": 565,
+  "capsule_wrapper_bytes_mean": 563.7361111111111,
+  "duplicate_threshold_sensitivity": {
+    "8": {
+      "classes": 127,
+      "file_pair_contexts": 216,
+      "cross_project_classes": 6
+    },
+    "12": {
+      "classes": 110,
+      "file_pair_contexts": 173,
+      "cross_project_classes": 1
+    },
+    "20": {
+      "classes": 74,
+      "file_pair_contexts": 99,
+      "cross_project_classes": 0
+    },
+    "40": {
+      "classes": 51,
+      "file_pair_contexts": 65,
+      "cross_project_classes": 0
+    }
+  },
+  "largest_duplicate_class_files": 4,
+  "examples": [
+    {
+      "canonical_line": "\t\t\t    All rights reserved.",
+      "left": {
+        "file": "perl/AutoLoader.pm",
+        "line": 406
+      },
+      "right": {
+        "file": "perl/AutoSplit.pm",
+        "line": 154
+      },
+      "cross_project": false
+    },
+    {
+      "canonical_line": "\t    else {",
+      "left": {
+        "file": "perl/AutoLoader.pm",
+        "line": 123
+      },
+      "right": {
+        "file": "perl/Benchmark.pm",
+        "line": 1071
+      },
+      "cross_project": false
+    },
+    {
+      "canonical_line": "\t    } else {",
+      "left": {
+        "file": "perl/AutoLoader.pm",
+        "line": 87
+      },
+      "right": {
+        "file": "perl/AutoSplit.pm",
+        "line": 414
+      },
+      "cross_project": false
+    },
+    {
+      "canonical_line": "\tSoftware Foundation; either version 1, or (at your option) any",
+      "left": {
+        "file": "perl/AutoLoader.pm",
+        "line": 412
+      },
+      "right": {
+        "file": "perl/AutoSplit.pm",
+        "line": 160
+      },
+      "cross_project": false
+    },
+    {
+      "canonical_line": "\ta) the GNU General Public License as published by the Free",
+      "left": {
+        "file": "perl/AutoLoader.pm",
+        "line": 411
+      },
+      "right": {
+        "file": "perl/AutoSplit.pm",
+        "line": 159
+      },
+      "cross_project": false
+    },
+    {
+      "canonical_line": "\tb) the \"Artistic License\" which comes with this Kit.",
+      "left": {
+        "file": "perl/AutoLoader.pm",
+        "line": 415
+      },
+      "right": {
+        "file": "perl/AutoSplit.pm",
+        "line": 163
+      },
+      "cross_project": false
+    },
+    {
+      "canonical_line": "\tlater version, or",
+      "left": {
+        "file": "perl/AutoLoader.pm",
+        "line": 413
+      },
+      "right": {
+        "file": "perl/AutoSplit.pm",
+        "line": 161
+      },
+      "cross_project": false
+    },
+    {
+      "canonical_line": "\t} else {",
+      "left": {
+        "file": "go/csv-reader.go",
+        "line": 201
+      },
+      "right": {
+        "file": "perl/AutoLoader.pm",
+        "line": 173
+      },
+      "cross_project": true
+    }
+  ],
+  "labels_are_generated_fixture_facts": true,
+  "source_text_was_not_executed": true,
+  "cpu_seconds": 1.617815373,
+  "wall_seconds": 1.6176475580000016,
+  "peak_rss_kib": 22560
+}

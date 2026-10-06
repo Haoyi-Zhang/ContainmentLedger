@@ -1,0 +1,9 @@
+{
+  "check": "repository-material-integrity",
+  "python_sources_parsed": 40,
+  "research_sources_present": 39,
+  "minimum_supplied_sources": 38,
+  "usage_document_present": true,
+  "errors": [],
+  "scope": "Documentation and source/configuration integrity only. Research programs, proofs and experiments are not executed."
+}

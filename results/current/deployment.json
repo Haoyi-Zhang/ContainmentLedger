@@ -1,0 +1,93 @@
+{
+  "replay_call_boundaries": {
+    "local_checker_calls": {
+      "issue": 1,
+      "verify": 0,
+      "compose": 0,
+      "verify_bound": 1,
+      "accept_bound": 1
+    },
+    "accept_bound_persisted_freshness": true,
+    "trust": "Summary-only composition authenticates checker assertions and does not receive or replay original ledgers."
+  },
+  "capsule_contract": "containment-ledger/equality-only/hmac-sha256",
+  "valid_capsule_bound_and_verified": true,
+  "tamper_or_context_cases_rejected": 23,
+  "tamper_cases": [
+    "policy_digest-mutation",
+    "ledger_digest-mutation",
+    "summary_digest-mutation",
+    "policy_tag-mutation",
+    "checker_tag-mutation",
+    "summary-content-mutation",
+    "output-name-mutation",
+    "contract-mutation",
+    "sequence-type-confusion",
+    "wrong-authority-key",
+    "wrong-checker-key",
+    "stale-epoch",
+    "stale-sequence",
+    "wrong-shard",
+    "per-shard-stale-sequence",
+    "duplicate-capsule-identity",
+    "duplicate-shard-revision",
+    "bound-policy-substitution",
+    "bound-ledger-substitution",
+    "authenticated-emission-tamper",
+    "destination-symlink",
+    "preexisting-destination",
+    "symlink-parent"
+  ],
+  "race_processes": 8,
+  "race_successful_publishers": 1,
+  "race_result_complete": true,
+  "race_temporary_files_remaining": 0,
+  "preexisting_destination_preserved": true,
+  "destination_symlink_preserved_and_target_unchanged": true,
+  "symlink_parent_refused": true,
+  "process_death_checkpoints": [
+    {
+      "checkpoint": "temp-created",
+      "destination_exists": false,
+      "expected_committed": false,
+      "temporary_files": 1
+    },
+    {
+      "checkpoint": "zip-closed",
+      "destination_exists": false,
+      "expected_committed": false,
+      "temporary_files": 1
+    },
+    {
+      "checkpoint": "file-synced",
+      "destination_exists": false,
+      "expected_committed": false,
+      "temporary_files": 1
+    },
+    {
+      "checkpoint": "linked",
+      "destination_exists": true,
+      "expected_committed": true,
+      "temporary_files": 1
+    },
+    {
+      "checkpoint": "directory-synced",
+      "destination_exists": true,
+      "expected_committed": true,
+      "temporary_files": 1
+    },
+    {
+      "checkpoint": "temporary-removed",
+      "destination_exists": true,
+      "expected_committed": true,
+      "temporary_files": 0
+    }
+  ],
+  "precommit_deaths_created_no_destination": true,
+  "postlink_deaths_left_complete_destination": true,
+  "power_loss_or_arbitrary_filesystem_durability_tested": false,
+  "public_signature_or_nonrepudiation_claimed": false,
+  "cpu_seconds": 0.015607924000000002,
+  "wall_seconds": 0.4258947999999947,
+  "peak_rss_kib": 25568
+}

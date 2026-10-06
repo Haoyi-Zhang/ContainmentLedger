@@ -1,0 +1,90 @@
+{
+  "cpu_seconds": 0.11039357,
+  "emitter_publication": {
+    "atomic_hard_link_commits": 1,
+    "destination_unlink_calls": 0,
+    "exclusive_and_no_follow_flags_present": true,
+    "fsync_calls": 3,
+    "overwrite_capable_publication_calls": 0,
+    "proof_implementation_boundary_aligned": true
+  },
+  "evidence_tables": {
+    "additional_evidence_rows": 8,
+    "all_resource_locators_https": true,
+    "claim_evidence_rows": 30,
+    "external_internals_modified": 0,
+    "external_resource_rows": 118,
+    "scholarly_or_standard_resource_rows": 85,
+    "unavailable_inherited_ancillary_records": 2
+  },
+  "package_shape": {
+    "forbidden_workflow_or_private_names": 0,
+    "nested_archives": 0,
+    "python_cache_artifacts": 0,
+    "symlinks": 0,
+    "top_level_entries": [
+      ".github",
+      "LICENSE",
+      "README.md",
+      "claim_evidence_ledger.csv",
+      "data",
+      "external_resources.csv",
+      "licenses",
+      "proofs",
+      "reproduce.py",
+      "results",
+      "reviewer-evidence-ledger.csv",
+      "src",
+      "tests",
+      "upstream"
+    ]
+  },
+  "peak_rss_kib": 17996,
+  "public_inputs": {
+    "all_selected_files_end_in_LF": true,
+    "all_selected_files_have_retained_license": true,
+    "all_selected_files_utf8": true,
+    "files_per_project": {
+      "CPython": 4,
+      "Go": 4,
+      "Perl": 4,
+      "Ruby": 4,
+      "npm CLI": 4,
+      "pip": 4
+    },
+    "selection_bytes": 268614,
+    "selection_files": 24,
+    "selection_physical_lines": 8191,
+    "selection_projects": 6
+  },
+  "retained_upstream": {
+    "bigcode_commit_and_blob_identifiers_present": true,
+    "humaneval_commit_and_blob_identifiers_present": true,
+    "humaneval_example_exact_record_matched": true,
+    "retained_bigcode_functions_ast_matched": 2,
+    "upstream_license_files_present": 2
+  },
+  "scope": "Offline package-shape, retained-byte accounting, AST-level source-safety, publication-source invariants, upstream-excerpt identity, and evidence-table integrity checks. These checks do not prove semantic correctness, arbitrary-file-system durability, or remote source availability.",
+  "source_safety": {
+    "cut_generator_verifier_cross_imports": 0,
+    "dynamic_import_sites": [
+      [
+        "src/builder_adapter.py",
+        32,
+        "importlib.util.spec_from_file_location"
+      ],
+      [
+        "src/builder_adapter.py",
+        36,
+        "spec.loader.exec_module"
+      ]
+    ],
+    "forbidden_dynamic_execution_calls": 0,
+    "forbidden_network_imports": 0,
+    "producer_checker_cross_imports": 0,
+    "python_files_ast_parsed": 30,
+    "shell_true_subprocess_calls": 0
+  },
+  "status": "passed",
+  "wall_seconds": 0.11731031099999711
+}

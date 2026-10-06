@@ -1,0 +1,3362 @@
+[
+  {
+    "shard": "abc.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abc.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abc.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abc.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abc.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abc.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abc.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abc.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abc.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abc.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abc.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abc.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abc.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "bisect.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "colorsys.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "keyword.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "csv-reader.go",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "path.go",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "path.go",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "path.go",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "path.go",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "path.go",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "path.go",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "path.go",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "path.go",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "path.go",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "path.go",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "path.go",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "path.go",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "path.go",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "sort.go",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "sort.go",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "sort.go",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "sort.go",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "sort.go",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "sort.go",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "sort.go",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "sort.go",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "sort.go",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "sort.go",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "sort.go",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "sort.go",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "sort.go",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tar-format.go",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cli-entry.js",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "dedupe.js",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "pack.js",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "pack.js",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "pack.js",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "pack.js",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "pack.js",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "pack.js",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "pack.js",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "pack.js",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "pack.js",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "pack.js",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "pack.js",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "pack.js",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "pack.js",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "reify-finish.js",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoLoader.pm",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "AutoSplit.pm",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "Benchmark.pm",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "English.pm",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "English.pm",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "English.pm",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "English.pm",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "English.pm",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "English.pm",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "English.pm",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "English.pm",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "English.pm",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "English.pm",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "English.pm",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "English.pm",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "English.pm",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cache.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cache.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cache.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cache.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cache.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cache.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cache.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cache.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cache.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cache.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "cache.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "cache.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "cache.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "direct-url.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "prepare.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "req-install.py",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "abbrev.rb",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "base64.rb",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "benchmark.rb",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C01",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C02",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C03",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C04",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C05",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C06",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C07",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C08",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C09",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C10",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C11",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C12",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C15",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C16",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C17",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C18",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C19",
+    "kind": "infeasible",
+    "cut_size": null,
+    "minimum_size": null
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C20",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C21",
+    "kind": "cut",
+    "cut_size": 1,
+    "minimum_size": 1
+  },
+  {
+    "shard": "tsort.rb",
+    "case": "C22",
+    "kind": "cut",
+    "cut_size": 0,
+    "minimum_size": 0
+  }
+]

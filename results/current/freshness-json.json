@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "valid_controls": 3,
+  "rejected_cases": [
+    {
+      "case": "duplicate-generation",
+      "bytes": 230,
+      "rejection": "freshness duplicate JSON key"
+    },
+    {
+      "case": "hidden-NaN-generation",
+      "bytes": 232,
+      "rejection": "freshness non-finite JSON constant"
+    },
+    {
+      "case": "duplicate-generation-identical",
+      "bytes": 230,
+      "rejection": "freshness duplicate JSON key"
+    },
+    {
+      "case": "escaped-duplicate-key",
+      "bytes": 235,
+      "rejection": "freshness duplicate JSON key"
+    },
+    {
+      "case": "duplicate-shard",
+      "bytes": 228,
+      "rejection": "freshness duplicate JSON key"
+    },
+    {
+      "case": "hidden-Infinity",
+      "bytes": 237,
+      "rejection": "freshness non-finite JSON constant"
+    },
+    {
+      "case": "hidden-negative-Infinity",
+      "bytes": 238,
+      "rejection": "freshness non-finite JSON constant"
+    },
+    {
+      "case": "boolean-generation",
+      "bytes": 218,
+      "rejection": "freshness generation"
+    },
+    {
+      "case": "integer-length",
+      "bytes": 234,
+      "rejection": "freshness JSON integer length"
+    },
+    {
+      "case": "invalid-UTF8",
+      "bytes": 1,
+      "rejection": "freshness state JSON"
+    },
+    {
+      "case": "lexical-depth",
+      "bytes": 131,
+      "rejection": "freshness JSON depth limit"
+    },
+    {
+      "case": "lexical-atoms",
+      "bytes": 2000003,
+      "rejection": "freshness JSON atom limit"
+    },
+    {
+      "case": "byte-limit",
+      "bytes": 4194305,
+      "rejection": "freshness state size"
+    },
+    {
+      "case": "changed-body-valid-syntax",
+      "bytes": 215,
+      "rejection": "freshness authentication"
+    }
+  ],
+  "rejected_count": 14,
+  "persisted_state_rejections_unchanged": [
+    "duplicate-generation",
+    "hidden-NaN-generation"
+  ],
+  "fixture_keys_only": true,
+  "interpretation": "Malformed encodings of an unchanged canonical authenticated body are rejected. No HMAC bypass or state rollback is claimed."
+}

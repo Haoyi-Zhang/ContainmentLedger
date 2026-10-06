@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "queries": [
+    {
+      "loader": "builder_adapter",
+      "matched_branch": true,
+      "return_matched": true,
+      "actual": [
+        false,
+        "fixture_match",
+        "needle"
+      ]
+    },
+    {
+      "loader": "builder_adapter",
+      "matched_branch": true,
+      "return_matched": false,
+      "actual": [
+        false,
+        "fixture_match"
+      ]
+    },
+    {
+      "loader": "builder_adapter",
+      "matched_branch": false,
+      "return_matched": true,
+      "actual": [
+        true,
+        null,
+        null
+      ]
+    },
+    {
+      "loader": "builder_adapter",
+      "matched_branch": false,
+      "return_matched": false,
+      "actual": [
+        true,
+        null
+      ]
+    },
+    {
+      "loader": "reviewer_hardening",
+      "matched_branch": true,
+      "return_matched": true,
+      "actual": [
+        false,
+        "fixture_match",
+        "needle"
+      ]
+    },
+    {
+      "loader": "reviewer_hardening",
+      "matched_branch": true,
+      "return_matched": false,
+      "actual": [
+        false,
+        "fixture_match"
+      ]
+    },
+    {
+      "loader": "reviewer_hardening",
+      "matched_branch": false,
+      "return_matched": true,
+      "actual": [
+        true,
+        null,
+        null
+      ]
+    },
+    {
+      "loader": "reviewer_hardening",
+      "matched_branch": false,
+      "return_matched": false,
+      "actual": [
+        true,
+        null
+      ]
+    }
+  ],
+  "query_count": 8,
+  "upstream_excerpt": "upstream/bigcode-dataset/find_substrings_excerpt.py",
+  "upstream_excerpt_sha256": "65aa3d5401b98cb067ab4103fa86ce168d516117db65dc4492dbf9c069813a7e",
+  "helper_loaded": true,
+  "scope": "Pure matching/nonmatching queries only, not a full-campaign result."
+}
