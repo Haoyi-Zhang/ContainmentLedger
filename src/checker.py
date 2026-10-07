@@ -210,7 +210,7 @@ def verify(policy,log,summary=False,exports=False,details=False,assert_claims=Tr
         for bit in (1,4):
             by_value={}; owner={}
             for vertex,(body,task) in data.items():
-                value=(norm(body),) if bit==1 else (norm(body),task)
+                value=(normal[vertex],) if bit==1 else (normal[vertex],task)
                 by_value.setdefault(value,len(by_value)); owner[vertex]=by_value[value]
             rows=set()
             for left,right,mask in arcs:

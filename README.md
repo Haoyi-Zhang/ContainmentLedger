@@ -165,7 +165,7 @@ five saved part records, their **current source/input SHA-256 bindings**, the
 hashes of generated evidence files, command statuses, and scientific
 invariants. It does not rerun experiments. Those checks remain active under
 `python -O`; an old PASS from different source or changed evidence is rejected.
-The source inventory is measured afresh (30 maintained Python files in this
+The source inventory is measured afresh (31 maintained Python files in this
 packet), not copied from an earlier audit. Result JSON records the source and
 input snapshot used for each measurement. The retained POSIX measurements are
 bound to an earlier source/input snapshot, not to the current tree; changed
@@ -225,13 +225,28 @@ either adapter yields a valid empty separator problem.
 
 ## Retained evidence
 
+The checker summary path reuses the canonical strings already computed in that
+same replay; it retains full keys, first-seen numbering, sorted arcs/seeds and
+output order. It does not cache across calls or import producer normalization.
+The portable finite regression uses short owned text, an independent raw-record
+replay and all-pairs Boolean closure, and fixture HMAC keys:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -B -S -m unittest discover -s tests -p test_summary_reuse.py -v
+```
+
+The scientific workflow runs this regression explicitly and preserves its log.
+It performs no publication, persistent freshness, upstream-source execution,
+resource campaign or timing measurement. It does not refresh the retained
+source-bound POSIX results or satisfy the full current-source verification gate.
+
 | Evidence | Result and scope |
 |---|---|
 | `results/upstream-regression.json` | 8 pure matching/nonmatching queries through the shared complete fixed-path loader |
 | `results/freshness-json.json` | 3 valid fixture-key controls, 14 syntax/authentication boundary rejections, 2 persisted malformed states left unchanged |
 | `results/runner-guards.json` | 7 controlled supervisor cases; five expected worker failures retain real metrics and clean descendants |
 | `results/reviewer-hardening.json` | 14,400 small-model cases, 12 listed abstract mutants, 120 retained-line rewrites checked by both replayers, and 264 supplementary quotient-oracle timing repetitions |
-| `results/package-audit.json` | retained whitelist/source audit; a current run inventories 30 maintained Python files, the fixed upstream excerpt and physical LF accounting |
+| `results/package-audit.json` | retained whitelist/source audit; a current run inventories 31 maintained Python files, the fixed upstream excerpt and physical LF accounting; saved audit records retain their own source inventory |
 | `results/campaign.json` | 6 projects, 24 files, 20 families, 480 assigned-policy cases: 336 blocked and 144 clean |
 | `results/mutations.json` | 288 malformed or false-claim records rejected by both replay implementations |
 | `results/composition.json` | 2,457 merge contexts and 4,962 output masks; complete summaries equal joined replay throughout |

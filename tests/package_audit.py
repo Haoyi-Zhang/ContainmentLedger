@@ -20,6 +20,7 @@ ALLOWED_TOP_LEVEL = {
 }
 EXPECTED_PYTHON_FILES = ['reproduce.py', 'src/builder_adapter.py', 'src/capsule.py', 'src/checker.py', 'src/corpus_adapter.py', 'src/cutcheck.py', 'src/cuts.py', 'src/diagnose.py', 'src/emitter.py', 'src/fixtures.py', 'src/freshness.py', 'src/ledger.py', 'src/merge.py', 'src/reviewer_hardening.py', 'tests/boundaries.py', 'tests/builder_bridge.py', 'tests/campaign.py', 'tests/context.py', 'tests/deployment.py', 'tests/emitter_worker.py', 'tests/finite.py', 'tests/freshness.py', 'tests/freshness_worker.py', 'tests/natural.py', 'tests/package_audit.py', 'tests/pilot.py', 'tests/reviewer_hardening.py', 'tests/runner_guards.py', 'tests/scaling.py']
 EXPECTED_PYTHON_FILES.append('tests/scientific_regressions.py')
+EXPECTED_PYTHON_FILES.append('tests/test_summary_reuse.py')
 EXPECTED_PYTHON_FILES.sort()
 FORBIDDEN_NETWORK_ROOTS = {
     "aiohttp", "ftplib", "http", "httplib", "requests", "socket", "telnetlib",
