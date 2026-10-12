@@ -545,6 +545,32 @@ preexisting paths, and force process death at six checkpoints. Those executions
 instantiate the stated profile on the evaluated host; they are not a proof of
 the cryptographic assumption or universal file-system durability.
 
+**Release-gate consequence of D1 and I1.** Assume a trusted controller freezes
+the complete equality-only membership, epoch and exact capsule revisions;
+assume SHA-256 collision resistance also on the pinned capsule encodings.
+Each local policy remains unchanged and occurrence namespaces are disjoint.
+`Consumer.admit` owns copies of the records, checks the manifest's capsule
+digest, performs bound verification and requires the exact pinned sequence.
+`seal` refuses any missing member and composes the authenticated summaries in
+manifest order. By I1 these summaries are bound to the checked local evidence;
+by D1 their output masks equal the fully namespaced union's masks, subject to
+the stated cryptographic and replay assumptions. `consume` refuses nonzero
+composed masks, independently reconstructs the selected exports and checks
+their output order. `publish` then uses the unchanged publication primitive.
+`release.publish_files` applies this gate to two bounded JSON files; no
+caller-supplied verdict or incomplete-context fallback enters that path.
+
+The trusted manifest is not a cryptographic proof of world completeness or
+authority to omit a member. Its exact sequence pins a revision but does not
+advance restart-persistent freshness state; J1 remains a separate POSIX
+operation. A key holder or controller allowed to choose a smaller manifest is
+outside this consequence. The older `emit` primitive checks a sealed local
+snapshot only, while `emit_authenticated` requires complete release admission.
+On Windows the publication adapter assumes stable trusted pathnames, not the
+opened-directory premise of I2, and does not synchronize the directory. The
+portable file-entrypoint tests therefore claim archive/readback and refusal
+behavior on that host, not the POSIX process-death or power-loss guarantees.
+
 ## J. Persistent local freshness and an operational filter bridge
 
 **Proposition J1 (local restart-persistent sequence advance).** Assume the

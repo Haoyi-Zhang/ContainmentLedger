@@ -21,9 +21,9 @@ A producer declares imports, copies, line-ending normalization, code-point
 extraction, literal replacement, authorized pair repair, collection, filtering,
 mixing, pair-key deduplication, and archive recomposition. Two separately
 implemented replay paths reconstruct exports from the registry, rebuild
-scope-specific closure, and compare exact outputs and claims. The emitter
-publishes only when the separately implemented checker reports a zero mask on every
-retained export.
+scope-specific closure, and compare exact outputs and claims. Local emission
+requires zero masks in its sealed local snapshot; composed release additionally
+requires zero masks after admitting the complete controller-pinned context.
 
 Acceptance is conditional on the registry, policy snapshot, canonicalizer,
 repair catalog, and frozen algebra. It excludes inconsistent byte substitution,
@@ -59,6 +59,19 @@ non-repudiation, transparency, distributed consensus, or key distribution.
 Pre-replacement process death can leave an unreferenced private temporary file.
 Test keys in the repository are public fixtures and must not be reused.
 
+`src/consumer.py` enforces a frozen release manifest supplied by a trusted
+controller. Its exact schema is `{"epoch": ..., "members": [...]}`, with each
+member containing `shard`, `sequence`, and `capsule_digest`. The digest binds
+the entire capsule, including its authenticated policy/ledger/summary bindings.
+The consumer owns copies of admitted records, checks both role tags, replays
+each local ledger, and requires exactly the pinned membership and revisions
+before sealing. Arrival order does not change manifest-ordered decisions.
+Members without exports still contribute their registered keys and labels.
+`consume` reconstructs a selected shard only when its composed masks are zero;
+`publish` sends those reconstructed values to create-if-absent ZIP publication.
+The manifest is not inferred from the records that happen to arrive. Its
+completeness and authority remain trusted inputs, not properties proved by HMAC.
+
 `src/emitter.py` validates first, creates an exclusive same-directory temporary
 ZIP through an opened non-symlink directory, synchronizes the file, commits by
 an atomic create-if-absent hard link, synchronizes the directory, removes the
@@ -67,6 +80,36 @@ preexisting and symlink destinations, a symlink parent, and six process-death
 checkpoints. These observations apply to process death on the evaluated POSIX
 filesystem; they do not establish arbitrary power-loss or network-filesystem
 durability.
+
+`emitter.emit_authenticated(...)` requires `release_manifest` and the complete
+`composition_inputs`; a locally clean authenticated shard is insufficient.
+`emitter.emit(...)` and its command-line example below remain explicit local
+sealed-snapshot primitives, not composed-release entrypoints. On Windows,
+publication uses trusted stable pathnames and file synchronization, without the
+POSIX directory-handle protocol or a directory-synchronization guarantee.
+
+### File-based release entrypoint
+
+`src/release.py` exposes `publish_files` for actual ZIP publication. It reads a
+separately supplied controller manifest and a JSON list of
+`{"policy": ..., "ledger": ..., "capsule": ...}` records through the existing
+bounded, duplicate-key/non-finite-value rejecting reader. It always admits and
+seals the complete context before publishing; there is no local-only fallback.
+From a Python caller with `src/` on its import path:
+
+```python
+from release import publish_files
+
+stats = publish_files("release-manifest.json", "release-inputs.json",
+                      "s0", "checked.zip", authority_key, checker_key)
+```
+
+The role keys are explicit byte arguments, with no defaults or credential
+retrieval. This entrypoint does not issue capsules, invent manifest authority,
+advance persistent freshness state, or execute the archived text. A controller
+requiring restart replay protection must perform `freshness.accept_bound`
+separately and supply its authorized epoch/revisions. Authentic whole-manifest
+rollback and discovering omitted world history are outside this gate.
 
 ### Which operation replays which evidence
 
@@ -165,8 +208,8 @@ five saved part records, their **current source/input SHA-256 bindings**, the
 hashes of generated evidence files, command statuses, and scientific
 invariants. It does not rerun experiments. Those checks remain active under
 `python -O`; an old PASS from different source or changed evidence is rejected.
-The source inventory is measured afresh (31 maintained Python files in this
-packet), not copied from an earlier audit. Result JSON records the source and
+The source inventory is measured afresh against the maintained file whitelist,
+not copied from an earlier audit. Result JSON records the source and
 input snapshot used for each measurement. The retained POSIX measurements are
 bound to an earlier source/input snapshot, not to the current tree; changed
 source requires a fresh supervised run
@@ -240,6 +283,34 @@ It performs no publication, persistent freshness, upstream-source execution,
 resource campaign or timing measurement. It does not refresh the retained
 source-bound POSIX results or satisfy the full current-source verification gate.
 
+The composed consumer and file-based publisher have separate portable checks:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python -B -S -m unittest discover -s tests -p test_consumption.py -v
+PYTHONDONTWRITEBYTECODE=1 python -B -S -m unittest discover -s tests -p test_release.py -v
+PYTHONDONTWRITEBYTECODE=1 python -B -S tests/consumption_comparison.py --verify results/consumption-comparison.json
+```
+
+The seven release tests compare 99 owned contexts with both repeated-edge
+fixed-point composition and a raw-record/all-pairs Boolean joined-closure
+reference, then publish/read back clean shards or refuse blocked ones. They
+include canonical late equality in a member with no exports, occurrence/pair
+scope separation, a composed cycle, and an independent after-pair obligation
+following authorized repair. Incomplete, extra, duplicate, changed-revision,
+malformed-JSON and authentication cases reject before destination creation.
+These tests do not rerun the timing campaign or the POSIX freshness/death suite.
+
+The retained consumption comparison records eight clean/late-label cells at
+2, 4, 8 and 16 shards, with five observations per method and cell: 80 pipeline
+executions, 40 clean publications/readbacks and 40 blocked publication refusals.
+Both methods use identical serialized inputs, admission/authentication,
+reconstruction and publication; only worklist versus repeated-edge closure
+differs. Saved source and recorded cost invariants can be checked without
+repeating the experiment. The recorded Windows/Python host, eight-file source
+binding, CPU/wall observations and byte costs are retained unchanged. This
+measurement covers the consumer/publisher path, not the later file-entrypoint
+wrapper, persistent freshness, peak-memory accounting or a speedup claim.
+
 | Evidence | Result and scope |
 |---|---|
 | `results/upstream-regression.json` | 8 pure matching/nonmatching queries through the shared complete fixed-path loader |
@@ -277,6 +348,9 @@ system.
 - `src/merge.py` constructs and composes scope-specific quotient graphs.
 - `src/capsule.py` validates, issues, authenticates, binds, and composes
   shared-key summary capsules.
+- `src/consumer.py` admits a complete pinned release and gates reconstructed
+  consumption/publication on composed masks; `src/release.py` supplies bounded
+  file ingress for that same release gate.
 - `src/freshness.py` persists authenticated per-shard sequence state and enforces
   explicit epoch/key transitions under an interprocess lock.
 - `src/corpus_adapter.py` constructs the natural repeated-line workload from
@@ -311,7 +385,9 @@ PYTHONDONTWRITEBYTECODE=1 python -S src/emitter.py \
   data/example-policy.json data/example-ledger.json checked.zip
 ```
 
-The emitter never overwrites an existing destination. ZIP member names are
+This example is local emission within one sealed snapshot. Use `publish_files`
+for a controller-pinned equality-composed release. Neither path overwrites an
+existing destination. ZIP member names are
 checked in the declared POSIX-style namespace; the emitter is not a universal
 secure extractor for every downstream filesystem.
 

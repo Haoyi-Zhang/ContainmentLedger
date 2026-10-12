@@ -1,0 +1,900 @@
+{
+  "all_ordered_masks_equal_joined_replay": true,
+  "clean_publications_read_back": 40,
+  "composed_blocked_publications_refused": 40,
+  "context_cases": 8,
+  "host": {
+    "executable": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14"
+  },
+  "pipeline_executions": 80,
+  "repetitions_per_method_case": 5,
+  "rows": [
+    {
+      "capsule_bytes": 4380,
+      "case": "clean-control",
+      "input_bytes": 9790,
+      "ledger_bytes": 4444,
+      "manifest_bytes": 259,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 31.25,
+          "median_wall_ms": 38.008400006219745,
+          "samples": [
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.039694400038570166
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.038008400006219745
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.034608200076036155
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.03431959997396916
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.04728519998025149
+            }
+          ],
+          "wall_ms_range": [
+            34.31959997396916,
+            47.28519998025149
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 31.25,
+          "median_wall_ms": 36.09439998399466,
+          "samples": [
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.04615069995634258
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.03609439998399466
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.0444539999589324
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.02930739999283105
+            },
+            {
+              "archive_bytes": 512,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 690,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.035333900013938546
+            }
+          ],
+          "wall_ms_range": [
+            29.30739999283105,
+            46.15069995634258
+          ]
+        }
+      },
+      "payload_scalar_values": 64,
+      "policy_bytes": 603,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 530,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0,
+        "wall_seconds": 0.0017281000036746264
+      },
+      "shards": 2,
+      "summary_bytes": 3271
+    },
+    {
+      "capsule_bytes": 4381,
+      "case": "late-content-label",
+      "input_bytes": 9791,
+      "ledger_bytes": 4444,
+      "manifest_bytes": 259,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 15.625,
+          "median_wall_ms": 28.50750007200986,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.03541799995582551
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.02850750007200986
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.029635399929247797
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.028076900052838027
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.028268599999137223
+            }
+          ],
+          "wall_ms_range": [
+            28.076900052838027,
+            35.41799995582551
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 31.25,
+          "median_wall_ms": 33.942399895749986,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.036807100055739284
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.027902600006200373
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.033942399895749986
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.03561899997293949
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 178,
+              "verdict_bytes": 178,
+              "wall_seconds": 0.03080549999140203
+            }
+          ],
+          "wall_ms_range": [
+            27.902600006200373,
+            36.807100055739284
+          ]
+        }
+      },
+      "payload_scalar_values": 64,
+      "policy_bytes": 603,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 530,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0,
+        "wall_seconds": 0.0013374000554904342
+      },
+      "shards": 2,
+      "summary_bytes": 3272
+    },
+    {
+      "capsule_bytes": 16930,
+      "case": "clean-control",
+      "input_bytes": 41286,
+      "ledger_bytes": 21760,
+      "manifest_bytes": 483,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 31.25,
+          "median_wall_ms": 43.05580002255738,
+          "samples": [
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.04147329996339977
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.043149099918082356
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.04305580002255738
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.039830499910749495
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.052831599954515696
+            }
+          ],
+          "wall_ms_range": [
+            39.830499910749495,
+            52.831599954515696
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 31.25,
+          "median_wall_ms": 47.7435999782756,
+          "samples": [
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.03969500004313886
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.042185200029052794
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.054674900020472705
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.0477435999782756
+            },
+            {
+              "archive_bytes": 516,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 922,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.04909109999425709
+            }
+          ],
+          "wall_ms_range": [
+            39.69500004313886,
+            54.674900020472705
+          ]
+        }
+      },
+      "payload_scalar_values": 128,
+      "policy_bytes": 1943,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 914,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0,
+        "wall_seconds": 0.004910299903713167
+      },
+      "shards": 4,
+      "summary_bytes": 14697
+    },
+    {
+      "capsule_bytes": 16931,
+      "case": "late-content-label",
+      "input_bytes": 41287,
+      "ledger_bytes": 21760,
+      "manifest_bytes": 483,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 15.625,
+          "median_wall_ms": 40.04810005426407,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.04154560004826635
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.04004810005426407
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.036789200035855174
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.03696129994932562
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.04785849992185831
+            }
+          ],
+          "wall_ms_range": [
+            36.789200035855174,
+            47.85849992185831
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 31.25,
+          "median_wall_ms": 35.355100058950484,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.0326351000694558
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.03420640004333109
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.05336289992555976
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.035355100058950484
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 406,
+              "verdict_bytes": 406,
+              "wall_seconds": 0.03766989998985082
+            }
+          ],
+          "wall_ms_range": [
+            32.6351000694558,
+            53.36289992555976
+          ]
+        }
+      },
+      "payload_scalar_values": 128,
+      "policy_bytes": 1943,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 914,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0.015625,
+        "wall_seconds": 0.0036300000501796603
+      },
+      "shards": 4,
+      "summary_bytes": 14698
+    },
+    {
+      "capsule_bytes": 65070,
+      "case": "clean-control",
+      "input_bytes": 164182,
+      "ledger_bytes": 90952,
+      "manifest_bytes": 931,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 46.875,
+          "median_wall_ms": 65.67979999817908,
+          "samples": [
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.05299090000335127
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.0685871000168845
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.06528149999212474
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.08526009996421635
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.06567979999817908
+            }
+          ],
+          "wall_ms_range": [
+            52.99090000335127,
+            85.26009996421635
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 46.875,
+          "median_wall_ms": 65.16789994202554,
+          "samples": [
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.06512089993339032
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.05946010001935065
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.06831400003284216
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.0665517000015825
+            },
+            {
+              "archive_bytes": 520,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 1382,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.06516789994202554
+            }
+          ],
+          "wall_ms_range": [
+            59.46010001935065,
+            68.31400003284216
+          ]
+        }
+      },
+      "payload_scalar_values": 256,
+      "policy_bytes": 6927,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 1682,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0.015625,
+        "wall_seconds": 0.012472999980673194
+      },
+      "shards": 8,
+      "summary_bytes": 60589
+    },
+    {
+      "capsule_bytes": 65071,
+      "case": "late-content-label",
+      "input_bytes": 164183,
+      "ledger_bytes": 90952,
+      "manifest_bytes": 931,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 46.875,
+          "median_wall_ms": 59.553700033575296,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.060478199971839786
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.055590400006622076
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.059877100051380694
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.05777529999613762
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.046875,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.059553700033575296
+            }
+          ],
+          "wall_ms_range": [
+            55.590400006622076,
+            60.478199971839786
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 62.5,
+          "median_wall_ms": 65.5399999814108,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.06155650003347546
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.0583850999828428
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.0655399999814108
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.03125,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.06631499994546175
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.015625,
+              "total_output_bytes": 862,
+              "verdict_bytes": 862,
+              "wall_seconds": 0.07194509997498244
+            }
+          ],
+          "wall_ms_range": [
+            58.3850999828428,
+            71.94509997498244
+          ]
+        }
+      },
+      "payload_scalar_values": 256,
+      "policy_bytes": 6927,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 1682,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0.015625,
+        "wall_seconds": 0.009358300012536347
+      },
+      "shards": 8,
+      "summary_bytes": 60590
+    },
+    {
+      "capsule_bytes": 253576,
+      "case": "clean-control",
+      "input_bytes": 649758,
+      "ledger_bytes": 367666,
+      "manifest_bytes": 1833,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 93.75,
+          "median_wall_ms": 157.31509996112436,
+          "samples": [
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.17032160004600883
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.1585543000837788
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.15268569998443127
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.125,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.15731509996112436
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.09642790001817048
+            }
+          ],
+          "wall_ms_range": [
+            96.42790001817048,
+            170.32160004600883
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 109.375,
+          "median_wall_ms": 150.58970008976758,
+          "samples": [
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.14492109999991953
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.171875,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.1682125999359414
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.140625,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.16492309991735965
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.15058970008976758
+            },
+            {
+              "archive_bytes": 530,
+              "cpu_seconds": 0.109375,
+              "total_output_bytes": 2310,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.14331449999008328
+            }
+          ],
+          "wall_ms_range": [
+            143.31449999008328,
+            168.2125999359414
+          ]
+        }
+      },
+      "payload_scalar_values": 512,
+      "policy_bytes": 26117,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 3218,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0.03125,
+        "wall_seconds": 0.028860499965958297
+      },
+      "shards": 16,
+      "summary_bytes": 244593
+    },
+    {
+      "capsule_bytes": 253577,
+      "case": "late-content-label",
+      "input_bytes": 649759,
+      "ledger_bytes": 367666,
+      "manifest_bytes": 1833,
+      "methods": {
+        "fixed-point-gate": {
+          "median_cpu_ms": 93.75,
+          "median_wall_ms": 103.31679997034371,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.109375,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.10919069999363273
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.10477500001434237
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.10331679997034371
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.078125,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.09729239996522665
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.08826470002532005
+            }
+          ],
+          "wall_ms_range": [
+            88.26470002532005,
+            109.19069999363273
+          ]
+        },
+        "quotient-worklist-gate": {
+          "median_cpu_ms": 93.75,
+          "median_wall_ms": 91.52639994863421,
+          "samples": [
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.09047669998835772
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.0625,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.09147560002747923
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.109375,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.10135489993263036
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.11595520004630089
+            },
+            {
+              "archive_bytes": 0,
+              "cpu_seconds": 0.09375,
+              "total_output_bytes": 1780,
+              "verdict_bytes": 1780,
+              "wall_seconds": 0.09152639994863421
+            }
+          ],
+          "wall_ms_range": [
+            90.47669998835772,
+            115.95520004630089
+          ]
+        }
+      },
+      "payload_scalar_values": 512,
+      "policy_bytes": 26117,
+      "repetitions": 5,
+      "selected_export_payload_bytes": 3218,
+      "setup_generation_and_issuance": {
+        "cpu_seconds": 0.015625,
+        "wall_seconds": 0.023462999961338937
+      },
+      "shards": 16,
+      "summary_bytes": 244594
+    }
+  ],
+  "same_serialized_input_and_output_bytes": true,
+  "scope": "Owned benign generated text; full input JSON read/parse, bound admission, authentication, complete composition, selected export reconstruction, actual ZIP publication and readback. Generation/issuance recorded separately; no warmups, process-isolated peaks, persistent freshness, production policy, exploit reproduction or upstream source execution. Windows assumes a trusted stable directory and claims no directory-handle race resistance or power-loss durability. Timings are five sequential observations per cell, not a speedup claim.",
+  "source_sha256": {
+    "src/capsule.py": "c93a0a0d0773deb35b857e7208ca24fdf799d6643f112e1a1269c75689783d72",
+    "src/checker.py": "6d919fb8409fcb680a126b242a2fbf58b47182ad2b34f7e70fbe8128d7d405ff",
+    "src/consumer.py": "cbc6d9f5acedcc55e205005a314890736bd04afed292fd45d178dcd9b839cbaf",
+    "src/emitter.py": "4ade0bb65e0fedf440c8dfadbb853d7ae8dc07370af6235617ba2c4f0eafa5b8",
+    "src/ledger.py": "8d5783f688b87fd9bae46c408b41dc5020376a74aef32ada94085e7fbb564958",
+    "src/merge.py": "bd3d4f13157a5fd5b96419bd030942cee5b8bb1d9c9136bf21d34b4059b9dad8",
+    "tests/consumption_comparison.py": "78a61eb97cff1bc9e4ef389b4387e7d82a3a100bc1fe9db88116fca496b6d700",
+    "tests/test_consumption.py": "5209a983070cbef62d6c8b5d409b265a821f39922eb5c8727d2304b6df46468e"
+  },
+  "status": "passed"
+}

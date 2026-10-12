@@ -31,6 +31,10 @@ jobs:
           timeout --signal=TERM --kill-after=5s 600s bash -euo pipefail <<'RUN'
           python -B .github/scripts/check_repository.py 2>&1 | tee results/workflow-raw/material-integrity.log
           python -B -S -m unittest discover -s tests -p test_summary_reuse.py -v 2>&1 | tee results/workflow-raw/summary-reuse.log
+          python -B -S -m unittest discover -s tests -p test_consumption.py -v 2>&1 | tee results/workflow-raw/consumption.log
+          python -B -S -m unittest discover -s tests -p test_release.py -v 2>&1 | tee results/workflow-raw/release.log
+          python -B -S tests/consumption_comparison.py 2>&1 | tee results/workflow-raw/consumption-comparison.json
+          python -B -S tests/consumption_comparison.py --verify results/workflow-raw/consumption-comparison.json
           python -B -S reproduce.py --checks 2>&1 | tee results/workflow-raw/checks.log
           python -B -S reproduce.py --scale chain-distinct 2>&1 | tee results/workflow-raw/chain-distinct.log
           python -B -S reproduce.py --scale alias-copy 2>&1 | tee results/workflow-raw/alias-copy.log

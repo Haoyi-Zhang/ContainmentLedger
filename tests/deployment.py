@@ -195,6 +195,9 @@ def main():
         ledger_file.write_text(json.dumps(log))
 
         authenticated_path = temp / "authenticated.zip"
+        release_manifest = {"epoch": "policyA", "members": [
+            {"shard": "example", "sequence": 7, "capsule_digest": capsule.digest(issued)}]}
+        composition_inputs = [{"policy": policy, "ledger": log, "capsule": issued}]
         stats = emitter.emit_authenticated(
             policy,
             log,
@@ -205,6 +208,8 @@ def main():
             expected_epoch="policyA",
             minimum_sequence=7,
             expected_shard="example",
+            release_manifest=release_manifest,
+            composition_inputs=composition_inputs,
         )
         assert valid_zip(authenticated_path, stats["members"])
         bad = copy.deepcopy(issued)
@@ -213,7 +218,8 @@ def main():
         add(
             "authenticated-emission-tamper",
             lambda: emitter.emit_authenticated(
-                policy, log, bad, AUTHORITY_KEY, CHECKER_KEY, refused_path
+                policy, log, bad, AUTHORITY_KEY, CHECKER_KEY, refused_path,
+                release_manifest=release_manifest, composition_inputs=composition_inputs,
             ),
         )
         assert not refused_path.exists()
