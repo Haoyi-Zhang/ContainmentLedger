@@ -292,8 +292,8 @@ def verify(
     _require(
         type(output_names) is list
         and len(output_names) <= MAX_OUTPUTS
-        and len(output_names) == len(set(output_names))
-        and all(type(name) is str and 0 < len(name) <= 512 for name in output_names),
+        and all(type(name) is str and 0 < len(name) <= 512 for name in output_names)
+        and len(output_names) == len(set(output_names)),
         "capsule outputs",
     )
     summary = validate_summary(capsule["summary"])

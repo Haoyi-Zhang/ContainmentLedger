@@ -560,6 +560,11 @@ their output order. `publish` then uses the unchanged publication primitive.
 `release.publish_files` applies this gate to two bounded JSON files; no
 caller-supplied verdict or incomplete-context fallback enters that path.
 
+The current bounded proof/code and closest-source correspondence, default
+workflow correction and source-bound owned file evidence are documented in
+`current-publication-review.md`. They do not add a new propagation/gating theorem
+or establish the pending full POSIX execution.
+
 The trusted manifest is not a cryptographic proof of world completeness or
 authority to omit a member. Its exact sequence pins a revision but does not
 advance restart-persistent freshness state; J1 remains a separate POSIX

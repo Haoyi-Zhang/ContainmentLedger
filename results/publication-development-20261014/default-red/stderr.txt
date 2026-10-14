@@ -1,0 +1,14 @@
+test_default_checks_include_source_bound_publication_receipt (test_default_publication.DefaultPublicationCoverage.test_default_checks_include_source_bound_publication_receipt) ... FAIL
+
+======================================================================
+FAIL: test_default_checks_include_source_bound_publication_receipt (test_default_publication.DefaultPublicationCoverage.test_default_checks_include_source_bound_publication_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\test_default_publication.py", line 24, in test_default_checks_include_source_bound_publication_receipt
+    self.assertIn(expected, commands,
+AssertionError: ['tests/publication_workflow.py', '--output', 'results/publication-workflow'] not found in [['tests/builder_bridge.py', '--smoke'], ['tests/freshness.py', '--json-only'], ['tests/runner_guards.py'], ['tests/package_audit.py'], ['tests/scientific_regressions.py', '--output', 'results/scientific-regressions.json'], ['tests/reviewer_hardening.py'], ['tests/pilot.py'], ['tests/campaign.py'], ['tests/finite.py', 'closure'], ['tests/finite.py', 'cuts'], ['tests/context.py'], ['tests/natural.py'], ['tests/builder_bridge.py'], ['tests/deployment.py'], ['tests/freshness.py'], ['tests/boundaries.py'], ['src/ledger.py', 'data/example-policy.json', 'data/example-ledger.json'], ['src/checker.py', 'data/example-policy.json', 'data/example-ledger.json']] : default --checks omits complete publication regression/receipt
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+FAILED (failures=1)

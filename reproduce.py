@@ -15,6 +15,7 @@ import sys
 import tempfile
 import time
 import zipfile
+import uuid
 
 ROOT = Path(__file__).resolve().parent
 RESULTS = ROOT / 'results'
@@ -25,7 +26,8 @@ PART_LIMITS = {'hardening': 170.0, 'checks': 90.0,
 PARTS = list(PART_LIMITS)
 PART_OUTPUTS = {
     'hardening': ['upstream-regression.json', 'freshness-json.json', 'runner-guards.json',
-                  'package-audit.json', 'reviewer-hardening.json', 'scientific-regressions.json'],
+                  'package-audit.json', 'reviewer-hardening.json', 'scientific-regressions.json',
+                  'publication-workflow.json'],
     'checks': ['pilot.json', 'campaign.json', 'mutations.json', 'composition.json',
                'composition-baselines.json', 'corpus-cases.csv', 'finite-closure.json',
                'finite-cuts.json', 'context.json', 'natural-duplicates.json',
@@ -290,6 +292,14 @@ def validate_hardening():
     audit = get('package-audit.json')
     hardening = get('reviewer-hardening.json')
     regression = get('scientific-regressions.json')
+    publication = get('publication-workflow.json')
+    sys.path.insert(0, str(ROOT / 'tests'))
+    import publication_workflow
+    directory = (ROOT / publication['directory']).resolve()
+    _require(directory.is_relative_to(RESULTS.resolve()), 'publication raw directory scope')
+    _require(hashlib.sha256((directory / 'receipt.json').read_bytes()).hexdigest()
+             == publication['receipt_sha256'], 'publication receipt binding')
+    publication_workflow.verify_receipt(directory)
     _require(regression['status'] == 'passed' and regression['diagnostic_cases'] == 9,
              'empty diagnostic and inventory regressions')
     _require(smoke['status'] == 'passed' and smoke['query_count'] == 8, 'upstream smoke')
@@ -412,6 +422,17 @@ def execute_part(part):
                             ['tests/scientific_regressions.py', '--output', 'results/scientific-regressions.json'],
                             ['tests/reviewer_hardening.py']):
                 run(command)
+            # The default scientific entry must consume the same release tests
+            # as CI, not merely leave them as unaccounted parallel CI steps.
+            publication_command = ['tests/publication_workflow.py', '--output', 'results/publication-workflow']
+            if (ROOT / publication_command[-1]).exists():
+                publication_command[-1] += '-' + uuid.uuid4().hex
+            run(publication_command)
+            directory = ROOT / publication_command[-1]
+            write_json(RESULTS / 'publication-workflow.json', {
+                'directory': publication_command[-1],
+                'receipt_sha256': hashlib.sha256((directory / 'receipt.json').read_bytes()).hexdigest(),
+                'scope': 'Complete owned publication regressions and same-information file controls; raw bundle retained.'})
             outcome['checks'] = validate_hardening()
         elif part == 'checks':
             for command in (
@@ -482,7 +503,7 @@ def verify_saved():
             'sum_part_wall_seconds': sum(p['wall_seconds'] for p in parts),
             'peak_child_rss_kib': max(p['peak_child_rss_kib'] for p in parts),
             'sampled_peak_group_rss_kib': max(p['sampled_peak_group_rss_kib'] for p in parts),
-            'accounting_scope': 'Five saved sequential supervised parts, including mandatory small regressions, guard tests, all additional hardening microbenchmark warmups/repetitions, original checks, all three primary scaling shapes, coordinators and waited/adopted descendants; plus this saved-result verification. Excludes earlier development, document build, and archive packaging.',
+            'accounting_scope': 'Five saved sequential supervised parts, including mandatory small regressions, complete owned publication regression/file controls, guard tests, all additional hardening microbenchmark warmups/repetitions, original checks, all three primary scaling shapes, coordinators and waited/adopted descendants; plus this saved-result verification. Excludes earlier development, document build, and archive packaging.',
             'verification_scope': 'Validates current source/input identity, saved command status, output digests and scientific invariants; does not rerun experiments.'}
     except (Exception, KeyboardInterrupt) as exc:
         result['error'] = type(exc).__name__ + ': ' + str(exc)

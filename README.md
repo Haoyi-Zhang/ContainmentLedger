@@ -9,6 +9,12 @@ system, or proof of an unobserved physical acquisition history.
 
 ## Contract and threat boundary
 
+Current isolated review and proof/code correspondence:
+[`proofs/current-publication-review.md`](proofs/current-publication-review.md).
+The complete manifest gate already existed; the current repair integrates its
+portable checks and exact file-entrypoint evidence into default reproduction.
+No new policy-propagation or output-gating novelty is claimed.
+
 A trusted policy snapshot registers exact source text and three label scopes:
 
 - **B (content scoped):** follows canonical textual equality;
@@ -247,12 +253,20 @@ supervised reproduction parts and the current-source verification gate on Ubuntu
 The whole scientific shell has a 600-second deadline (plus five seconds for
 forced termination), a 3 GiB per-process address-space ceiling and a 600-second
 per-process CPU ceiling; the tighter internal part/worker limits still apply.
-The workflow preserves logs and result records even after failure. The retained
-Linux execution in `results/current/` completes all five parts and 22 commands:
+The workflow preserves logs and result records even after failure. The full
+supervised reproduction runs on main-branch pushes or manual dispatch;
+the four portable publication unit suites run as a focused job on every
+push, pull request and manual dispatch. That focused job does not regenerate
+the supervised Linux result bundle. The historical
+Linux execution in `results/current/` completed all five parts and 22 commands:
 35.843 accounted wall seconds, 45.486 accounted CPU seconds, and 101,700 KiB
 peak child RSS. It reproduces 327,680 closure instances, 262,144 contexts,
 15,625 grouped-cut graphs and 2,059 rejected mutations; 52 greedy cardinality
-gaps remain in the results. Historical timing samples retain their own context.
+gaps remain in the results. It predates the publication stage now required by
+the default supervisor. Neither that record nor the older root-level record
+is a current-source success for this candidate. The current full Linux run
+(five parts, now 23 top-level child commands) remains pending main review;
+historical timing samples are not relabelled or overwritten.
 
 The small diagnostic/inventory regression is also portable:
 
@@ -278,7 +292,8 @@ replay and all-pairs Boolean closure, and fixture HMAC keys:
 PYTHONDONTWRITEBYTECODE=1 python -B -S -m unittest discover -s tests -p test_summary_reuse.py -v
 ```
 
-The scientific workflow runs this regression explicitly and preserves its log.
+The scientific workflow now runs this regression inside the default publication
+stage and preserves its log in that source-bound bundle.
 It performs no publication, persistent freshness, upstream-source execution,
 resource campaign or timing measurement. It does not refresh the retained
 source-bound POSIX results or satisfy the full current-source verification gate.
@@ -298,6 +313,8 @@ include canonical late equality in a member with no exports, occurrence/pair
 scope separation, a composed cycle, and an independent after-pair obligation
 following authorized repair. Incomplete, extra, duplicate, changed-revision,
 malformed-JSON and authentication cases reject before destination creation.
+The ingress regression also rejects a JSON-valid but non-string capsule output
+name as a capsule error before publication.
 These tests do not rerun the timing campaign or the POSIX freshness/death suite.
 
 The retained consumption comparison records eight clean/late-label cells at
@@ -310,6 +327,33 @@ repeating the experiment. The recorded Windows/Python host, eight-file source
 binding, CPU/wall observations and byte costs are retained unchanged. This
 measurement covers the consumer/publisher path, not the later file-entrypoint
 wrapper, persistent freshness, peak-memory accounting or a speedup claim.
+
+The current portable default-publication stage has one fresh-output entry:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 python -B -S tests/publication_workflow.py --output results/my-fresh-publication-run
+python -B -S tests/publication_workflow.py --verify results/owned-publication-20261014-current
+```
+
+Use an absent output directory; an existing bundle is never reset. The default
+Linux supervisor chooses a new raw directory on a repeat run and binds its
+receipt in `results/publication-workflow.json`. It now runs all four portable
+suites (6 + 10 + 7 + 1 = 24 tests) plus five two-file controls. The original
+three suites are not claimed as newly designed independent experiments.
+Ten same-information file pipelines produce six archives read back and four
+refusals, with exact archive bytes/masks tied. Raw files, per-method costs,
+source/environment bindings and logs are in
+`results/owned-publication-20261014-current/`; actual archive bytes are hex encoded
+to preserve the no-nested-archive packet rule. This current owned Windows fact
+is separate from the old 80-execution comparison and the pending full Linux run.
+No current gate silently adopts a caller's partial context or supplied verdict.
+
+The red default-coverage record, the 23 passing preexisting tests, and the
+initial new-driver diagnostic-encoding failure remain in
+`results/publication-development-20261014/` and
+`results/owned-publication-20261014/`. The latter's interrupted initial receipt
+is not a passing current result. Diagnostic JSON supports finite timing numbers;
+the capsule's narrower canonical types and both role-MAC mechanisms are unchanged.
 
 | Evidence | Result and scope |
 |---|---|

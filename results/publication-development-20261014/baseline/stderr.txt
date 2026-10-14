@@ -1,0 +1,37 @@
+test_authenticated_publisher_uses_composed_not_local_masks (test_consumption.ConsumptionRegression.test_authenticated_publisher_uses_composed_not_local_masks) ... ok
+test_complete_context_scope_masks_match_joined_replay (test_consumption.ConsumptionRegression.test_complete_context_scope_masks_match_joined_replay) ... ok
+test_empty_export_and_repeated_output_order (test_consumption.ConsumptionRegression.test_empty_export_and_repeated_output_order) ... ok
+test_exception_checkpoints_preserve_pre_post_commit_boundary (test_consumption.ConsumptionRegression.test_exception_checkpoints_preserve_pre_post_commit_boundary) ... ok
+test_existing_destination_and_eight_owned_publishers (test_consumption.ConsumptionRegression.test_existing_destination_and_eight_owned_publishers) ... ok
+test_incomplete_context_denies_consumption_and_publication (test_consumption.ConsumptionRegression.test_incomplete_context_denies_consumption_and_publication) ... ok
+test_mandatory_authenticated_publisher_context (test_consumption.ConsumptionRegression.test_mandatory_authenticated_publisher_context) ... ok
+test_manifest_and_records_are_owned_and_sealed (test_consumption.ConsumptionRegression.test_manifest_and_records_are_owned_and_sealed) ... ok
+test_repair_scope_and_independent_after_pair_obligation (test_consumption.ConsumptionRegression.test_repair_scope_and_independent_after_pair_obligation) ... ok
+test_revision_membership_and_binding_rejections (test_consumption.ConsumptionRegression.test_revision_membership_and_binding_rejections) ... ok
+test_default_checks_include_source_bound_publication_receipt (test_default_publication.DefaultPublicationCoverage.test_default_checks_include_source_bound_publication_receipt) ... FAIL
+test_all_owned_single_shard_scopes_and_empty_exports (test_release.ReleaseRegression.test_all_owned_single_shard_scopes_and_empty_exports) ... ok
+test_composed_cycle_and_repaired_pair_restoration (test_release.ReleaseRegression.test_composed_cycle_and_repaired_pair_restoration) ... ok
+test_file_entrypoint_preserves_existing_destination (test_release.ReleaseRegression.test_file_entrypoint_preserves_existing_destination) ... ok
+test_json_ingress_and_authentication_preserved (test_release.ReleaseRegression.test_json_ingress_and_authentication_preserved) ... ok
+test_late_canonical_registry_label_in_member_without_exports (test_release.ReleaseRegression.test_late_canonical_registry_label_in_member_without_exports) ... ok
+test_missing_extra_duplicate_revision_and_target_denied_before_io (test_release.ReleaseRegression.test_missing_extra_duplicate_revision_and_target_denied_before_io) ... ok
+test_same_information_contexts_and_raw_joined_closure (test_release.ReleaseRegression.test_same_information_contexts_and_raw_joined_closure) ... ok
+test_capsule_records_and_role_boundaries (test_summary_reuse.SummaryReuseRegression.test_capsule_records_and_role_boundaries) ... ok
+test_complete_named_fixture_oracles (test_summary_reuse.SummaryReuseRegression.test_complete_named_fixture_oracles) ... ok
+test_literal_canonicalizer_boundaries (test_summary_reuse.SummaryReuseRegression.test_literal_canonicalizer_boundaries) ... ok
+test_no_extra_normalization_passes_or_cross_call_cache (test_summary_reuse.SummaryReuseRegression.test_no_extra_normalization_passes_or_cross_call_cache) ... ok
+test_option_precedence_and_owned_rejections (test_summary_reuse.SummaryReuseRegression.test_option_precedence_and_owned_rejections) ... ok
+test_ordered_composition_against_joined_literal_oracle (test_summary_reuse.SummaryReuseRegression.test_ordered_composition_against_joined_literal_oracle) ... ok
+
+======================================================================
+FAIL: test_default_checks_include_source_bound_publication_receipt (test_default_publication.DefaultPublicationCoverage.test_default_checks_include_source_bound_publication_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\test_default_publication.py", line 24, in test_default_checks_include_source_bound_publication_receipt
+    self.assertIn(expected, commands,
+AssertionError: ['tests/publication_workflow.py', '--output', 'results/publication-workflow'] not found in [['tests/builder_bridge.py', '--smoke'], ['tests/freshness.py', '--json-only'], ['tests/runner_guards.py'], ['tests/package_audit.py'], ['tests/scientific_regressions.py', '--output', 'results/scientific-regressions.json'], ['tests/reviewer_hardening.py'], ['tests/pilot.py'], ['tests/campaign.py'], ['tests/finite.py', 'closure'], ['tests/finite.py', 'cuts'], ['tests/context.py'], ['tests/natural.py'], ['tests/builder_bridge.py'], ['tests/deployment.py'], ['tests/freshness.py'], ['tests/boundaries.py'], ['src/ledger.py', 'data/example-policy.json', 'data/example-ledger.json'], ['src/checker.py', 'data/example-policy.json', 'data/example-ledger.json']] : default --checks omits complete publication regression/receipt
+
+----------------------------------------------------------------------
+Ran 24 tests in 4.141s
+
+FAILED (failures=1)

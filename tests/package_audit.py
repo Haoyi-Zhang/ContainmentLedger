@@ -23,6 +23,7 @@ EXPECTED_PYTHON_FILES.append('tests/scientific_regressions.py')
 EXPECTED_PYTHON_FILES.append('tests/test_summary_reuse.py')
 EXPECTED_PYTHON_FILES.extend(['src/consumer.py', 'tests/test_consumption.py', 'tests/consumption_comparison.py'])
 EXPECTED_PYTHON_FILES.extend(['src/release.py', 'tests/test_release.py'])
+EXPECTED_PYTHON_FILES.extend(['tests/test_default_publication.py', 'tests/publication_workflow.py'])
 EXPECTED_PYTHON_FILES.sort()
 FORBIDDEN_NETWORK_ROOTS = {
     "aiohttp", "ftplib", "http", "httplib", "requests", "socket", "telnetlib",

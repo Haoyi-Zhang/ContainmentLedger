@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\publication_workflow.py", line 244, in run
+    report["controls"] = run_controls(directory)
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\publication_workflow.py", line 173, in run_controls
+    write_json(case / (method + ".json"), result)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\publication_workflow.py", line 59, in write_json
+    Path(path).write_bytes(capsule.canonical_bytes(value) + b"\n")
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 85, in canonical_bytes
+    walk(value)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 81, in walk
+    walk(item, depth + 1)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 83, in walk
+    raise CapsuleError("canonical JSON type")
+capsule.CapsuleError: canonical JSON type
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\publication_workflow.py", line 276, in <module>
+    main()
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\publication_workflow.py", line 270, in main
+    report = verify_receipt(args.verify) if args.verify else run(args.output)
+                                                             ^^^^^^^^^^^^^^^^
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\publication_workflow.py", line 260, in run
+    write_json(directory / "receipt.json", report)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\tests\publication_workflow.py", line 59, in write_json
+    Path(path).write_bytes(capsule.canonical_bytes(value) + b"\n")
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 85, in canonical_bytes
+    walk(value)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 81, in walk
+    walk(item, depth + 1)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 81, in walk
+    walk(item, depth + 1)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 81, in walk
+    walk(item, depth + 1)
+  File "D:\CodexProjects\wg-check\substantive-library\P027\artifact\src\capsule.py", line 83, in walk
+    raise CapsuleError("canonical JSON type")
+capsule.CapsuleError: canonical JSON type

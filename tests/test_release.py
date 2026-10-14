@@ -148,6 +148,16 @@ class ReleaseRegression(unittest.TestCase):
             with self.assertRaisesRegex(capsule.CapsuleError, "checker authentication"):
                 release.publish_files(manifest_path, inputs_path, "s0", destination, AUTHORITY, CHECKER_KEY)
             self.assertFalse(destination.exists())
+            malformed = deepcopy(inputs)
+            malformed[0]["capsule"]["output_names"] = [[]]
+            pinned = deepcopy(manifest)
+            pinned["members"][0]["capsule_digest"] = capsule.digest(malformed[0]["capsule"])
+            manifest_path.write_bytes(capsule.canonical_bytes(pinned))
+            inputs_path.write_bytes(capsule.canonical_bytes(malformed))
+            with self.assertRaisesRegex(capsule.CapsuleError, "capsule outputs"):
+                release.publish_files(manifest_path, inputs_path, "s0", destination,
+                                      AUTHORITY, CHECKER_KEY)
+            self.assertFalse(destination.exists())
 
     def test_file_entrypoint_preserves_existing_destination(self):
         manifest, inputs = records([chain("clean")])

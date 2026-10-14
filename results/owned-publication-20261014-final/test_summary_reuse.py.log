@@ -1,0 +1,11 @@
+test_capsule_records_and_role_boundaries (test_summary_reuse.SummaryReuseRegression.test_capsule_records_and_role_boundaries) ... ok
+test_complete_named_fixture_oracles (test_summary_reuse.SummaryReuseRegression.test_complete_named_fixture_oracles) ... ok
+test_literal_canonicalizer_boundaries (test_summary_reuse.SummaryReuseRegression.test_literal_canonicalizer_boundaries) ... ok
+test_no_extra_normalization_passes_or_cross_call_cache (test_summary_reuse.SummaryReuseRegression.test_no_extra_normalization_passes_or_cross_call_cache) ... ok
+test_option_precedence_and_owned_rejections (test_summary_reuse.SummaryReuseRegression.test_option_precedence_and_owned_rejections) ... ok
+test_ordered_composition_against_joined_literal_oracle (test_summary_reuse.SummaryReuseRegression.test_ordered_composition_against_joined_literal_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.123s
+
+OK

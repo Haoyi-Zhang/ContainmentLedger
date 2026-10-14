@@ -1,12 +1,33 @@
 name: Scientific checks
 on:
   push:
-    branches: [main]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
+  focused-publication-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      PYTHONPATH: src:tests
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Exercise bound capsules, complete consumption, and atomic publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          for pattern in test_summary_reuse.py test_consumption.py test_release.py test_default_publication.py; do
+            python -B -S -m unittest discover -s tests -p "$pattern" -v
+          done
   bounded-offline-science:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -30,9 +51,8 @@ jobs:
           ulimit -t 600
           timeout --signal=TERM --kill-after=5s 600s bash -euo pipefail <<'RUN'
           python -B .github/scripts/check_repository.py 2>&1 | tee results/workflow-raw/material-integrity.log
-          python -B -S -m unittest discover -s tests -p test_summary_reuse.py -v 2>&1 | tee results/workflow-raw/summary-reuse.log
-          python -B -S -m unittest discover -s tests -p test_consumption.py -v 2>&1 | tee results/workflow-raw/consumption.log
-          python -B -S -m unittest discover -s tests -p test_release.py -v 2>&1 | tee results/workflow-raw/release.log
+          # reproduce --checks now includes all four publication suites and
+          # the complete two-file same-information release controls/receipt.
           python -B -S tests/consumption_comparison.py 2>&1 | tee results/workflow-raw/consumption-comparison.json
           python -B -S tests/consumption_comparison.py --verify results/workflow-raw/consumption-comparison.json
           python -B -S reproduce.py --checks 2>&1 | tee results/workflow-raw/checks.log

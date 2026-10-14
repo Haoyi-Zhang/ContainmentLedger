@@ -1,0 +1,1 @@
+{"masks":[0,0],"ordered_decisions":[{"epoch":"owned-epoch","outputs":[{"mask":0,"name":"0.txt"},{"mask":0,"name":"1.txt"}],"sequence":3,"shard":"s0"},{"epoch":"owned-epoch","outputs":[],"sequence":3,"shard":"s1"}]}

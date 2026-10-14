@@ -1,0 +1,12 @@
+test_all_owned_single_shard_scopes_and_empty_exports (test_release.ReleaseRegression.test_all_owned_single_shard_scopes_and_empty_exports) ... ok
+test_composed_cycle_and_repaired_pair_restoration (test_release.ReleaseRegression.test_composed_cycle_and_repaired_pair_restoration) ... ok
+test_file_entrypoint_preserves_existing_destination (test_release.ReleaseRegression.test_file_entrypoint_preserves_existing_destination) ... ok
+test_json_ingress_and_authentication_preserved (test_release.ReleaseRegression.test_json_ingress_and_authentication_preserved) ... ok
+test_late_canonical_registry_label_in_member_without_exports (test_release.ReleaseRegression.test_late_canonical_registry_label_in_member_without_exports) ... ok
+test_missing_extra_duplicate_revision_and_target_denied_before_io (test_release.ReleaseRegression.test_missing_extra_duplicate_revision_and_target_denied_before_io) ... ok
+test_same_information_contexts_and_raw_joined_closure (test_release.ReleaseRegression.test_same_information_contexts_and_raw_joined_closure) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.710s
+
+OK

@@ -1,0 +1,15 @@
+test_authenticated_publisher_uses_composed_not_local_masks (test_consumption.ConsumptionRegression.test_authenticated_publisher_uses_composed_not_local_masks) ... ok
+test_complete_context_scope_masks_match_joined_replay (test_consumption.ConsumptionRegression.test_complete_context_scope_masks_match_joined_replay) ... ok
+test_empty_export_and_repeated_output_order (test_consumption.ConsumptionRegression.test_empty_export_and_repeated_output_order) ... ok
+test_exception_checkpoints_preserve_pre_post_commit_boundary (test_consumption.ConsumptionRegression.test_exception_checkpoints_preserve_pre_post_commit_boundary) ... ok
+test_existing_destination_and_eight_owned_publishers (test_consumption.ConsumptionRegression.test_existing_destination_and_eight_owned_publishers) ... ok
+test_incomplete_context_denies_consumption_and_publication (test_consumption.ConsumptionRegression.test_incomplete_context_denies_consumption_and_publication) ... ok
+test_mandatory_authenticated_publisher_context (test_consumption.ConsumptionRegression.test_mandatory_authenticated_publisher_context) ... ok
+test_manifest_and_records_are_owned_and_sealed (test_consumption.ConsumptionRegression.test_manifest_and_records_are_owned_and_sealed) ... ok
+test_repair_scope_and_independent_after_pair_obligation (test_consumption.ConsumptionRegression.test_repair_scope_and_independent_after_pair_obligation) ... ok
+test_revision_membership_and_binding_rejections (test_consumption.ConsumptionRegression.test_revision_membership_and_binding_rejections) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.128s
+
+OK
