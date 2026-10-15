@@ -378,13 +378,14 @@ the Linux supervisor.
 Use an absent output directory; an existing bundle is never reset. The default
 Linux supervisor chooses a new raw directory on a repeat run and binds its
 receipt in `results/publication-workflow.json`. It now runs all four portable
-suites (6 + 10 + 7 + 1 = 24 tests) plus five two-file controls. The original
+suites (6 + 10 + 7 + 3 = 26 tests) plus five two-file controls. The original
 three suites are not claimed as newly designed independent experiments.
 Ten same-information file pipelines produce six archives read back and four
 refusals, with exact archive bytes/masks tied. Raw files, per-method costs,
 source/environment bindings and logs are in
 `results/owned-publication-20261014-current/`; actual archive bytes are hex encoded
-to preserve the no-nested-archive packet rule. This current owned Windows fact
+to preserve the no-nested-archive packet rule. That retained Windows bundle has
+the earlier 24 tests, before the two manuscript-figure inventory regressions. It
 is separate from the old 80-execution comparison and the pending full Linux run.
 No current gate silently adopts a caller's partial context or supplied verdict.
 

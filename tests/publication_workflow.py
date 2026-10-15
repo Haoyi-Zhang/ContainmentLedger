@@ -30,7 +30,7 @@ import release
 
 SCHEMA = "containment-ledger/owned-publication-workflow/v1"
 STAGES = {"test_summary_reuse.py": 6, "test_consumption.py": 10,
-          "test_release.py": 7, "test_default_publication.py": 1}
+          "test_release.py": 7, "test_default_publication.py": 3}
 METHODS = ("file-release-worklist", "same-information-fixed-point")
 EXPECTED = {"clean": [0, 0], "late-content": [1, 1],
             "occurrence-does-not-alias": [0, 0], "different-intent-pair": [0, 0],

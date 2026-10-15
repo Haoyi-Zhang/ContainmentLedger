@@ -53,6 +53,11 @@ class DefaultPublicationCoverage(unittest.TestCase):
         self.assertIn("publication_workflow.verify_receipt", text)
         workflow = (ROOT / ".github/workflows/scientific-checks.yml").read_text(encoding="utf-8")
         self.assertIn("reproduce.py --checks", workflow)
+        driver = ast.parse((ROOT / 'tests/publication_workflow.py').read_text(encoding='utf-8'))
+        stages = next(node for node in driver.body if isinstance(node, ast.Assign)
+                      and any(isinstance(t, ast.Name) and t.id == 'STAGES' for t in node.targets))
+        declared = ast.literal_eval(stages.value)['test_default_publication.py']
+        self.assertEqual(declared, unittest.defaultTestLoader.loadTestsFromTestCase(type(self)).countTestCases())
 
 
 if __name__ == "__main__":
