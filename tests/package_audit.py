@@ -16,7 +16,7 @@ RESULT = ROOT / "results" / "package-audit.json"
 ALLOWED_TOP_LEVEL = {
     "LICENSE", "README.md", "claim_evidence_ledger.csv", "data",
     "external_resources.csv", "licenses", "proofs", "reproduce.py",
-    "results", "src", "tests", "upstream", "reviewer-evidence-ledger.csv", ".github",
+    "results", "src", "tests", "upstream", "reviewer-evidence-ledger.csv", ".github", "figures",
 }
 EXPECTED_PYTHON_FILES = ['reproduce.py', 'src/builder_adapter.py', 'src/capsule.py', 'src/checker.py', 'src/corpus_adapter.py', 'src/cutcheck.py', 'src/cuts.py', 'src/diagnose.py', 'src/emitter.py', 'src/fixtures.py', 'src/freshness.py', 'src/ledger.py', 'src/merge.py', 'src/reviewer_hardening.py', 'tests/boundaries.py', 'tests/builder_bridge.py', 'tests/campaign.py', 'tests/context.py', 'tests/deployment.py', 'tests/emitter_worker.py', 'tests/finite.py', 'tests/freshness.py', 'tests/freshness_worker.py', 'tests/natural.py', 'tests/package_audit.py', 'tests/pilot.py', 'tests/reviewer_hardening.py', 'tests/runner_guards.py', 'tests/scaling.py']
 EXPECTED_PYTHON_FILES.append('tests/scientific_regressions.py')
@@ -348,6 +348,9 @@ def package_shape_audit() -> dict:
     actual_top = {path.name for path in ROOT.iterdir() if path.name != '.git'}
     require(actual_top == ALLOWED_TOP_LEVEL,
             f"artifact top-level mismatch: {sorted(actual_top ^ ALLOWED_TOP_LEVEL)}")
+    require({p.name for p in (ROOT / 'figures').iterdir()} ==
+            {'draw_schematics.py', 'late-alias.pdf', 'grouped-cut.pdf'},
+            'manuscript figure inventory mismatch')
     symlinks = []
     nested_archives = []
     cache_artifacts = []

@@ -16,7 +16,7 @@ needed. From this directory, run the four portable suites together:
 python -B -S -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-Expected: 24 tests pass, with no skips. These tests use short owned text and
+Expected: 26 tests pass, with no skips. These tests use short owned text and
 public fixture keys, and create temporary publication files; they do not run
 the retained public sources or the supervised Linux campaigns. For a retained
 fresh-output bundle, use `tests/publication_workflow.py` as documented below.
@@ -500,3 +500,13 @@ and online 55-record reference-validation result were not supplied and are not
 reconstructed. The retained `proofs/arguments.md`, current regenerated tests, and
 paper's offline citation-coverage audit must not be confused with those missing
 records.
+
+## Manuscript diagrams
+
+The late-equality and grouped-cut examples are generated directly in Python as
+font-embedded vector PDFs. They preserve the declared graph edges and scopes;
+they are not measured workloads. With Python 3.9+ and Matplotlib, run:
+
+```sh
+python -B figures/draw_schematics.py --output figures
+```
