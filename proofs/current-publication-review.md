@@ -123,13 +123,3 @@ cases, builder/storage integration and downstream decision benefit are not
 established by these controls. The fixed-point baseline ties; 52 historical
 inclusion-minimal-versus-minimum cut gaps remain explicit. The finite arguments
 are handwritten, not machine checked.
-
-The [official S&P 2027 CFP](https://www.ieee-security.org/TC/SP2027/cfpapers.html)
-allows 13 body pages and 5 additional reference/appendix pages, with 18 total;
-anonymous initial review and unchanged IEEEtran letter conference/compsoc layout
-apply. An ethics statement is required in the registration form; an Ethics
-section is optional in the submitted PDF and required after acceptance. AI use
-must be disclosed/motivated in the submission form; no AI author is permitted.
-Author accuracy/originality review, anonymous artifact hosting and actual
-submission fields remain author obligations. This review neither submits
-nor certifies venue acceptance, all full texts or scientific independence.
