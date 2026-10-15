@@ -264,9 +264,10 @@ peak child RSS. It reproduces 327,680 closure instances, 262,144 contexts,
 15,625 grouped-cut graphs and 2,059 rejected mutations; 52 greedy cardinality
 gaps remain in the results. It predates the publication stage now required by
 the default supervisor. Neither that record nor the older root-level record
-is a current-source success for this candidate. The current full Linux run
-(five parts, now 23 top-level child commands) remains pending main review;
-historical timing samples are not relabelled or overwritten.
+is a source-bound success for the expanded supervisor. A complete invocation
+now executes five parts and 23 top-level child commands; its saved-result
+verification supplies the source/input binding required by the paper gate.
+Historical timing samples remain separate from newly generated runs.
 
 The small diagnostic/inventory regression is also portable:
 
