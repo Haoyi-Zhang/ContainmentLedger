@@ -22,7 +22,7 @@ for space. Data Capsule §3.1's fourth phase gates declassification by policy
 satisfaction and analyst role; §§5.3–5.4 infer transformation effects and residual
 policies. These mechanisms already cover policy propagation and output gating.
 
-P027's result is bounded to the declared exact textual fragment and its
+ContainmentLedger's result is bounded to the declared exact textual fragment and its
 equality-only interface. It does not prove that either prior mechanism cannot
 implement the fragment, or establish a production advantage over them.
 
